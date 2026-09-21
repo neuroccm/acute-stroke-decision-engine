@@ -138,6 +138,13 @@ p { margin: 0; }
 .site-footer .links a { color: var(--text-2); text-decoration: none; }
 .site-footer .links a:hover { color: var(--text-1); }
 
+.footer-callout { font: 700 13px/1.5 var(--sans); color: var(--red); margin: 0 0 14px; }
+
+.prose { max-width: 74ch; color: var(--text-1); font-size: 14.5px; line-height: 1.7; }
+.prose h2 { font-size: 18px; margin: 32px 0 4px; color: var(--text-1); }
+.prose p { margin: 0 0 14px; }
+.prose a { color: var(--accent); }
+
 @media (max-width: 640px) {
   .topnav__links { gap: 14px; }
   .hero { padding: 64px 0 48px; }

@@ -15,6 +15,8 @@ inside CodeStrokeApp.
   `scripts/sync-decision-tree.sh` — never hand-edit this file.
 - `cases/index.html` — 40 clinical test scenarios grouped by theme, each
   linking into the live engine with real inputs preloaded.
+- `disclaimer/index.html` — terms of use and disclaimer (no duty of care,
+  educational purpose only, no real patient data, source attribution).
 - `assets/` — shared CSS, hand-built icons, brand assets, and the JSON data
   (`scenarios.json`, `stats.json` generated; `case-notes.json` hand-authored
   here).

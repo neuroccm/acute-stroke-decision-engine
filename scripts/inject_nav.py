@@ -21,6 +21,7 @@ EXTRA_CSS = """
 .site-foot-links { display:flex; gap:16px; padding-top:14px; margin-top:18px; border-top:1px solid var(--rule); font:600 12px/1 var(--cond); }
 .site-foot-links a { color: var(--muted); text-decoration:none; }
 .site-foot-links a:hover { color: var(--accent); }
+.site-footer-callout { font:700 12px/1.4 var(--sans); color: var(--cor3nb); margin: 0 0 10px; }
 """
 
 NAV_HTML = """<div class="site-crumbs">
@@ -32,9 +33,11 @@ NAV_HTML = """<div class="site-crumbs">
 </div>
 """
 
-SUBFOOTER_HTML = """<div class="site-foot-links">
+SUBFOOTER_HTML = """<p class="site-footer-callout">There is no duty of care. This is an educational website.</p>
+<div class="site-foot-links">
   <a href="/">&larr; Back to overview</a>
   <a href="/cases/">Case scenarios</a>
+  <a href="/disclaimer/">Disclaimer</a>
   <a href="https://github.com/neuroccm/acute-stroke-decision-engine">Source on GitHub</a>
 </div>
 """

@@ -1230,6 +1230,303 @@ git commit -m "Add README with local preview, sync, and deploy instructions"
 
 ---
 
+## Task 10b: Disclaimer page and footer duty-of-care callout
+
+Added mid-run at the user's request: a dedicated `/disclaimer/` page adapted
+from the author's existing codestroke.net terms-of-use text, plus a bold
+"no duty of care" callout added to the footer of all three existing pages
+(`index.html`, `cases/index.html`, and the vendored `engine/index.html`'s
+injected subfooter). Four adaptation decisions already made with the user:
+reuse `stroke@codestroke.net` as the HIPAA/PHIPA contact, omit the
+advertising-policy clause (no ads on this project), state plainly that no
+tracking/analytics is in place (accurate for the current static site), and
+omit the Dr. Luis Domitrovic illustration credit (this site uses none of
+his artwork).
+
+**Files:**
+- Create: `disclaimer/index.html`
+- Modify: `assets/css/site.css` (add `.footer-callout` and `.prose` rules)
+- Modify: `index.html:153-161` (footer)
+- Modify: `cases/index.html:36-44` (footer)
+- Modify: `scripts/inject_nav.py` (`SUBFOOTER_HTML`)
+- Regenerate: `engine/index.html` (via `scripts/sync-decision-tree.sh`)
+
+**Interfaces:**
+- Consumes: `assets/css/site.css` classes from Task 2 (`.topnav`, `.section`,
+  `.wrap`, `.eyebrow`, `.lede`, `.site-footer`), the disclaimer text and
+  attribution line already used on every page.
+- Produces: route `/disclaimer/`; a `.footer-callout` class and `.prose`
+  class added to `assets/css/site.css` for this and future pages; a
+  `<a href="/disclaimer/">Disclaimer</a>` link added to the footer `.links`
+  row on all three pages.
+
+- [ ] **Step 1: Add two rules to `assets/css/site.css`** (append after the
+  existing `.site-footer .links a:hover { color: var(--text-1); }` rule,
+  before the closing responsive `@media` block)
+
+```css
+.footer-callout { font: 700 13px/1.5 var(--sans); color: var(--red); margin: 0 0 14px; }
+
+.prose { max-width: 74ch; color: var(--text-1); font-size: 14.5px; line-height: 1.7; }
+.prose h2 { font-size: 18px; margin: 32px 0 4px; color: var(--text-1); }
+.prose p { margin: 0 0 14px; }
+.prose a { color: var(--accent); }
+```
+
+- [ ] **Step 2: Write `disclaimer/index.html`**
+
+```html
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Disclaimer — Hyperacute Stroke Decision Engine</title>
+<meta name="description" content="Terms of use and disclaimer for the Hyperacute Stroke Decision Engine: educational purpose, no duty of care, no real patient data, and source attribution.">
+<link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+Condensed:wght@500;600;700&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap">
+<link rel="stylesheet" href="/assets/css/site.css">
+</head>
+<body>
+
+<nav class="topnav">
+  <img class="topnav__mark" src="/assets/img/app-icon.png" alt="">
+  <a class="topnav__title" href="/">Hyperacute Stroke Decision Engine</a>
+  <div class="topnav__links">
+    <a href="/">Home</a>
+    <a href="/engine/">Decision engine</a>
+    <a href="/cases/">Case scenarios</a>
+  </div>
+</nav>
+
+<header class="section section--tight wrap">
+  <span class="eyebrow">Terms of use</span>
+  <h1 style="font-size:clamp(28px,4vw,42px)">Disclaimer</h1>
+  <p class="lede">There is no duty of care. This is an educational website.</p>
+</header>
+
+<main class="wrap" style="padding-bottom:48px">
+  <div class="prose">
+    <p>This Terms of Use Agreement (this &ldquo;Agreement&rdquo;) is entered into by and between the Hyperacute Stroke Decision Engine project (Dr. Houman Khosravani, the &ldquo;author&rdquo;) and &ldquo;you,&rdquo; the user of this website (the &ldquo;Site&rdquo;). Access to, use of, and/or browsing of the Site is provided subject to the terms and conditions set out here. By accessing, using, and/or browsing the Site, you agree to these terms and conditions.</p>
+    <p>All opinions expressed here are those of the author and not of their employer.</p>
+
+    <h2>Overview</h2>
+    <p>Information provided on this Site is for EDUCATIONAL PURPOSES ONLY. THERE IS NO DUTY OF CARE. THIS WEBSITE IS FOR EDUCATIONAL AND RESEARCH PURPOSES AND USE BY SPECIFIC HEALTH PROFESSIONALS. It is not intended as, and does not substitute for, medical advice. If you are a patient, please see your doctor for evaluation of your individual case. Under no circumstances will the author be liable to you for any direct or indirect damages arising in connection with use of this Site. This Site&rsquo;s intended audience is medical providers (medical students, residents, staff, nurses) for EDUCATIONAL PURPOSES ONLY. Any operational decision or use is at the discretion of the provider and based on their own expertise and judgment. This Site and its content have no medical care responsibility, do not claim to be the ground source of truth, and do not replace expert clinical opinion and practice. The decision engine on this Site is explicitly marked draft and pending clinical review &mdash; see the disclaimer repeated on every page.</p>
+
+    <h2>External hyperlinks</h2>
+    <p>The appearance of external hyperlinks to other websites does not constitute endorsement. We do not verify, endorse, or take responsibility for the accuracy, currency, completeness, or quality of the content contained on those sites.</p>
+
+    <h2>Case data</h2>
+    <p>There is no real patient data on this Site. We do not write or &ldquo;blog&rdquo; about patients. The 40 case scenarios shown on this Site are synthetic test cases used to validate the decision engine&rsquo;s logic &mdash; similar in spirit to the vignettes in a board-exam question bank &mdash; not descriptions of real patients or real clinical encounters.</p>
+    <p>Report a suspected HIPAA/PHIPA violation to <a href="mailto:stroke@codestroke.net">stroke@codestroke.net</a>.</p>
+
+    <h2>Purpose of this Site</h2>
+    <p>This Site is intended for medical professionals but can also be accessed by the general public. The information provided here is made available by the author for educational purposes only and is not intended to provide medical advice. By accessing the Site, visitors acknowledge that there is no physician-patient relationship between them and the author. The Site should not be used as a substitute for competent medical advice from a licensed physician. It is designed to support, not replace, the relationship that exists between a patient and their physician. Every recommendation the decision engine produces is linked to its source guideline, section, page, and grade &mdash; nothing here asserts authority beyond the cited source.</p>
+
+    <h2>Privacy</h2>
+    <p>This Site does not currently collect any personal information about its visitors and readers, and does not use cookies or analytics.</p>
+
+    <h2>Disclosure of funding sources</h2>
+    <p>This is a private, non-commercial educational project receiving no funding from any third party.</p>
+
+    <h2>Links to other websites</h2>
+    <p>This Site may contain links to third-party websites. These links do not represent a guarantee, warranty, or recommendation by the author, nor any affiliation, sponsorship, or endorsement of those third-party websites.</p>
+
+    <h2>Copyright</h2>
+    <p>Copyright &copy; 2026 Dr. Houman Khosravani, and Division of Neurology, University of Toronto. Code is MIT-licensed (see the project&rsquo;s GitHub repository); cited guideline text is reproduced as short, individually attributed quotations for clinical and educational use.</p>
+  </div>
+</main>
+
+<footer class="site-footer wrap">
+  <p class="footer-callout">There is no duty of care. This is an educational website.</p>
+  <p class="disclaimer">Clinical decision support derived from the cited guidelines. It does not replace clinical judgement, local protocols, or specialist consultation. Draft pending clinical review.</p>
+  <p>An educational initiative &mdash; Division of Neurology, University of Toronto &mdash; Dr. Houman Khosravani, MD PhD FRCPC.</p>
+  <div class="links">
+    <a href="/">Home</a>
+    <a href="/engine/">Decision engine</a>
+    <a href="/cases/">Case scenarios</a>
+    <a href="/disclaimer/">Disclaimer</a>
+    <a href="https://github.com/neuroccm/acute-stroke-decision-engine">GitHub</a>
+  </div>
+</footer>
+
+</body>
+</html>
+```
+
+- [ ] **Step 3: Edit `index.html`'s footer** — insert the callout as the
+  first line inside the footer, and add the Disclaimer link:
+
+Old:
+```html
+<footer class="site-footer wrap">
+  <p class="disclaimer">Clinical decision support derived from the cited guidelines. It does not replace clinical judgement, local protocols, or specialist consultation. Draft pending clinical review.</p>
+  <p>Sources: 2026 AHA/ASA Acute Ischemic Stroke Guideline &middot; CSBPR Acute Stroke Management 2022 &middot; CSBPR EVT Interim Update 2025 &middot; Thrombosis Canada IVT/EVT Guide. Code is MIT-licensed; cited guideline text is reproduced as short, individually attributed quotations for clinical and educational use.</p>
+  <p>An educational initiative &mdash; Division of Neurology, University of Toronto &mdash; Dr. Houman Khosravani, MD PhD FRCPC.</p>
+  <div class="links">
+    <a href="/engine/">Decision engine</a>
+    <a href="/cases/">Case scenarios</a>
+    <a href="https://github.com/neuroccm/acute-stroke-decision-engine">GitHub</a>
+  </div>
+</footer>
+```
+
+New:
+```html
+<footer class="site-footer wrap">
+  <p class="footer-callout">There is no duty of care. This is an educational website.</p>
+  <p class="disclaimer">Clinical decision support derived from the cited guidelines. It does not replace clinical judgement, local protocols, or specialist consultation. Draft pending clinical review.</p>
+  <p>Sources: 2026 AHA/ASA Acute Ischemic Stroke Guideline &middot; CSBPR Acute Stroke Management 2022 &middot; CSBPR EVT Interim Update 2025 &middot; Thrombosis Canada IVT/EVT Guide. Code is MIT-licensed; cited guideline text is reproduced as short, individually attributed quotations for clinical and educational use.</p>
+  <p>An educational initiative &mdash; Division of Neurology, University of Toronto &mdash; Dr. Houman Khosravani, MD PhD FRCPC.</p>
+  <div class="links">
+    <a href="/engine/">Decision engine</a>
+    <a href="/cases/">Case scenarios</a>
+    <a href="/disclaimer/">Disclaimer</a>
+    <a href="https://github.com/neuroccm/acute-stroke-decision-engine">GitHub</a>
+  </div>
+</footer>
+```
+
+- [ ] **Step 4: Edit `cases/index.html`'s footer** the same way:
+
+Old:
+```html
+<footer class="site-footer wrap">
+  <p class="disclaimer" id="disclaimer-text"></p>
+  <p>Sources: 2026 AHA/ASA Acute Ischemic Stroke Guideline &middot; CSBPR Acute Stroke Management 2022 &middot; CSBPR EVT Interim Update 2025 &middot; Thrombosis Canada IVT/EVT Guide.</p>
+  <p>An educational initiative &mdash; Division of Neurology, University of Toronto &mdash; Dr. Houman Khosravani, MD PhD FRCPC.</p>
+  <div class="links">
+    <a href="/">Home</a>
+    <a href="/engine/">Decision engine</a>
+    <a href="https://github.com/neuroccm/acute-stroke-decision-engine">GitHub</a>
+  </div>
+```
+
+New:
+```html
+<footer class="site-footer wrap">
+  <p class="footer-callout">There is no duty of care. This is an educational website.</p>
+  <p class="disclaimer" id="disclaimer-text"></p>
+  <p>Sources: 2026 AHA/ASA Acute Ischemic Stroke Guideline &middot; CSBPR Acute Stroke Management 2022 &middot; CSBPR EVT Interim Update 2025 &middot; Thrombosis Canada IVT/EVT Guide.</p>
+  <p>An educational initiative &mdash; Division of Neurology, University of Toronto &mdash; Dr. Houman Khosravani, MD PhD FRCPC.</p>
+  <div class="links">
+    <a href="/">Home</a>
+    <a href="/engine/">Decision engine</a>
+    <a href="/disclaimer/">Disclaimer</a>
+    <a href="https://github.com/neuroccm/acute-stroke-decision-engine">GitHub</a>
+  </div>
+```
+
+- [ ] **Step 5: Edit `scripts/inject_nav.py`'s `SUBFOOTER_HTML`** to add the
+  same callout (using the engine page's own CSS vars, since that page
+  doesn't load `site.css`) and a Disclaimer link. Also add one rule to
+  `EXTRA_CSS`:
+
+Old `EXTRA_CSS` (add one rule to the end of the existing string, before the
+closing `"""`):
+```python
+EXTRA_CSS = """
+.site-crumbs { display:flex; align-items:center; gap:10px; padding-bottom:14px; margin-bottom:14px; border-bottom:1px solid var(--rule); font:600 12px/1 var(--cond); }
+.site-crumbs img { border-radius:6px; display:block; }
+.site-crumbs a { color: var(--muted); text-decoration:none; }
+.site-crumbs a:hover { color: var(--accent); }
+.site-crumbs .sep { color: var(--rule); }
+.site-crumbs .current { color: var(--ink); }
+.site-foot-links { display:flex; gap:16px; padding-top:14px; margin-top:18px; border-top:1px solid var(--rule); font:600 12px/1 var(--cond); }
+.site-foot-links a { color: var(--muted); text-decoration:none; }
+.site-foot-links a:hover { color: var(--accent); }
+"""
+```
+
+New `EXTRA_CSS`:
+```python
+EXTRA_CSS = """
+.site-crumbs { display:flex; align-items:center; gap:10px; padding-bottom:14px; margin-bottom:14px; border-bottom:1px solid var(--rule); font:600 12px/1 var(--cond); }
+.site-crumbs img { border-radius:6px; display:block; }
+.site-crumbs a { color: var(--muted); text-decoration:none; }
+.site-crumbs a:hover { color: var(--accent); }
+.site-crumbs .sep { color: var(--rule); }
+.site-crumbs .current { color: var(--ink); }
+.site-foot-links { display:flex; gap:16px; padding-top:14px; margin-top:18px; border-top:1px solid var(--rule); font:600 12px/1 var(--cond); }
+.site-foot-links a { color: var(--muted); text-decoration:none; }
+.site-foot-links a:hover { color: var(--accent); }
+.site-footer-callout { font:700 12px/1.4 var(--sans); color: var(--cor3nb); margin: 0 0 10px; }
+"""
+```
+
+Old `SUBFOOTER_HTML`:
+```python
+SUBFOOTER_HTML = """<div class="site-foot-links">
+  <a href="/">&larr; Back to overview</a>
+  <a href="/cases/">Case scenarios</a>
+  <a href="https://github.com/neuroccm/acute-stroke-decision-engine">Source on GitHub</a>
+</div>
+"""
+```
+
+New `SUBFOOTER_HTML`:
+```python
+SUBFOOTER_HTML = """<p class="site-footer-callout">There is no duty of care. This is an educational website.</p>
+<div class="site-foot-links">
+  <a href="/">&larr; Back to overview</a>
+  <a href="/cases/">Case scenarios</a>
+  <a href="/disclaimer/">Disclaimer</a>
+  <a href="https://github.com/neuroccm/acute-stroke-decision-engine">Source on GitHub</a>
+</div>
+"""
+```
+
+- [ ] **Step 6: Re-run the sync script to regenerate `engine/index.html`
+  with the updated subfooter**
+
+```bash
+./scripts/sync-decision-tree.sh
+```
+
+- [ ] **Step 7: Verify in a browser**
+
+```bash
+python3 -m http.server 4173 &
+SERVER_PID=$!
+```
+With `claude-in-chrome`, visit `/disclaimer/` and confirm: the page renders
+with readable prose (headings and paragraphs properly spaced via `.prose`),
+the "There is no duty of care" line appears both as the page's lede and as
+the bold red `.footer-callout` in its own footer, the HIPAA/PHIPA mailto
+link is present, and the topnav/footer links work. Then visit `/`,
+`/cases/`, and `/engine/` and confirm each now shows the bold callout line
+and a working `/disclaimer/` link in its footer (the engine page's version
+uses its own red tone from `--cor3nb`, not `site.css`). Check console on
+all four pages — expect no errors. `kill $SERVER_PID`.
+
+- [ ] **Step 8: Update `README.md`'s Structure section** to add one line
+  for the new page:
+
+Old:
+```markdown
+- `cases/index.html` — 40 clinical test scenarios grouped by theme, each
+  linking into the live engine with real inputs preloaded.
+```
+
+New:
+```markdown
+- `cases/index.html` — 40 clinical test scenarios grouped by theme, each
+  linking into the live engine with real inputs preloaded.
+- `disclaimer/index.html` — terms of use and disclaimer (no duty of care,
+  educational purpose only, no real patient data, source attribution).
+```
+
+- [ ] **Step 9: Commit**
+
+```bash
+git add assets/css/site.css disclaimer/index.html index.html cases/index.html scripts/inject_nav.py engine/index.html README.md
+git commit -m "Add disclaimer page and duty-of-care callout to every footer"
+```
+
+---
+
 ## Task 11: Publish to GitHub (explicit go-ahead required)
 
 **STOP. Do not run this task's steps without Houman explicitly confirming he wants the repo created and pushed now** — this is public, visible to others, and not easily reversible. Confirm the repo name (`acute-stroke-decision-engine`) and that `neuroccm` is the right account before proceeding, since both were assumed in this plan, not reconfirmed at execution time.

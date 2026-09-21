@@ -1,0 +1,50 @@
+{
+  "S01": { "theme": "Core pathway & absolute exclusions", "note": "The core pathway at its cleanest: disabling deficit, clean imaging, early window — thrombolysis plus an EVT bridge with no branch left ambiguous." },
+  "S02": { "theme": "Core pathway & absolute exclusions", "note": "Tests the non-disabling branch — a real stroke that still routes away from standard thrombolysis and into antiplatelet therapy." },
+  "S04": { "theme": "Core pathway & absolute exclusions", "note": "The absolute exclusion the whole pathway checks before anything else runs." },
+  "S33": { "theme": "Core pathway & absolute exclusions", "note": "Past every reperfusion window — the tree still has to land somewhere useful." },
+  "S34": { "theme": "Core pathway & absolute exclusions", "note": "Routing and transfer logic when EVT isn't available on site." },
+
+  "S05": { "theme": "Imaging & core-size edge cases", "note": "Unwitnessed onset — the tree lets imaging mismatch substitute for a clock nobody can read." },
+  "S06": { "theme": "Imaging & core-size edge cases", "note": "Vessel location and hemisphere dominance change the answer even when perfusion looks favorable." },
+  "S07": { "theme": "Imaging & core-size edge cases", "note": "Late window, but a small enough core that time alone doesn't disqualify the patient." },
+  "S08": { "theme": "Imaging & core-size edge cases", "note": "A large core early in the window — tests where the ASPECTS threshold actually bites." },
+  "S09": { "theme": "Imaging & core-size edge cases", "note": "About as large a core as the tree will ever see — the floor of the ASPECTS threshold." },
+  "S10": { "theme": "Imaging & core-size edge cases", "note": "Large core, late window, and advanced age stacked together — three relative factors at once." },
+
+  "S11": { "theme": "Vessel & anatomy nuance", "note": "Posterior circulation with a severe deficit gets a wider window than anterior circulation would." },
+  "S12": { "theme": "Vessel & anatomy nuance", "note": "Same vessel, mild deficit — tests whether severity alone gates EVT for basilar occlusion." },
+  "S13": { "theme": "Vessel & anatomy nuance", "note": "The M2-dominance branch that CodeStrokeApp's current model doesn't capture yet." },
+  "S32": { "theme": "Vessel & anatomy nuance", "note": "An ischemic event the tree has to recognize as outside the standard cerebral pathway." },
+
+  "S14": { "theme": "Baseline function & special populations", "note": "Mild baseline disability — still a clear candidate, not an automatic individualize." },
+  "S15": { "theme": "Baseline function & special populations", "note": "Moderate baseline disability tips the same occlusion into individualized decision-making." },
+  "S16": { "theme": "Baseline function & special populations", "note": "The pediatric age gate in the early window, where adult defaults don't apply." },
+  "S17": { "theme": "Baseline function & special populations", "note": "Pediatric, late window, and imaging-selected — the narrowest version of the EVT criteria." },
+  "S39": { "theme": "Baseline function & special populations", "note": "Pregnancy as a relative factor the tree weighs, not an automatic exclusion." },
+
+  "S03": { "theme": "Anticoagulation, labs & recent-procedure risk", "note": "A DOAC with no drug level and no clear last-dose confirmation — thrombolysis eligibility narrows, EVT stays open." },
+  "S18": { "theme": "Anticoagulation, labs & recent-procedure risk", "note": "Hypoglycemia that can mimic or worsen a deficit — corrected before the stroke pathway proceeds." },
+  "S21": { "theme": "Anticoagulation, labs & recent-procedure risk", "note": "A recent-surgery relative contraindication with its own lookback window." },
+
+  "S19": { "theme": "Blood pressure", "note": "Above the pre-treatment blood pressure threshold — treat first, then re-check eligibility." },
+  "S20": { "theme": "Blood pressure", "note": "Blood pressure that won't come into range in time closes the thrombolysis window entirely." },
+  "S37": { "theme": "Blood pressure", "note": "Post-stroke blood pressure management when reperfusion therapy isn't in the picture." },
+
+  "S22": { "theme": "Incomplete information", "note": "The 'unknown is not no' rule under real time pressure — the tree stops and asks rather than assuming." },
+  "S35": { "theme": "Incomplete information", "note": "Two unknowns stacked — onset time and imaging strategy both still open." },
+  "S36": { "theme": "Incomplete information", "note": "The empty-state worst case for how the tree handles missing information." },
+
+  "S23": { "theme": "Post-treatment complications", "note": "The symptomatic hemorrhage pathway that follows a treatment complication, not a treatment decision." },
+  "S24": { "theme": "Post-treatment complications", "note": "A different post-thrombolysis emergency, with its own immediate management branch." },
+  "S28": { "theme": "Post-treatment complications", "note": "A day-2 complication that moves the patient into decompressive-surgery territory." },
+  "S29": { "theme": "Post-treatment complications", "note": "A posterior fossa emergency that exits the standard pathway entirely." },
+
+  "S25": { "theme": "Downstream care & systems", "note": "Reperfusion grading after mechanical-only treatment, feeding directly into secondary prevention." },
+  "S26": { "theme": "Downstream care & systems", "note": "High-risk TIA triage — no reperfusion decision, but urgency the tree still has to route correctly." },
+  "S27": { "theme": "Downstream care & systems", "note": "Anticoagulation timing after a non-reperfused cardioembolic stroke — AHA and CSBPR diverge here." },
+  "S30": { "theme": "Downstream care & systems", "note": "Mothership-versus-drip-and-ship, in a system built to support direct transfer." },
+  "S31": { "theme": "Downstream care & systems", "note": "The same routing decision under worse real-world constraints." },
+  "S38": { "theme": "Downstream care & systems", "note": "Mild deficit, late presentation, no reperfusion candidate — secondary prevention carries the visit." },
+  "S40": { "theme": "Downstream care & systems", "note": "A stroke mimic that turns out not to be one — the tree has to tell the difference." }
+}

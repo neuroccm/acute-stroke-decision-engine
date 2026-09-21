@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Case scenarios — Hyperacute Stroke Decision Engine</title>
+<meta name="description" content="40 clinical test scenarios for the Hyperacute Stroke Decision Engine, grouped by theme, each running live against the real decision tree.">
+<link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+Condensed:wght@500;600;700&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap">
+<link rel="stylesheet" href="/assets/css/site.css">
+</head>
+<body>
+
+<nav class="topnav">
+  <img class="topnav__mark" src="/assets/img/app-icon.png" alt="">
+  <a class="topnav__title" href="/">Hyperacute Stroke Decision Engine</a>
+  <div class="topnav__links">
+    <a href="/">Home</a>
+    <a href="/engine/">Decision engine</a>
+    <a href="/cases/" aria-current="page">Case scenarios</a>
+  </div>
+</nav>
+
+<header class="section section--tight wrap">
+  <span class="eyebrow">40 clinical test scenarios</span>
+  <h1 style="font-size:clamp(28px,4vw,42px)">Case scenarios &amp; edge cases</h1>
+  <p class="lede">Every card below is a real test case from TypeSafeStroke's scenario suite &mdash; the same 40 cases that gate every change to the tree. Open one and it runs live against the actual decision engine, not a canned summary.</p>
+</header>
+
+<main class="wrap">
+  <div id="theme-sections"></div>
+</main>
+
+<footer class="site-footer wrap">
+  <p class="disclaimer" id="disclaimer-text"></p>
+  <p>Sources: 2026 AHA/ASA Acute Ischemic Stroke Guideline &middot; CSBPR Acute Stroke Management 2022 &middot; CSBPR EVT Interim Update 2025 &middot; Thrombosis Canada IVT/EVT Guide.</p>
+  <p>An educational initiative &mdash; Division of Neurology, University of Toronto &mdash; Dr. Houman Khosravani, MD PhD FRCPC.</p>
+  <div class="links">
+    <a href="/">Home</a>
+    <a href="/engine/">Decision engine</a>
+    <a href="https://github.com/neuroccm/acute-stroke-decision-engine">GitHub</a>
+  </div>
+</footer>
+
+<script>
+const THEME_ORDER = [
+  "Core pathway & absolute exclusions",
+  "Imaging & core-size edge cases",
+  "Vessel & anatomy nuance",
+  "Baseline function & special populations",
+  "Anticoagulation, labs & recent-procedure risk",
+  "Blood pressure",
+  "Incomplete information",
+  "Post-treatment complications",
+  "Downstream care & systems",
+];
+
+const esc = (s) => String(s ?? "").replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+
+Promise.all([
+  fetch("/assets/data/scenarios.json").then((r) => r.json()),
+  fetch("/assets/data/case-notes.json").then((r) => r.json()),
+]).then(([scenData, notes]) => {
+  const titleById = Object.fromEntries(scenData.scenarios.map((s) => [s.id, s.title]));
+  const root = document.getElementById("theme-sections");
+  for (const theme of THEME_ORDER) {
+    const ids = Object.keys(notes).filter((id) => notes[id].theme === theme).sort();
+    if (!ids.length) continue;
+    const section = document.createElement("section");
+    section.className = "section";
+    section.innerHTML = `<h2>${esc(theme)}</h2><div class="card-grid"></div>`;
+    const grid = section.querySelector(".card-grid");
+    for (const id of ids) {
+      const a = document.createElement("a");
+      a.className = "card";
+      a.href = `/engine/?scenario=${encodeURIComponent(id)}`;
+      a.innerHTML = `<span class="card__meta">${esc(id)}</span><h3>${esc(titleById[id] || id)}</h3><p>${esc(notes[id].note)}</p>`;
+      grid.appendChild(a);
+    }
+    root.appendChild(section);
+  }
+});
+
+fetch("/assets/data/stats.json").then((r) => r.json()).catch(() => null);
+document.getElementById("disclaimer-text").textContent =
+  "Clinical decision support derived from the cited guidelines. It does not replace clinical judgement, local protocols, or specialist consultation. Draft pending clinical review.";
+</script>
+
+</body>
+</html>

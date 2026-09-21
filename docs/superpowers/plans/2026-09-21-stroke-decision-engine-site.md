@@ -830,6 +830,7 @@ git commit -m "Add themed case notes for all 40 TypeSafeStroke scenarios"
 <footer class="site-footer wrap">
   <p class="disclaimer" id="disclaimer-text"></p>
   <p>Sources: 2026 AHA/ASA Acute Ischemic Stroke Guideline &middot; CSBPR Acute Stroke Management 2022 &middot; CSBPR EVT Interim Update 2025 &middot; Thrombosis Canada IVT/EVT Guide.</p>
+  <p>An educational initiative &mdash; Division of Neurology, University of Toronto &mdash; Dr. Houman Khosravani, MD PhD FRCPC.</p>
   <div class="links">
     <a href="/">Home</a>
     <a href="/engine/">Decision engine</a>
@@ -1069,7 +1070,7 @@ git commit -m "Add case-scenario index page grouped by clinical theme"
 <footer class="site-footer wrap">
   <p class="disclaimer">Clinical decision support derived from the cited guidelines. It does not replace clinical judgement, local protocols, or specialist consultation. Draft pending clinical review.</p>
   <p>Sources: 2026 AHA/ASA Acute Ischemic Stroke Guideline &middot; CSBPR Acute Stroke Management 2022 &middot; CSBPR EVT Interim Update 2025 &middot; Thrombosis Canada IVT/EVT Guide. Code is MIT-licensed; cited guideline text is reproduced as short, individually attributed quotations for clinical and educational use.</p>
-  <p>Built by Dr. Houman Khosravani.</p>
+  <p>An educational initiative &mdash; Division of Neurology, University of Toronto &mdash; Dr. Houman Khosravani, MD PhD FRCPC.</p>
   <div class="links">
     <a href="/engine/">Decision engine</a>
     <a href="/cases/">Case scenarios</a>

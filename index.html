@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hyperacute Stroke Decision Engine</title>
+<meta name="description" content="A type-safe, citation-traced decision engine for acute ischemic stroke, built from U.S. and Canadian guidelines. Open source, built from CodeStrokeApp.">
+<link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+Condensed:wght@500;600;700&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap">
+<link rel="stylesheet" href="/assets/css/site.css">
+</head>
+<body>
+
+<nav class="topnav">
+  <img class="topnav__mark" src="/assets/img/app-icon.png" alt="">
+  <a class="topnav__title" href="/">Hyperacute Stroke Decision Engine</a>
+  <div class="topnav__links">
+    <a href="/" aria-current="page">Home</a>
+    <a href="/engine/">Decision engine</a>
+    <a href="/cases/">Case scenarios</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="hero__row">
+      <img class="hero__mark" src="/assets/img/app-icon.png" alt="">
+      <span class="eyebrow" style="margin:0">From CodeStrokeApp</span>
+    </div>
+    <h1>A type-safe decision engine for the first hours of stroke care</h1>
+    <p class="lede">Every branch is built from the 2026 AHA/ASA guideline, CSBPR 2022 and its 2025 EVT update, and the Thrombosis Canada guide &mdash; with a verbatim citation, page number, and grade behind every recommendation. Free-text input is turned into a typed patient state with TypeSafe, then evaluated by the same engine that runs inside CodeStrokeApp.</p>
+    <div class="hero__actions">
+      <a class="btn btn--primary" href="/engine/">Run the decision engine</a>
+      <a class="btn btn--ghost" href="/cases/">Browse case scenarios</a>
+    </div>
+    <div class="badge--disclaimer">Draft &middot; decision support, not orders</div>
+  </div>
+</header>
+
+<section class="section">
+  <div class="wrap">
+    <span class="eyebrow">The problem</span>
+    <h2 style="font-size:clamp(24px,3.4vw,34px);max-width:26ch">Guidelines are thousands of pages. Bedside decisions happen in minutes.</h2>
+    <p class="lede">The AHA/ASA and Canadian (CSBPR) stroke guidelines run to hundreds of pages combined, and they don't always agree with each other. A team standing at the bedside needs a fast, specific, defensible answer &mdash; and needs to know exactly which page of which guideline that answer came from.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <span class="eyebrow">What this is</span>
+    <h2 style="font-size:clamp(24px,3.4vw,34px);max-width:30ch">A hand-authored decision tree, every leaf traced back to its source</h2>
+    <p class="lede">TypeSafeStroke pairs a small language model (TypeSafe) that turns free text &mdash; an EMS handover, a history, a medication list &mdash; into typed, confidence-scored inputs, with a decision tree authored directly from the guidelines, node by node. Nothing is inferred silently: unknown is never read as no. When the tree is missing something it needs, it stops and says exactly what.</p>
+    <div class="stat-strip" id="stat-strip">
+      <div class="stat"><b>&hellip;</b><span>Modules</span></div>
+      <div class="stat"><b>&hellip;</b><span>Decision nodes</span></div>
+      <div class="stat"><b>&hellip;</b><span>Outcome paths</span></div>
+      <div class="stat"><b>&hellip;</b><span>Cited statements</span></div>
+      <div class="stat"><b>&hellip;</b><span>Full citation corpus</span></div>
+      <div class="stat"><b>&hellip;</b><span>Test scenarios</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <span class="eyebrow">How it works</span>
+    <h2 style="font-size:clamp(24px,3.4vw,34px);max-width:26ch">From free text to an evidence-linked outcome</h2>
+    <div class="step-grid">
+      <div class="step">
+        <div class="step__icon" id="icon-slot-mic"></div>
+        <h3>1. Free text in</h3>
+        <p>EMS handover, chart history, med list &mdash; whatever's on hand, unstructured.</p>
+      </div>
+      <div class="step">
+        <div class="step__icon" id="icon-slot-cpu"></div>
+        <h3>2. Typed patient state</h3>
+        <p>TypeSafe infers structured fields with asymmetric confidence thresholds; anything uncertain stays unconfirmed rather than guessed.</p>
+      </div>
+      <div class="step">
+        <div class="step__icon" id="icon-slot-brain"></div>
+        <h3>3. Decision engine</h3>
+        <p>A three-valued tree &mdash; true, false, unknown &mdash; walks phase-ordered modules and stops rather than assumes.</p>
+      </div>
+      <div class="step">
+        <div class="step__icon" id="icon-slot-check"></div>
+        <h3>4. Evidence-linked outcome</h3>
+        <p>Every recommendation carries its source, section, page, and grade &mdash; ready to check against the guideline itself.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <span class="eyebrow">From CodeStrokeApp to the web</span>
+    <h2 style="font-size:clamp(24px,3.4vw,34px);max-width:28ch">The same engine, running twice, agreeing every time</h2>
+    <p class="lede">This tree runs in Swift inside CodeStrokeApp and in JavaScript on this page &mdash; two independent implementations of the same semantics, checked against each other on every one of the 40 test scenarios below. It's slated to replace CodeStrokeApp's current hard-coded <code>EligibilityEngine</code>, whose rules already differ from the sources in places this project corrects.</p>
+    <div class="step-grid" style="grid-template-columns:repeat(auto-fit,minmax(220px,1fr))">
+      <div class="step">
+        <div class="step__icon" id="icon-slot-waveform"></div>
+        <h3>Dual-engine parity</h3>
+        <p>Swift and JavaScript engines are parity-tested against the same scenario suite on every rebuild.</p>
+      </div>
+      <div class="step">
+        <div class="step__icon" id="icon-slot-shield"></div>
+        <h3>Unknown is never no</h3>
+        <p>A missing input halts a decision and records what's needed &mdash; it never falls through to a false branch.</p>
+      </div>
+      <div class="step">
+        <div class="step__icon" id="icon-slot-clock"></div>
+        <h3>Draft, under clinical review</h3>
+        <p>Every open question is tracked in the open below &mdash; nothing here is presented as finished.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <span class="eyebrow">Explore</span>
+    <div class="card-grid" style="grid-template-columns:repeat(auto-fit,minmax(300px,1fr))">
+      <a class="card" href="/engine/">
+        <span class="card__meta">Interactive</span>
+        <h3>Run the decision engine</h3>
+        <p>Load a case, or build one field at a time, and see the outcomes and citations the tree produces &mdash; the exact same artifact this project ships.</p>
+      </a>
+      <a class="card" href="/cases/">
+        <span class="card__meta">40 scenarios</span>
+        <h3>Case scenarios &amp; edge cases</h3>
+        <p>Pediatric occlusions, basilar strokes, DOACs without a level, malignant edema, incomplete histories &mdash; grouped by theme, each running live.</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <span class="eyebrow">Open questions</span>
+    <h2 style="font-size:clamp(24px,3.4vw,34px);max-width:26ch">Where the guidelines disagree, or the tree isn't settled yet</h2>
+    <ul class="lede" style="padding-left:20px">
+      <li>AHA's "absolute" Table 8 items are worded as "higher relative harm" in its own legend; the tree currently treats them as do-not-give.</li>
+      <li>Lab thresholds (platelets, INR, aPTT, PT) are AHA-absolute but CSBPR/Thrombosis Canada-relative &mdash; the tree follows AHA.</li>
+      <li>ASPECTS &lt;6 for thrombolysis is CSBPR-relative; AHA only excludes extensive, clear hypodensity.</li>
+      <li>Pediatric EVT at 6&ndash;17y in the 0&ndash;6h window: AHA's figure requires salvageable tissue that the recommendation text doesn't state explicitly.</li>
+      <li>AHA favors early DOAC resumption after AF-related stroke (2a); CSBPR uses a 1-3-6-12 day consensus schedule. Both are shown.</li>
+      <li>Not covered: intracerebral hemorrhage management, and CSBPR's inpatient-complications and MAiD sections.</li>
+    </ul>
+  </div>
+</section>
+
+<footer class="site-footer wrap">
+  <p class="disclaimer">Clinical decision support derived from the cited guidelines. It does not replace clinical judgement, local protocols, or specialist consultation. Draft pending clinical review.</p>
+  <p>Sources: 2026 AHA/ASA Acute Ischemic Stroke Guideline &middot; CSBPR Acute Stroke Management 2022 &middot; CSBPR EVT Interim Update 2025 &middot; Thrombosis Canada IVT/EVT Guide. Code is MIT-licensed; cited guideline text is reproduced as short, individually attributed quotations for clinical and educational use.</p>
+  <p>An educational initiative &mdash; Division of Neurology, University of Toronto &mdash; Dr. Houman Khosravani, MD PhD FRCPC.</p>
+  <div class="links">
+    <a href="/engine/">Decision engine</a>
+    <a href="/cases/">Case scenarios</a>
+    <a href="https://github.com/neuroccm/acute-stroke-decision-engine">GitHub</a>
+  </div>
+</footer>
+
+<script>
+const ICONS = {
+  mic: "/assets/icons/icon-mic.svg",
+  cpu: "/assets/icons/icon-cpu.svg",
+  brain: "/assets/icons/icon-brain.svg",
+  check: "/assets/icons/icon-check-seal.svg",
+  waveform: "/assets/icons/icon-waveform.svg",
+  shield: "/assets/icons/icon-shield.svg",
+  clock: "/assets/icons/icon-clock.svg",
+};
+Object.entries(ICONS).forEach(([key, src]) => {
+  const slot = document.getElementById(`icon-slot-${key}`);
+  if (slot) fetch(src).then((r) => r.text()).then((svg) => (slot.innerHTML = svg));
+});
+
+fetch("/assets/data/stats.json").then((r) => r.json()).then((s) => {
+  const strip = document.getElementById("stat-strip");
+  const items = [
+    [s.modules, "Modules"],
+    [s.nodes, "Decision nodes"],
+    [s.outcomes, "Outcome paths"],
+    [s.citedStatements, "Cited statements"],
+    [s.corpusStatements, "Full citation corpus"],
+    [s.scenarios, "Test scenarios"],
+  ];
+  strip.innerHTML = items.map(([n, label]) => `<div class="stat"><b>${n}</b><span>${label}</span></div>`).join("");
+});
+</script>
+
+</body>
+</html>

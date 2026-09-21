@@ -1,6 +1,6 @@
 # Hyperacute Stroke Decision Engine
 
-A TypeSafe-based, citation-traced decision engine for acute ischemic stroke,
+(hot on the release of TypeSafe) A TypeSafe-based, citation-traced decision engine for acute ischemic stroke,
 built from the 2026 AHA/ASA guideline, CSBPR 2022 (+ 2025 EVT update), and
 the Thrombosis Canada guide. For educational purposes only currently. This
 repo is the public site for the [TypeSafeStroke](https://github.com/neuroccm)

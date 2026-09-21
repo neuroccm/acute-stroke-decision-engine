@@ -19,7 +19,7 @@
 - Every page (`/`, `/engine/`, `/cases/`) must surface the disclaimer: *"Clinical decision support derived from the cited guidelines. It does not replace clinical judgement, local protocols, or specialist consultation. Draft pending clinical review."* (verbatim, from `decision_tree.json`'s `disclaimer` field).
 - Repo name: `acute-stroke-decision-engine`. GitHub account: `neuroccm` (already `gh`-authenticated in this environment).
 - Color tokens come from `CodeStrokeApp/Theme/AppColors.swift`; typography reuses IBM Plex Sans / Sans Condensed / Mono (already loaded by the vendored engine page) across all three pages.
-- Task 11 (publish to GitHub) is a hard stop: do not run it without an explicit, separate go-ahead from Houman, even if earlier tasks were approved.
+- Task 12 (publish to GitHub) is a hard stop: do not run it without an explicit, separate go-ahead from Houman, even if earlier tasks were approved.
 
 ---
 
@@ -1230,7 +1230,7 @@ git commit -m "Add README with local preview, sync, and deploy instructions"
 
 ---
 
-## Task 10b: Disclaimer page and footer duty-of-care callout
+## Task 11: Disclaimer page and footer duty-of-care callout
 
 Added mid-run at the user's request: a dedicated `/disclaimer/` page adapted
 from the author's existing codestroke.net terms-of-use text, plus a bold
@@ -1527,7 +1527,7 @@ git commit -m "Add disclaimer page and duty-of-care callout to every footer"
 
 ---
 
-## Task 11: Publish to GitHub (explicit go-ahead required)
+## Task 12: Publish to GitHub (explicit go-ahead required)
 
 **STOP. Do not run this task's steps without Houman explicitly confirming he wants the repo created and pushed now** — this is public, visible to others, and not easily reversible. Confirm the repo name (`acute-stroke-decision-engine`) and that `neuroccm` is the right account before proceeding, since both were assumed in this plan, not reconfirmed at execution time.
 
@@ -1556,6 +1556,6 @@ Run: `git log --oneline -1` and `git -C . rev-parse origin/main` — confirm the
 
 ## Self-review notes
 
-- **Spec coverage:** homepage (Task 9), `/engine/` live artifact + sync (Task 6, upstream patch Task 5), `/cases/` themed index (Tasks 7–8), CodeStrokeApp theme/icons (Tasks 2–4), public repo + disclaimer (Task 11 + disclaimer text baked into Tasks 8–10), MIT code license + verbatim-citation attribution (Task 1 LICENSE, Task 10 README) all have a task. Cloudflare deploy is documented (README) but not executed — no Cloudflare credentials available in this environment (checked: `wrangler whoami` fails, not logged in); left as a documented manual step, matching the spec's "Deployment" section.
+- **Spec coverage:** homepage (Task 9), `/engine/` live artifact + sync (Task 6, upstream patch Task 5), `/cases/` themed index (Tasks 7–8), CodeStrokeApp theme/icons (Tasks 2–4), public repo + disclaimer (Task 12 + disclaimer text baked into Tasks 8–10, plus a dedicated `/disclaimer/` page in Task 11), MIT code license + verbatim-citation attribution (Task 1 LICENSE, Task 10 README) all have a task. Cloudflare deploy is documented (README) but not executed — no Cloudflare credentials available in this environment (checked: `wrangler whoami` fails, not logged in); left as a documented manual step, matching the spec's "Deployment" section.
 - **Placeholder scan:** no TBD/TODO; every step has literal file content or an exact command.
 - **Type/interface consistency:** `THEME_ORDER` (Task 8) matches the 9 theme strings used in `case-notes.json` (Task 7) exactly; `stats.json` keys used in Task 9's fetch (`modules`, `nodes`, `outcomes`, `citedStatements`, `corpusStatements`, `scenarios`) match exactly what Task 6's `write_stats.py` writes; icon filenames referenced in Task 9's `ICONS` map match Task 3's filenames exactly; nav links (`/`, `/engine/`, `/cases/`) are consistent across Tasks 8, 9, and the injected nav in Task 6.

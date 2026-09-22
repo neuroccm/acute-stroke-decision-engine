@@ -145,6 +145,47 @@ p { margin: 0; }
 .prose p { margin: 0 0 14px; }
 .prose a { color: var(--accent); }
 
+/* Jev eval pages */
+.kind-badge {
+  display: inline-flex; align-items: center; font: 600 11px/1 var(--cond); letter-spacing: .03em;
+  text-transform: uppercase; padding: 4px 8px; border-radius: 4px; white-space: nowrap;
+}
+.kind-badge.k-recommended, .kind-badge.k-reasonable, .kind-badge.k-may_consider { background: rgba(52, 199, 89, .15); color: var(--green); }
+.kind-badge.k-individualize { background: rgba(255, 214, 10, .15); color: var(--yellow); }
+.kind-badge.k-not_recommended, .kind-badge.k-harm { background: rgba(255, 59, 48, .15); color: var(--red); }
+.kind-badge.k-action { background: rgba(0, 122, 255, .15); color: var(--accent); }
+
+.verdict { display: inline-flex; align-items: center; gap: 6px; font: 700 13px/1 var(--sans); }
+.verdict.v-correct { color: var(--green); }
+.verdict.v-incorrect { color: var(--red); }
+
+.compare-table { width: 100%; border-collapse: collapse; font-size: 13.5px; margin-top: 12px; }
+.compare-table th, .compare-table td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--rule); }
+.compare-table th { color: var(--text-2); font: 600 11px/1 var(--cond); text-transform: uppercase; letter-spacing: .04em; }
+.compare-table td b { font: 700 16px/1 var(--cond); }
+.compare-table tr:last-child td { border-bottom: 0; }
+
+.jev-group { margin-top: 28px; }
+.jev-case {
+  background: var(--surface-1); border: 1px solid var(--rule); border-radius: var(--radius);
+  padding: 16px 18px; margin-bottom: 10px;
+}
+.jev-case.is-miss { border-color: var(--red); }
+.jev-case summary { cursor: pointer; list-style: none; }
+.jev-case summary::-webkit-details-marker { display: none; }
+.jev-case__head { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.jev-case__id { font: 600 11px/1 var(--mono); color: var(--accent); text-transform: uppercase; }
+.jev-case__title { font: 600 14px/1.3 var(--sans); flex: 1 1 auto; min-width: 200px; }
+.jev-case__verdicts { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 10px; }
+.jev-q { display: flex; align-items: center; gap: 8px; font-size: 12.5px; color: var(--text-2); }
+.jev-sub {
+  display: grid; gap: 10px; margin-top: 14px; padding-top: 14px; border-top: 1px solid var(--rule);
+}
+.jev-sub-q { font: 600 12px/1 var(--cond); letter-spacing: .02em; color: var(--text-2); text-transform: uppercase; margin-bottom: 2px; }
+.jev-sub-row { display: flex; justify-content: space-between; gap: 12px; font-size: 13px; }
+.jev-sub-row b { font-weight: 600; }
+.jev-sub-row span { color: var(--text-2); font: 500 12px var(--mono); }
+
 @media (max-width: 640px) {
   .topnav__links { gap: 14px; }
   .hero { padding: 64px 0 48px; }

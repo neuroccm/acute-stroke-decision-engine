@@ -1,0 +1,4506 @@
+{
+  "singleShot": {
+    "correct": 28,
+    "total": 66,
+    "byQuestion": {
+      "ivt_decision": {
+        "correct": 16,
+        "total": 35
+      },
+      "evt_decision": {
+        "correct": 12,
+        "total": 31
+      }
+    }
+  },
+  "decomposed": {
+    "correct": 63,
+    "total": 66,
+    "byQuestion": {
+      "evt_decision": {
+        "correct": 31,
+        "total": 31
+      },
+      "ivt_decision": {
+        "correct": 32,
+        "total": 35
+      }
+    }
+  },
+  "caseCount": 42,
+  "cases": {
+    "G01": {
+      "title": "Early window, M1, ASPECTS 9, mRS 0 (baseline favorable)",
+      "questions": {
+        "ivt_decision": {
+          "target_kind": "recommended",
+          "synthesized_kind": "recommended",
+          "correct": true,
+          "sub_answers": {
+            "ivt_screen_severity": {
+              "band": "clear",
+              "confidence": 0.97,
+              "probabilities": {
+                "absolute": 0.0,
+                "relative": 0.02,
+                "clear": 0.98,
+                "unconfirmed": 0.0
+              }
+            },
+            "ivt_disabling_deficit": {
+              "band": "disabling",
+              "confidence": 1.0,
+              "probabilities": {
+                "not_disabling": 0.0,
+                "unclear": 0.0,
+                "disabling": 1.0
+              }
+            },
+            "ivt_time_band": {
+              "band": "early",
+              "confidence": 1.0,
+              "probabilities": {
+                "late": 0.0,
+                "extended": 0.0,
+                "unknown": 0.0,
+                "early": 1.0
+              }
+            },
+            "evt_time_band": {
+              "band": "early",
+              "confidence": 1.0,
+              "probabilities": {
+                "unknown": 0.0,
+                "extended": 0.0,
+                "late": 0.0,
+                "early": 1.0
+              }
+            },
+            "evt_core_band": {
+              "band": "favorable",
+              "confidence": 0.99,
+              "probabilities": {
+                "moderate": 0.0,
+                "unfavorable": 0.0,
+                "favorable": 1.0
+              }
+            },
+            "evt_mrs_band": {
+              "band": "independent",
+              "confidence": 1.0,
+              "probabilities": {
+                "independent": 1.0,
+                "mild_dependence": 0.0,
+                "moderate_severe_dependence": 0.0,
+                "severe_dependence": 0.0
+              }
+            },
+            "evt_nihss_band": {
+              "band": "high",
+              "confidence": 1.0,
+              "probabilities": {
+                "moderate": 0.0,
+                "low": 0.0,
+                "high": 1.0
+              }
+            }
+          }
+        },
+        "evt_decision": {
+          "target_kind": "recommended",
+          "synthesized_kind": "recommended",
+          "correct": true,
+          "sub_answers": {
+            "ivt_screen_severity": {
+              "band": "clear",
+              "confidence": 0.97,
+              "probabilities": {
+                "absolute": 0.0,
+                "relative": 0.02,
+                "clear": 0.98,
+                "unconfirmed": 0.0
+              }
+            },
+            "ivt_disabling_deficit": {
+              "band": "disabling",
+              "confidence": 1.0,
+              "probabilities": {
+                "not_disabling": 0.0,
+                "unclear": 0.0,
+                "disabling": 1.0
+              }
+            },
+            "ivt_time_band": {
+              "band": "early",
+              "confidence": 1.0,
+              "probabilities": {
+                "late": 0.0,
+                "extended": 0.0,
+                "unknown": 0.0,
+                "early": 1.0
+              }
+            },
+            "evt_time_band": {
+              "band": "early",
+              "confidence": 1.0,
+              "probabilities": {
+                "unknown": 0.0,
+                "extended": 0.0,
+                "late": 0.0,
+                "early": 1.0
+              }
+            },
+            "evt_core_band": {
+              "band": "favorable",
+              "confidence": 0.99,
+              "probabilities": {
+                "moderate": 0.0,
+                "unfavorable": 0.0,
+                "favorable": 1.0
+              }
+            },
+            "evt_mrs_band": {
+              "band": "independent",
+              "confidence": 1.0,
+              "probabilities": {
+                "independent": 1.0,
+                "mild_dependence": 0.0,
+                "moderate_severe_dependence": 0.0,
+                "severe_dependence": 0.0
+              }
+            },
+            "evt_nihss_band": {
+              "band": "high",
+              "confidence": 1.0,
+              "probabilities": {
+                "moderate": 0.0,
+                "low": 0.0,
+                "high": 1.0
+              }
+            }
+          }
+        }
+      }
+    },
+    "G02": {
+      "title": "Late window (10 h), M1, ASPECTS 9, mRS 0",
+      "questions": {
+        "ivt_decision": {
+          "target_kind": "reasonable",
+          "synthesized_kind": "reasonable",
+          "correct": true,
+          "sub_answers": {
+            "ivt_screen_severity": {
+              "band": "clear",
+              "confidence": 0.97,
+              "probabilities": {
+                "relative": 0.02,
+                "clear": 0.98,
+                "absolute": 0.0,
+                "unconfirmed": 0.0
+              }
+            },
+            "ivt_disabling_deficit": {
+              "band": "disabling",
+              "confidence": 1.0,
+              "probabilities": {
+                "unclear": 0.0,
+                "not_disabling": 0.0,
+                "disabling": 1.0
+              }
+            },
+            "ivt_time_band": {
+              "band": "late",
+              "confidence": 0.99,
+              "probabilities": {
+                "extended": 0.0,
+                "unknown": 0.0,
+                "late": 0.99,
+                "early": 0.01
+              }
+            },
+            "evt_time_band": {
+              "band": "late",
+              "confidence": 1.0,
+              "probabilities": {
+                "extended": 0.0,
+                "unknown": 0.0,
+                "late": 1.0,
+                "early": 0.0
+              }
+            },
+            "evt_core_band": {
+              "band": "favorable",
+              "confidence": 1.0,
+              "probabilities": {
+                "moderate": 0.0,
+                "unfavorable": 0.0,
+                "favorable": 1.0
+              }
+            },
+            "evt_mrs_band": {
+              "band": "independent",
+              "confidence": 1.0,
+              "probabilities": {
+                "mild_dependence": 0.0,
+                "moderate_severe_dependence": 0.0,
+                "independent": 1.0,
+                "severe_dependence": 0.0
+              }
+            },
+            "evt_nihss_band": {
+              "band": "high",
+              "confidence": 1.0,
+              "probabilities": {
+                "low": 0.0,
+                "moderate": 0.0,
+                "high": 1.0
+              }
+            }
+          }
+        },
+        "evt_decision": {
+          "target_kind": "recommended",
+          "synthesized_kind": "recommended",
+          "correct": true,
+          "sub_answers": {
+            "ivt_screen_severity": {
+              "band": "clear",
+              "confidence": 0.97,
+              "probabilities": {
+                "relative": 0.02,
+                "clear": 0.98,
+                "absolute": 0.0,
+                "unconfirmed": 0.0
+              }
+            },
+            "ivt_disabling_deficit": {
+              "band": "disabling",
+              "confidence": 1.0,
+              "probabilities": {
+                "unclear": 0.0,
+                "not_disabling": 0.0,
+                "disabling": 1.0
+              }
+            },
+            "ivt_time_band": {
+              "band": "late",
+              "confidence": 0.99,
+              "probabilities": {
+                "extended": 0.0,
+                "unknown": 0.0,
+                "late": 0.99,
+                "early": 0.01
+              }
+            },
+            "evt_time_band": {
+              "band": "late",
+              "confidence": 1.0,
+              "probabilities": {
+                "extended": 0.0,
+                "unknown": 0.0,
+                "late": 1.0,
+                "early": 0.0
+              }
+            },
+            "evt_core_band": {
+              "band": "favorable",
+              "confidence": 1.0,
+              "probabilities": {
+                "moderate": 0.0,
+                "unfavorable": 0.0,
+                "favorable": 1.0
+              }
+            },
+            "evt_mrs_band": {
+              "band": "independent",
+              "confidence": 1.0,
+              "probabilities": {
+                "mild_dependence": 0.0,
+                "moderate_severe_dependence": 0.0,
+                "independent": 1.0,
+                "severe_dependence": 0.0
+              }
+            },
+            "evt_nihss_band": {
+              "band": "high",
+              "confidence": 1.0,
+              "probabilities": {
+                "low": 0.0,
+                "moderate": 0.0,
+                "high": 1.0
+              }
+            }
+          }
+        }
+      }
+    },
+    "G03": {
+      "title": "Extended window (30 h), M1, mRS 0 (beyond trial-proven EVT window)",
+      "questions": {
+        "evt_decision": {
+          "target_kind": "individualize",
+          "synthesized_kind": "individualize",
+          "correct": true,
+          "sub_answers": {
+            "evt_time_band": {
+              "band": "extended",
+              "confidence": 0.91,
+              "probabilities": {
+                "unknown": 0.0,
+                "late": 0.05,
+                "extended": 0.93,
+                "early": 0.02
+              }
+            },
+            "evt_core_band": {
+              "band": "favorable",
+              "confidence": 1.0,
+              "probabilities": {
+                "moderate": 0.0,
+                "favorable": 1.0,
+                "unfavorable": 0.0
+              }
+            },
+            "evt_mrs_band": {
+              "band": "independent",
+              "confidence": 1.0,
+              "probabilities": {
+                "independent": 1.0,
+                "mild_dependence": 0.0,
+                "severe_dependence": 0.0,
+                "moderate_severe_dependence": 0.0
+              }
+            },
+            "evt_nihss_band": {
+              "band": "high",
+              "confidence": 1.0,
+              "probabilities": {
+                "moderate": 0.0,
+                "high": 1.0,
+                "low": 0.0
+              }
+            }
+          }
+        }
+      }
+    },
+    "G04": {
+      "title": "Early window, M1, ASPECTS 4 (moderate-low core), mRS 0",
+      "questions": {
+        "ivt_decision": {
+          "target_kind": "individualize",
+          "synthesized_kind": "recommended",
+          "correct": false,
+          "sub_answers": {
+            "ivt_screen_severity": {
+              "band": "clear",
+              "confidence": 0.6,
+              "probabilities": {
+                "clear": 0.7,
+                "relative": 0.29,
+                "absolute": 0.01,
+                "unconfirmed": 0.0
+              }
+            },
+            "ivt_disabling_deficit": {
+              "band": "disabling",
+              "confidence": 1.0,
+              "probabilities": {
+                "not_disabling": 0.0,
+                "disabling": 1.0,
+                "unclear": 0.0
+              }
+            },
+            "ivt_time_band": {
+              "band": "early",
+              "confidence": 1.0,
+              "probabilities": {
+                "unknown": 0.0,
+                "extended": 0.0,
+                "late": 0.0,
+                "early": 1.0
+              }
+            },
+            "evt_time_band": {
+              "band": "early",
+              "confidence": 1.0,
+              "probabilities": {
+                "unknown": 0.0,
+                "extended": 0.0,
+                "late": 0.0,
+                "early": 1.0
+              }
+            },
+            "evt_core_band": {
+              "band": "moderate",
+              "confidence": 0.99,
+              "probabilities": {
+                "unfavorable": 0.0,
+                "favorable": 0.0,
+                "moderate": 1.0
+              }
+            },
+            "evt_mrs_band": {
+              "band": "independent",
+              "confidence": 1.0,
+              "probabilities": {
+                "mild_dependence": 0.0,
+                "severe_dependence": 0.0,
+                "moderate_severe_dependence": 0.0,
+                "independent": 1.0
+              }
+            },
+            "evt_nihss_band": {
+              "band": "high",
+              "confidence": 1.0,
+              "probabilities": {
+                "low": 0.0,
+                "high": 1.0,
+                "moderate": 0.0
+              }
+            }
+          }
+        },
+        "evt_decision": {
+          "target_kind": "recommended",
+          "synthesized_kind": "recommended",
+          "correct": true,
+          "sub_answers": {
+            "ivt_screen_severity": {
+              "band": "clear",
+              "confidence": 0.6,
+              "probabilities": {
+                "clear": 0.7,
+                "relative": 0.29,
+                "absolute": 0.01,
+                "unconfirmed": 0.0
+              }
+            },
+            "ivt_disabling_deficit": {
+              "band": "disabling",
+              "confidence": 1.0,
+              "probabilities": {
+                "not_disabling": 0.0,
+                "disabling": 1.0,
+                "unclear": 0.0
+              }
+            },
+            "ivt_time_band": {
+              "band": "early",
+              "confidence": 1.0,
+              "probabilities": {
+                "unknown": 0.0,
+                "extended": 0.0,
+                "late": 0.0,
+                "early": 1.0
+              }
+            },
+            "evt_time_band": {
+              "band": "early",
+              "confidence": 1.0,
+              "probabilities": {
+                "unknown": 0.0,
+                "extended": 0.0,
+                "late": 0.0,
+                "early": 1.0
+              }
+            },
+            "evt_core_band": {
+              "band": "moderate",
+              "confidence": 0.99,
+              "probabilities": {
+                "unfavorable": 0.0,
+                "favorable": 0.0,
+                "moderate": 1.0
+              }
+            },
+            "evt_mrs_band": {
+              "band": "independent",
+              "confidence": 1.0,
+              "probabilities": {
+                "mild_dependence": 0.0,
+                "severe_dependence": 0.0,
+                "moderate_severe_dependence": 0.0,
+                "independent": 1.0
+              }
+            },
+            "evt_nihss_band": {
+              "band": "high",
+              "confidence": 1.0,
+              "probabilities": {
+                "low": 0.0,
+                "high": 1.0,
+                "moderate": 0.0
+              }
+            }
+          }
+        }
+      }
+    },
+    "G05": {
+      "title": "Early window, M1, ASPECTS 1 (large core), age 65, mRS 0, no mass effect",
+      "questions": {
+        "ivt_decision": {
+          "target_kind": "individualize",
+          "synthesized_kind": "recommended",
+          "correct": false,
+          "sub_answers": {
+            "ivt_screen_severity": {
+              "band": "clear",
+              "confidence": 0.58,
+              "probabilities": {
+                "unconfirmed": 0.0,
+                "relative": 0.31,
+                "absolute": 0.0,
+                "clear": 0.69
+              }
+            },
+            "ivt_disabling_deficit": {
+              "band": "disabling",
+              "confidence": 1.0,
+              "probabilities": {
+                "not_disabling": 0.0,
+                "unclear": 0.0,
+                "disabling": 1.0
+              }
+            },
+            "ivt_time_band": {
+              "band": "early",
+              "confidence": 1.0,
+              "probabilities": {
+                "unknown": 0.0,
+                "early": 1.0,
+                "extended": 0.0,
+                "late": 0.0
+              }
+            },
+            "evt_time_band": {
+              "band": "early",
+              "confidence": 1.0,
+              "probabilities": {
+                "unknown": 0.0,
+                "early": 1.0,
+                "extended": 0.0,
+                "late": 0.0
+              }
+            },
+            "evt_core_band": {
+              "band": "unfavorable",
+              "confidence": 0.97,
+              "probabilities": {
+                "unfavorable": 0.98,
+                "favorable": 0.02,
+                "moderate": 0.0
+              }
+            },
+            "evt_mrs_band": {
+              "band": "independent",
+              "confidence": 1.0,
+              "probabilities": {
+                "severe_dependence": 0.0,
+                "independent": 1.0,
+                "moderate_severe_dependence": 0.0,
+                "mild_dependence": 0.0
+              }
+            },
+            "evt_nihss_band": {
+              "band": "high",
+              "confidence": 1.0,
+              "probabilities": {
+                "high": 1.0,
+                "moderate": 0.0,
+                "low": 0.0
+              }
+            }
+          }
+        },
+        "evt_decision": {
+          "target_kind": "reasonable",
+          "synthesized_kind": "reasonable",
+          "correct": true,
+          "sub_answers": {
+            "ivt_screen_severity": {
+              "band": "clear",
+              "confidence": 0.58,
+              "probabilities": {
+                "unconfirmed": 0.0,
+                "relative": 0.31,
+                "absolute": 0.0,
+                "clear": 0.69
+              }
+            },
+            "ivt_disabling_deficit": {
+              "band": "disabling",
+              "confidence": 1.0,
+              "probabilities": {
+                "not_disabling": 0.0,
+                "unclear": 0.0,
+                "disabling": 1.0
+              }
+            },
+            "ivt_time_band": {
+              "band": "early",
+              "confidence": 1.0,
+              "probabilities": {
+                "unknown": 0.0,
+                "early": 1.0,
+                "extended": 0.0,
+                "late": 0.0
+              }
+            },
+            "evt_time_band": {
+              "band": "early",
+              "confidence": 1.0,
+              "probabilities": {
+                "unknown": 0.0,
+                "early": 1.0,
+                "extended": 0.0,
+                "late": 0.0
+              }
+            },
+            "evt_core_band": {
+              "band": "unfavorable",
+              "confidence": 0.97,
+              "probabilities": {
+                "unfavorable": 0.98,
+                "favorable": 0.02,
+                "moderate": 0.0
+              }
+            },
+            "evt_mrs_band": {
+              "band": "independent",
+              "confidence": 1.0,
+              "probabilities": {
+                "severe_dependence": 0.0,
+                "independent": 1.0,
+                "moderate_severe_dependence": 0.0,
+                "mild_dependence": 0.0
+              }
+            },
+            "evt_nihss_band": {
+              "band": "high",
+              "confidence": 1.0,
+              "probabilities": {
+                "high": 1.0,
+                "moderate": 0.0,
+                "low": 0.0
+              }
+            }
+          }
+        }
+      }
+    },
+    "G06": {
+      "title": "Early window, M1, ASPECTS 1 (large core), age 84 (>=80 age gate), mRS 0",
+      "questions": {
+        "ivt_decision": {
+          "target_kind": "individualize",
+          "synthesized_kind": "recommended",
+          "correct": false,
+          "sub_answers": {
+            "ivt_screen_severity": {
+              "band": "clear",
+              "confidence": 0.77,
+              "probabilities": {
+                "absolute": 0.0,
+                "clear": 0.83,
+                "relative": 0.17,
+                "unconfirmed": 0.0
+              }
+            },
+            "ivt_disabling_deficit": {
+              "band": "disabling",
+              "confidence": 1.0,
+              "probabilities": {
+                "unclear": 0.0,
+                "not_disabling": 0.0,
+                "disabling": 1.0
+              }
+            },
+            "ivt_time_band": {
+              "band": "early",
+              "confidence": 1.0,
+              "probabilities": {
+                "unknown": 0.0,
+                "extended": 0.0,
+                "late": 0.0,
+                "early": 1.0
+              }
+            },
+            "evt_time_band": {
+              "band": "early",
+              "confidence": 1.0,
+              "probabilities": {
+                "unknown": 0.0,
+                "extended": 0.0,
+                "late": 0.0,
+                "early": 1.0
+              }
+            },
+            "evt_core_band": {
+              "band": "unfavorable",
+              "confidence": 0.95,
+              "probabilities": {
+                "moderate": 0.0,
+                "unfavorable": 0.97,
+                "favorable": 0.03
+              }
+            },
+            "evt_mrs_band": {
+              "band": "independent",
+              "confidence": 1.0,
+              "probabilities": {
+                "mild_dependence": 0.0,
+                "independent": 1.0,
+                "moderate_severe_dependence": 0.0,
+                "severe_dependence": 0.0
+              }
+            },
+            "evt_nihss_band": {
+              "band": "high",
+              "confidence": 1.0,
+              "probabilities": {
+                "moderate": 0.0,
+                "low": 0.0,
+                "high": 1.0
+              }
+            }
+          }
+        },
+        "evt_decision": {
+          "target_kind": "individualize",
+          "synthesized_kind": "individualize",
+          "correct": true,
+          "sub_answers": {
+            "ivt_screen_severity": {
+              "band": "clear",
+              "confidence": 0.77,
+              "probabilities": {
+                "absolute": 0.0,
+                "clear": 0.83,
+                "relative": 0.17,
+                "unconfirmed": 0.0
+              }
+            },
+            "ivt_disabling_deficit": {
+              "band": "disabling",
+              "confidence": 1.0,
+              "probabilities": {
+                "unclear": 0.0,
+                "not_disabling": 0.0,
+                "disabling": 1.0
+              }
+            },
+            "ivt_time_band": {
+              "band": "early",
+              "confidence": 1.0,
+              "probabilities": {
+                "unknown": 0.0,
+                "extended": 0.0,
+                "late": 0.0,
+                "early": 1.0
+              }
+            },
+            "evt_time_band": {
+              "band": "early",
+              "confidence": 1.0,
+              "probabilities": {
+                "unknown": 0.0,
+                "extended": 0.0,
+                "late": 0.0,
+                "early": 1.0
+              }
+            },
+            "evt_core_band": {
+              "band": "unfavorable",
+              "confidence": 0.95,
+              "probabilities": {
+                "moderate": 0.0,
+                "unfavorable": 0.97,
+                "favorable": 0.03
+              }
+            },
+            "evt_mrs_band": {
+              "band": "independent",
+              "confidence": 1.0,
+              "probabilities": {
+                "mild_dependence": 0.0,
+                "independent": 1.0,
+                "moderate_severe_dependence": 0.0,
+                "severe_dependence": 0.0
+              }
+            },
+            "evt_nihss_band": {
+              "band": "high",
+              "confidence": 1.0,
+              "probabilities": {
+                "moderate": 0.0,
+                "low": 0.0,
+                "high": 1.0
+              }
+            }
+          }
+        }
+      }
+    },
+    "G07": {
+      "title": "Early window, M1, ASPECTS 9, mRS 2",
+      "questions": {
+        "ivt_decision": {
+          "target_kind": "recommended",
+          "synthesized_kind": "recommended",
+          "correct": true,
+          "sub_answers": {
+            "ivt_screen_severity": {
+              "band": "clear",
+              "confidence": 0.93,
+              "probabilities": {
+                "relative": 0.05,
+                "clear": 0.95,
+                "unconfirmed": 0.0,
+                "absolute": 0.0
+              }
+            },
+            "ivt_disabling_deficit": {
+              "band": "disabling",
+              "confidence": 1.0,
+              "probabilities": {
+                "unclear": 0.0,
+                "not_disabling": 0.0,
+                "disabling": 1.0
+              }
+            },
+            "ivt_time_band": {
+              "band": "early",
+              "confidence": 1.0,
+              "probabilities": {
+                "unknown": 0.0,
+                "early": 1.0,
+                "extended": 0.0,
+                "late": 0.0
+              }
+            },
+            "evt_time_band": {
+              "band": "early",
+              "confidence": 1.0,
+              "probabilities": {
+                "unknown": 0.0,
+                "early": 1.0,
+                "extended": 0.0,
+                "late": 0.0
+              }
+            },
+            "evt_core_band": {
+              "band": "favorable",
+              "confidence": 0.99,
+              "probabilities": {
+                "unfavorable": 0.0,
+                "favorable": 1.0,
+                "moderate": 0.0
+              }
+            },
+            "evt_mrs_band": {
+              "band": "mild_dependence",
+              "confidence": 1.0,
+              "probabilities": {
+                "mild_dependence": 1.0,
+                "moderate_severe_dependence": 0.0,
+                "independent": 0.0,
+                "severe_dependence": 0.0
+              }
+            },
+            "evt_nihss_band": {
+              "band": "high",
+              "confidence": 1.0,
+              "probabilities": {
+                "high": 1.0,
+                "low": 0.0,
+                "moderate": 0.0
+              }
+            }
+          }
+        },
+        "evt_decision": {
+          "target_kind": "reasonable",
+          "synthesized_kind": "reasonable",
+          "correct": true,
+          "sub_answers": {
+            "ivt_screen_severity": {
+              "band": "clear",
+              "confidence": 0.93,
+              "probabilities": {
+                "relative": 0.05,
+                "clear": 0.95,
+                "unconfirmed": 0.0,
+                "absolute": 0.0
+              }
+            },
+            "ivt_disabling_deficit": {
+              "band": "disabling",
+              "confidence": 1.0,
+              "probabilities": {
+                "unclear": 0.0,
+                "not_disabling": 0.0,
+                "disabling": 1.0
+              }
+            },
+            "ivt_time_band": {
+              "band": "early",
+              "confidence": 1.0,
+              "probabilities": {
+                "unknown": 0.0,
+                "early": 1.0,
+                "extended": 0.0,
+                "late": 0.0
+              }
+            },
+            "evt_time_band": {
+              "band": "early",
+              "confidence": 1.0,
+              "probabilities": {
+                "unknown": 0.0,
+                "early": 1.0,
+                "extended": 0.0,
+                "late": 0.0
+              }
+            },
+            "evt_core_band": {
+              "band": "favorable",
+              "confidence": 0.99,
+              "probabilities": {
+                "unfavorable": 0.0,
+                "favorable": 1.0,
+                "moderate": 0.0
+              }
+            },
+            "evt_mrs_band": {
+              "band": "mild_dependence",
+              "confidence": 1.0,
+              "probabilities": {
+                "mild_dependence": 1.0,
+                "moderate_severe_dependence": 0.0,
+                "independent": 0.0,
+                "severe_dependence": 0.0
+              }
+            },
+            "evt_nihss_band": {
+              "band": "high",
+              "confidence": 1.0,
+              "probabilities": {
+                "high": 1.0,
+                "low": 0.0,
+                "moderate": 0.0
+              }
+            }
+          }
+        }
+      }
+    },
+    "G08": {
+      "title": "Early window, M1, ASPECTS 9, mRS 3",
+      "questions": {
+        "ivt_decision": {
+          "target_kind": "individualize",
+          "synthesized_kind": "individualize",
+          "correct": true,
+          "sub_answers": {
+            "ivt_screen_severity": {
+              "band": "relative",
+              "confidence": 0.97,
+              "probabilities": {
+                "relative": 0.98,
+                "unconfirmed": 0.0,
+                "absolute": 0.0,
+                "clear": 0.02
+              }
+            },
+            "ivt_disabling_deficit": {
+              "band": "disabling",
+              "confidence": 1.0,
+              "probabilities": {
+                "not_disabling": 0.0,
+                "unclear": 0.0,
+                "disabling": 1.0
+              }
+            },
+            "ivt_time_band": {
+              "band": "early",
+              "confidence": 1.0,
+              "probabilities": {
+                "extended": 0.0,
+                "unknown": 0.0,
+                "late": 0.0,
+                "early": 1.0
+              }
+            },
+            "evt_time_band": {
+              "band": "early",
+              "confidence": 1.0,
+              "probabilities": {
+                "extended": 0.0,
+                "unknown": 0.0,
+                "late": 0.0,
+                "early": 1.0
+              }
+            },
+            "evt_core_band": {
+              "band": "favorable",
+              "confidence": 1.0,
+              "probabilities": {
+                "moderate": 0.0,
+                "favorable": 1.0,
+                "unfavorable": 0.0
+              }
+            },
+            "evt_mrs_band": {
+              "band": "moderate_severe_dependence",
+              "confidence": 0.98,
+              "probabilities": {
+                "moderate_severe_dependence": 0.99,
+                "independent": 0.0,
+                "severe_dependence": 0.0,
+                "mild_dependence": 0.01
+              }
+            },
+            "evt_nihss_band": {
+              "band": "high",
+              "confidence": 1.0,
+              "probabilities": {
+                "low": 0.0,
+                "moderate": 0.0,
+                "high": 1.0
+              }
+            }
+          }
+        },
+        "evt_decision": {
+          "target_kind": "may_consider",
+          "synthesized_kind": "may_consider",
+          "correct": true,
+          "sub_answers": {
+            "ivt_screen_severity": {
+              "band": "relative",
+              "confidence": 0.97,
+              "probabilities": {
+                "relative": 0.98,
+                "unconfirmed": 0.0,
+                "absolute": 0.0,
+                "clear": 0.02
+              }
+            },
+            "ivt_disabling_deficit": {
+              "band": "disabling",
+              "confidence": 1.0,
+              "probabilities": {
+                "not_disabling": 0.0,
+                "unclear": 0.0,
+                "disabling": 1.0
+              }
+            },
+            "ivt_time_band": {
+              "band": "early",
+              "confidence": 1.0,
+              "probabilities": {
+                "extended": 0.0,
+                "unknown": 0.0,
+                "late": 0.0,
+                "early": 1.0
+              }
+            },
+            "evt_time_band": {
+              "band": "early",
+              "confidence": 1.0,
+              "probabilities": {
+                "extended": 0.0,
+                "unknown": 0.0,
+                "late": 0.0,
+                "early": 1.0
+              }
+            },
+            "evt_core_band": {
+              "band": "favorable",
+              "confidence": 1.0,
+              "probabilities": {
+                "moderate": 0.0,
+                "favorable": 1.0,
+                "unfavorable": 0.0
+              }
+            },
+            "evt_mrs_band": {
+              "band": "moderate_severe_dependence",
+              "confidence": 0.98,
+              "probabilities": {
+                "moderate_severe_dependence": 0.99,
+                "independent": 0.0,
+                "severe_dependence": 0.0,
+                "mild_dependence": 0.01
+              }
+            },
+            "evt_nihss_band": {
+              "band": "high",
+              "confidence": 1.0,
+              "probabilities": {
+                "low": 0.0,
+                "moderate": 0.0,
+                "high": 1.0
+              }
+            }
+          }
+        }
+      }
+    },
+    "G09": {
+      "title": "Early window, M1, ASPECTS 9, mRS 5 (severe baseline disability)",
+      "questions": {
+        "ivt_decision": {
+          "target_kind": "individualize",
+          "synthesized_kind": "individualize",
+          "correct": true,
+          "sub_answers": {
+            "ivt_screen_severity": {
+              "band": "relative",
+              "confidence": 0.99,
+              "probabilities": {
+                "clear": 0.01,
+                "unconfirmed": 0.0,
+                "absolute": 0.0,
+                "relative": 0.99
+              }
+            },
+            "ivt_disabling_deficit": {
+              "band": "disabling",
+              "confidence": 1.0,
+              "probabilities": {
+                "unclear": 0.0,
+                "not_disabling": 0.0,
+                "disabling": 1.0
+              }
+            },
+            "ivt_time_band": {
+              "band": "early",
+              "confidence": 1.0,
+              "probabilities": {
+                "late": 0.0,
+                "extended": 0.0,
+                "unknown": 0.0,
+                "early": 1.0
+              }
+            },
+            "evt_time_band": {
+              "band": "early",
+              "confidence": 1.0,
+              "probabilities": {
+                "late": 0.0,
+                "extended": 0.0,
+                "unknown": 0.0,
+                "early": 1.0
+              }
+            },
+            "evt_core_band": {
+              "band": "favorable",
+              "confidence": 0.99,
+              "probabilities": {
+                "unfavorable": 0.0,
+                "moderate": 0.0,
+                "favorable": 1.0
+              }
+            },
+            "evt_mrs_band": {
+              "band": "severe_dependence",
+              "confidence": 0.96,
+              "probabilities": {
+                "independent": 0.0,
+                "mild_dependence": 0.0,
+                "severe_dependence": 0.98,
+                "moderate_severe_dependence": 0.02
+              }
+            },
+            "evt_nihss_band": {
+              "band": "high",
+              "confidence": 1.0,
+              "probabilities": {
+                "high": 1.0,
+                "moderate": 0.0,
+                "low": 0.0
+              }
+            }
+          }
+        },
+        "evt_decision": {
+          "target_kind": "individualize",
+          "synthesized_kind": "individualize",
+          "correct": true,
+          "sub_answers": {
+            "ivt_screen_severity": {
+              "band": "relative",
+              "confidence": 0.99,
+              "probabilities": {
+                "clear": 0.01,
+                "unconfirmed": 0.0,
+                "absolute": 0.0,
+                "relative": 0.99
+              }
+            },
+            "ivt_disabling_deficit": {
+              "band": "disabling",
+              "confidence": 1.0,
+              "probabilities": {
+                "unclear": 0.0,
+                "not_disabling": 0.0,
+                "disabling": 1.0
+              }
+            },
+            "ivt_time_band": {
+              "band": "early",
+              "confidence": 1.0,
+              "probabilities": {
+                "late": 0.0,
+                "extended": 0.0,
+                "unknown": 0.0,
+                "early": 1.0
+              }
+            },
+            "evt_time_band": {
+              "band": "early",
+              "confidence": 1.0,
+              "probabilities": {
+                "late": 0.0,
+                "extended": 0.0,
+                "unknown": 0.0,
+                "early": 1.0
+              }
+            },
+            "evt_core_band": {
+              "band": "favorable",
+              "confidence": 0.99,
+              "probabilities": {
+                "unfavorable": 0.0,
+                "moderate": 0.0,
+                "favorable": 1.0
+              }
+            },
+            "evt_mrs_band": {
+              "band": "severe_dependence",
+              "confidence": 0.96,
+              "probabilities": {
+                "independent": 0.0,
+                "mild_dependence": 0.0,
+                "severe_dependence": 0.98,
+                "moderate_severe_dependence": 0.02
+              }
+            },
+            "evt_nihss_band": {
+              "band": "high",
+              "confidence": 1.0,
+              "probabilities": {
+                "high": 1.0,
+                "moderate": 0.0,
+                "low": 0.0
+              }
+            }
+          }
+        }
+      }
+    },
+    "G10": {
+      "title": "Early window, M1, NIHSS 4 (low), mRS 0",
+      "questions": {
+        "ivt_decision": {
+          "target_kind": "recommended",
+          "synthesized_kind": "recommended",
+          "correct": true,
+          "sub_answers": {
+            "ivt_screen_severity": {
+              "band": "clear",
+              "confidence": 0.97,
+              "probabilities": {
+                "clear": 0.98,
+                "relative": 0.02,
+                "unconfirmed": 0.0,
+                "absolute": 0.0
+              }
+            },
+            "ivt_disabling_deficit": {
+              "band": "disabling",
+              "confidence": 0.99,
+              "probabilities": {
+                "unclear": 0.0,
+                "disabling": 0.99,
+                "not_disabling": 0.01
+              }
+            },
+            "ivt_time_band": {
+              "band": "early",
+              "confidence": 1.0,
+              "probabilities": {
+                "unknown": 0.0,
+                "early": 1.0,
+                "late": 0.0,
+                "extended": 0.0
+              }
+            },
+            "evt_time_band": {
+              "band": "early",
+              "confidence": 1.0,
+              "probabilities": {
+                "unknown": 0.0,
+                "early": 1.0,
+                "extended": 0.0,
+                "late": 0.0
+              }
+            },
+            "evt_core_band": {
+              "band": "favorable",
+              "confidence": 1.0,
+              "probabilities": {
+                "unfavorable": 0.0,
+                "moderate": 0.0,
+                "favorable": 1.0
+              }
+            },
+            "evt_mrs_band": {
+              "band": "independent",
+              "confidence": 1.0,
+              "probabilities": {
+                "severe_dependence": 0.0,
+                "mild_dependence": 0.0,
+                "independent": 1.0,
+                "moderate_severe_dependence": 0.0
+              }
+            },
+            "evt_nihss_band": {
+              "band": "low",
+              "confidence": 0.99,
+              "probabilities": {
+                "high": 0.0,
+                "low": 1.0,
+                "moderate": 0.0
+              }
+            }
+          }
+        },
+        "evt_decision": {
+          "target_kind": "individualize",
+          "synthesized_kind": "individualize",
+          "correct": true,
+          "sub_answers": {
+            "ivt_screen_severity": {
+              "band": "clear",
+              "confidence": 0.97,
+              "probabilities": {
+                "clear": 0.98,
+                "relative": 0.02,
+                "unconfirmed": 0.0,
+                "absolute": 0.0
+              }
+            },
+            "ivt_disabling_deficit": {
+              "band": "disabling",
+              "confidence": 0.99,
+              "probabilities": {
+                "unclear": 0.0,
+                "disabling": 0.99,
+                "not_disabling": 0.01
+              }
+            },
+            "ivt_time_band": {
+              "band": "early",
+              "confidence": 1.0,
+              "probabilities": {
+                "unknown": 0.0,
+                "early": 1.0,
+                "late": 0.0,
+                "extended": 0.0
+              }
+            },
+            "evt_time_band": {
+              "band": "early",
+              "confidence": 1.0,
+              "probabilities": {
+                "unknown": 0.0,
+                "early": 1.0,
+                "extended": 0.0,
+                "late": 0.0
+              }
+            },
+            "evt_core_band": {
+              "band": "favorable",
+              "confidence": 1.0,
+              "probabilities": {
+                "unfavorable": 0.0,
+                "moderate": 0.0,
+                "favorable": 1.0
+              }
+            },
+            "evt_mrs_band": {
+              "band": "independent",
+              "confidence": 1.0,
+              "probabilities": {
+                "severe_dependence": 0.0,
+                "mild_dependence": 0.0,
+                "independent": 1.0,
+                "moderate_severe_dependence": 0.0
+              }
+            },
+            "evt_nihss_band": {
+              "band": "low",
+              "confidence": 0.99,
+              "probabilities": {
+                "high": 0.0,
+                "low": 1.0,
+                "moderate": 0.0
+              }
+            }
+          }
+        }
+      }
+    },
+    "G11": {
+      "title": "M2 dominant proximal, early window, NIHSS 12, ASPECTS 8, mRS 0",
+      "questions": {
+        "ivt_decision": {
+          "target_kind": "recommended",
+          "synthesized_kind": "recommended",
+          "correct": true,
+          "sub_answers": {
+            "ivt_screen_severity": {
+              "band": "clear",
+              "confidence": 0.97,
+              "probabilities": {
+                "absolute": 0.0,
+                "relative": 0.02,
+                "unconfirmed": 0.0,
+                "clear": 0.98
+              }
+            },
+            "ivt_disabling_deficit": {
+              "band": "disabling",
+              "confidence": 1.0,
+              "probabilities": {
+                "disabling": 1.0,
+                "not_disabling": 0.0,
+                "unclear": 0.0
+              }
+            },
+            "ivt_time_band": {
+              "band": "early",
+              "confidence": 1.0,
+              "probabilities": {
+                "unknown": 0.0,
+                "early": 1.0,
+                "late": 0.0,
+                "extended": 0.0
+              }
+            },
+            "evt_time_band": {
+              "band": "early",
+              "confidence": 1.0,
+              "probabilities": {
+                "unknown": 0.0,
+                "early": 1.0,
+                "late": 0.0,
+                "extended": 0.0
+              }
+            },
+            "evt_core_band": {
+              "band": "favorable",
+              "confidence": 1.0,
+              "probabilities": {
+                "unfavorable": 0.0,
+                "moderate": 0.0,
+                "favorable": 1.0
+              }
+            },
+            "evt_mrs_band": {
+              "band": "independent",
+              "confidence": 1.0,
+              "probabilities": {
+                "independent": 1.0,
+                "mild_dependence": 0.0,
+                "severe_dependence": 0.0,
+                "moderate_severe_dependence": 0.0
+              }
+            },
+            "evt_nihss_band": {
+              "band": "high",
+              "confidence": 1.0,
+              "probabilities": {
+                "moderate": 0.0,
+                "high": 1.0,
+                "low": 0.0
+              }
+            }
+          }
+        },
+        "evt_decision": {
+          "target_kind": "reasonable",
+          "synthesized_kind": "reasonable",
+          "correct": true,
+          "sub_answers": {
+            "ivt_screen_severity": {
+              "band": "clear",
+              "confidence": 0.97,
+              "probabilities": {
+                "absolute": 0.0,
+                "relative": 0.02,
+                "unconfirmed": 0.0,
+                "clear": 0.98
+              }
+            },
+            "ivt_disabling_deficit": {
+              "band": "disabling",
+              "confidence": 1.0,
+              "probabilities": {
+                "disabling": 1.0,
+                "not_disabling": 0.0,
+                "unclear": 0.0
+              }
+            },
+            "ivt_time_band": {
+              "band": "early",
+              "confidence": 1.0,
+              "probabilities": {
+                "unknown": 0.0,
+                "early": 1.0,
+                "late": 0.0,
+                "extended": 0.0
+              }
+            },
+            "evt_time_band": {
+              "band": "early",
+              "confidence": 1.0,
+              "probabilities": {
+                "unknown": 0.0,
+                "early": 1.0,
+                "late": 0.0,
+                "extended": 0.0
+              }
+            },
+            "evt_core_band": {
+              "band": "favorable",
+              "confidence": 1.0,
+              "probabilities": {
+                "unfavorable": 0.0,
+                "moderate": 0.0,
+                "favorable": 1.0
+              }
+            },
+            "evt_mrs_band": {
+              "band": "independent",
+              "confidence": 1.0,
+              "probabilities": {
+                "independent": 1.0,
+                "mild_dependence": 0.0,
+                "severe_dependence": 0.0,
+                "moderate_severe_dependence": 0.0
+              }
+            },
+            "evt_nihss_band": {
+              "band": "high",
+              "confidence": 1.0,
+              "probabilities": {
+                "moderate": 0.0,
+                "high": 1.0,
+                "low": 0.0
+              }
+            }
+          }
+        }
+      }
+    },
+    "G12": {
+      "title": "M2 nondominant (MeVO), early window",
+      "questions": {
+        "ivt_decision": {
+          "target_kind": "recommended",
+          "synthesized_kind": "recommended",
+          "correct": true,
+          "sub_answers": {
+            "ivt_screen_severity": {
+              "band": "clear",
+              "confidence": 0.97,
+              "probabilities": {
+                "absolute": 0.0,
+                "clear": 0.98,
+                "relative": 0.02,
+                "unconfirmed": 0.0
+              }
+            },
+            "ivt_disabling_deficit": {
+              "band": "disabling",
+              "confidence": 1.0,
+              "probabilities": {
+                "unclear": 0.0,
+                "not_disabling": 0.0,
+                "disabling": 1.0
+              }
+            },
+            "ivt_time_band": {
+              "band": "early",
+              "confidence": 1.0,
+              "probabilities": {
+                "unknown": 0.0,
+                "early": 1.0,
+                "late": 0.0,
+                "extended": 0.0
+              }
+            },
+            "evt_time_band": {
+              "band": "early",
+              "confidence": 1.0,
+              "probabilities": {
+                "extended": 0.0,
+                "early": 1.0,
+                "late": 0.0,
+                "unknown": 0.0
+              }
+            },
+            "evt_core_band": {
+              "band": "favorable",
+              "confidence": 1.0,
+              "probabilities": {
+                "unfavorable": 0.0,
+                "favorable": 1.0,
+                "moderate": 0.0
+              }
+            },
+            "evt_mrs_band": {
+              "band": "independent",
+              "confidence": 1.0,
+              "probabilities": {
+                "mild_dependence": 0.0,
+                "moderate_severe_dependence": 0.0,
+                "severe_dependence": 0.0,
+                "independent": 1.0
+              }
+            },
+            "evt_nihss_band": {
+              "band": "moderate",
+              "confidence": 1.0,
+              "probabilities": {
+                "low": 0.0,
+                "high": 0.0,
+                "moderate": 1.0
+              }
+            }
+          }
+        },
+        "evt_decision": {
+          "target_kind": "not_recommended",
+          "synthesized_kind": "not_recommended",
+          "correct": true,
+          "sub_answers": {
+            "ivt_screen_severity": {
+              "band": "clear",
+              "confidence": 0.97,
+              "probabilities": {
+                "absolute": 0.0,
+                "clear": 0.98,
+                "relative": 0.02,
+                "unconfirmed": 0.0
+              }
+            },
+            "ivt_disabling_deficit": {
+              "band": "disabling",
+              "confidence": 1.0,
+              "probabilities": {
+                "unclear": 0.0,
+                "not_disabling": 0.0,
+                "disabling": 1.0
+              }
+            },
+            "ivt_time_band": {
+              "band": "early",
+              "confidence": 1.0,
+              "probabilities": {
+                "unknown": 0.0,
+                "early": 1.0,
+                "late": 0.0,
+                "extended": 0.0
+              }
+            },
+            "evt_time_band": {
+              "band": "early",
+              "confidence": 1.0,
+              "probabilities": {
+                "extended": 0.0,
+                "early": 1.0,
+                "late": 0.0,
+                "unknown": 0.0
+              }
+            },
+            "evt_core_band": {
+              "band": "favorable",
+              "confidence": 1.0,
+              "probabilities": {
+                "unfavorable": 0.0,
+                "favorable": 1.0,
+                "moderate": 0.0
+              }
+            },
+            "evt_mrs_band": {
+              "band": "independent",
+              "confidence": 1.0,
+              "probabilities": {
+                "mild_dependence": 0.0,
+                "moderate_severe_dependence": 0.0,
+                "severe_dependence": 0.0,
+                "independent": 1.0
+              }
+            },
+            "evt_nihss_band": {
+              "band": "moderate",
+              "confidence": 1.0,
+              "probabilities": {
+                "low": 0.0,
+                "high": 0.0,
+                "moderate": 1.0
+              }
+            }
+          }
+        }
+      }
+    },
+    "G13": {
+      "title": "Basilar, NIHSS 14, PC-ASPECTS 8, mRS 0, 10 h",
+      "questions": {
+        "ivt_decision": {
+          "target_kind": "reasonable",
+          "synthesized_kind": "reasonable",
+          "correct": true,
+          "sub_answers": {
+            "ivt_screen_severity": {
+              "band": "clear",
+              "confidence": 0.67,
+              "probabilities": {
+                "unconfirmed": 0.0,
+                "clear": 0.75,
+                "relative": 0.24,
+                "absolute": 0.01
+              }
+            },
+            "ivt_disabling_deficit": {
+              "band": "disabling",
+              "confidence": 1.0,
+              "probabilities": {
+                "unclear": 0.0,
+                "disabling": 1.0,
+                "not_disabling": 0.0
+              }
+            },
+            "ivt_time_band": {
+              "band": "late",
+              "confidence": 0.99,
+              "probabilities": {
+                "early": 0.0,
+                "late": 1.0,
+                "extended": 0.0,
+                "unknown": 0.0
+              }
+            },
+            "evt_time_band": {
+              "band": "late",
+              "confidence": 1.0,
+              "probabilities": {
+                "early": 0.0,
+                "late": 1.0,
+                "extended": 0.0,
+                "unknown": 0.0
+              }
+            },
+            "evt_core_band": {
+              "band": "favorable",
+              "confidence": 0.99,
+              "probabilities": {
+                "favorable": 1.0,
+                "moderate": 0.0,
+                "unfavorable": 0.0
+              }
+            },
+            "evt_mrs_band": {
+              "band": "independent",
+              "confidence": 1.0,
+              "probabilities": {
+                "severe_dependence": 0.0,
+                "moderate_severe_dependence": 0.0,
+                "independent": 1.0,
+                "mild_dependence": 0.0
+              }
+            },
+            "evt_nihss_band": {
+              "band": "high",
+              "confidence": 1.0,
+              "probabilities": {
+                "low": 0.0,
+                "moderate": 0.0,
+                "high": 1.0
+              }
+            }
+          }
+        },
+        "evt_decision": {
+          "target_kind": "recommended",
+          "synthesized_kind": "recommended",
+          "correct": true,
+          "sub_answers": {
+            "ivt_screen_severity": {
+              "band": "clear",
+              "confidence": 0.67,
+              "probabilities": {
+                "unconfirmed": 0.0,
+                "clear": 0.75,
+                "relative": 0.24,
+                "absolute": 0.01
+              }
+            },
+            "ivt_disabling_deficit": {
+              "band": "disabling",
+              "confidence": 1.0,
+              "probabilities": {
+                "unclear": 0.0,
+                "disabling": 1.0,
+                "not_disabling": 0.0
+              }
+            },
+            "ivt_time_band": {
+              "band": "late",
+              "confidence": 0.99,
+              "probabilities": {
+                "early": 0.0,
+                "late": 1.0,
+                "extended": 0.0,
+                "unknown": 0.0
+              }
+            },
+            "evt_time_band": {
+              "band": "late",
+              "confidence": 1.0,
+              "probabilities": {
+                "early": 0.0,
+                "late": 1.0,
+                "extended": 0.0,
+                "unknown": 0.0
+              }
+            },
+            "evt_core_band": {
+              "band": "favorable",
+              "confidence": 0.99,
+              "probabilities": {
+                "favorable": 1.0,
+                "moderate": 0.0,
+                "unfavorable": 0.0
+              }
+            },
+            "evt_mrs_band": {
+              "band": "independent",
+              "confidence": 1.0,
+              "probabilities": {
+                "severe_dependence": 0.0,
+                "moderate_severe_dependence": 0.0,
+                "independent": 1.0,
+                "mild_dependence": 0.0
+              }
+            },
+            "evt_nihss_band": {
+              "band": "high",
+              "confidence": 1.0,
+              "probabilities": {
+                "low": 0.0,
+                "moderate": 0.0,
+                "high": 1.0
+              }
+            }
+          }
+        }
+      }
+    },
+    "G14": {
+      "title": "Basilar, NIHSS 7 (moderate), PC-ASPECTS 8, mRS 0, 10 h",
+      "questions": {
+        "ivt_decision": {
+          "target_kind": "reasonable",
+          "synthesized_kind": "reasonable",
+          "correct": true,
+          "sub_answers": {
+            "ivt_screen_severity": {
+              "band": "clear",
+              "confidence": 0.55,
+              "probabilities": {
+                "relative": 0.33,
+                "clear": 0.66,
+                "unconfirmed": 0.0,
+                "absolute": 0.01
+              }
+            },
+            "ivt_disabling_deficit": {
+              "band": "disabling",
+              "confidence": 1.0,
+              "probabilities": {
+                "unclear": 0.0,
+                "not_disabling": 0.0,
+                "disabling": 1.0
+              }
+            },
+            "ivt_time_band": {
+              "band": "late",
+              "confidence": 0.99,
+              "probabilities": {
+                "unknown": 0.0,
+                "early": 0.0,
+                "late": 1.0,
+                "extended": 0.0
+              }
+            },
+            "evt_time_band": {
+              "band": "late",
+              "confidence": 1.0,
+              "probabilities": {
+                "unknown": 0.0,
+                "early": 0.0,
+                "late": 1.0,
+                "extended": 0.0
+              }
+            },
+            "evt_core_band": {
+              "band": "favorable",
+              "confidence": 0.99,
+              "probabilities": {
+                "favorable": 0.99,
+                "moderate": 0.0,
+                "unfavorable": 0.01
+              }
+            },
+            "evt_mrs_band": {
+              "band": "independent",
+              "confidence": 1.0,
+              "probabilities": {
+                "independent": 1.0,
+                "moderate_severe_dependence": 0.0,
+                "severe_dependence": 0.0,
+                "mild_dependence": 0.0
+              }
+            },
+            "evt_nihss_band": {
+              "band": "moderate",
+              "confidence": 1.0,
+              "probabilities": {
+                "low": 0.0,
+                "moderate": 1.0,
+                "high": 0.0
+              }
+            }
+          }
+        },
+        "evt_decision": {
+          "target_kind": "may_consider",
+          "synthesized_kind": "may_consider",
+          "correct": true,
+          "sub_answers": {
+            "ivt_screen_severity": {
+              "band": "clear",
+              "confidence": 0.55,
+              "probabilities": {
+                "relative": 0.33,
+                "clear": 0.66,
+                "unconfirmed": 0.0,
+                "absolute": 0.01
+              }
+            },
+            "ivt_disabling_deficit": {
+              "band": "disabling",
+              "confidence": 1.0,
+              "probabilities": {
+                "unclear": 0.0,
+                "not_disabling": 0.0,
+                "disabling": 1.0
+              }
+            },
+            "ivt_time_band": {
+              "band": "late",
+              "confidence": 0.99,
+              "probabilities": {
+                "unknown": 0.0,
+                "early": 0.0,
+                "late": 1.0,
+                "extended": 0.0
+              }
+            },
+            "evt_time_band": {
+              "band": "late",
+              "confidence": 1.0,
+              "probabilities": {
+                "unknown": 0.0,
+                "early": 0.0,
+                "late": 1.0,
+                "extended": 0.0
+              }
+            },
+            "evt_core_band": {
+              "band": "favorable",
+              "confidence": 0.99,
+              "probabilities": {
+                "favorable": 0.99,
+                "moderate": 0.0,
+                "unfavorable": 0.01
+              }
+            },
+            "evt_mrs_band": {
+              "band": "independent",
+              "confidence": 1.0,
+              "probabilities": {
+                "independent": 1.0,
+                "moderate_severe_dependence": 0.0,
+                "severe_dependence": 0.0,
+                "mild_dependence": 0.0
+              }
+            },
+            "evt_nihss_band": {
+              "band": "moderate",
+              "confidence": 1.0,
+              "probabilities": {
+                "low": 0.0,
+                "moderate": 1.0,
+                "high": 0.0
+              }
+            }
+          }
+        }
+      }
+    },
+    "G15": {
+      "title": "IVT-only, clean history, time 2 h, disabling deficit",
+      "questions": {
+        "ivt_decision": {
+          "target_kind": "recommended",
+          "synthesized_kind": "recommended",
+          "correct": true,
+          "sub_answers": {
+            "ivt_screen_severity": {
+              "band": "clear",
+              "confidence": 0.97,
+              "probabilities": {
+                "absolute": 0.0,
+                "clear": 0.98,
+                "relative": 0.02,
+                "unconfirmed": 0.0
+              }
+            },
+            "ivt_disabling_deficit": {
+              "band": "disabling",
+              "confidence": 1.0,
+              "probabilities": {
+                "unclear": 0.0,
+                "disabling": 1.0,
+                "not_disabling": 0.0
+              }
+            },
+            "ivt_time_band": {
+              "band": "early",
+              "confidence": 1.0,
+              "probabilities": {
+                "late": 0.0,
+                "unknown": 0.0,
+                "early": 1.0,
+                "extended": 0.0
+              }
+            }
+          }
+        }
+      }
+    },
+    "G16": {
+      "title": "IVT-only, active bleeding documented (absolute contraindication)",
+      "questions": {
+        "ivt_decision": {
+          "target_kind": "harm",
+          "synthesized_kind": "harm",
+          "correct": true,
+          "sub_answers": {
+            "ivt_screen_severity": {
+              "band": "absolute",
+              "confidence": 1.0,
+              "probabilities": {
+                "absolute": 1.0,
+                "relative": 0.0,
+                "clear": 0.0,
+                "unconfirmed": 0.0
+              }
+            },
+            "ivt_disabling_deficit": {
+              "band": "disabling",
+              "confidence": 1.0,
+              "probabilities": {
+                "unclear": 0.0,
+                "not_disabling": 0.0,
+                "disabling": 1.0
+              }
+            },
+            "ivt_time_band": {
+              "band": "early",
+              "confidence": 1.0,
+              "probabilities": {
+                "unknown": 0.0,
+                "extended": 0.0,
+                "late": 0.0,
+                "early": 1.0
+              }
+            }
+          }
+        }
+      }
+    },
+    "G17": {
+      "title": "IVT-only, prior ICH documented (relative contraindication)",
+      "questions": {
+        "ivt_decision": {
+          "target_kind": "individualize",
+          "synthesized_kind": "individualize",
+          "correct": true,
+          "sub_answers": {
+            "ivt_screen_severity": {
+              "band": "relative",
+              "confidence": 0.99,
+              "probabilities": {
+                "clear": 0.0,
+                "absolute": 0.01,
+                "relative": 0.99,
+                "unconfirmed": 0.0
+              }
+            },
+            "ivt_disabling_deficit": {
+              "band": "disabling",
+              "confidence": 1.0,
+              "probabilities": {
+                "not_disabling": 0.0,
+                "unclear": 0.0,
+                "disabling": 1.0
+              }
+            },
+            "ivt_time_band": {
+              "band": "early",
+              "confidence": 1.0,
+              "probabilities": {
+                "unknown": 0.0,
+                "early": 1.0,
+                "extended": 0.0,
+                "late": 0.0
+              }
+            }
+          }
+        }
+      }
+    },
+    "G18": {
+      "title": "IVT-only, history not yet taken (contraindication checklist unconfirmed)",
+      "questions": {
+        "ivt_decision": {
+          "target_kind": "action",
+          "synthesized_kind": "action",
+          "correct": true,
+          "sub_answers": {
+            "ivt_screen_severity": {
+              "band": "unconfirmed",
+              "confidence": 0.79,
+              "probabilities": {
+                "relative": 0.13,
+                "absolute": 0.0,
+                "unconfirmed": 0.85,
+                "clear": 0.02
+              }
+            },
+            "ivt_disabling_deficit": {
+              "band": "disabling",
+              "confidence": 1.0,
+              "probabilities": {
+                "not_disabling": 0.0,
+                "unclear": 0.0,
+                "disabling": 1.0
+              }
+            },
+            "ivt_time_band": {
+              "band": "early",
+              "confidence": 1.0,
+              "probabilities": {
+                "extended": 0.0,
+                "late": 0.0,
+                "early": 1.0,
+                "unknown": 0.0
+              }
+            }
+          }
+        }
+      }
+    },
+    "S01": {
+      "title": "M1 occlusion at 90 min, disabling",
+      "questions": {
+        "ivt_decision": {
+          "target_kind": "recommended",
+          "synthesized_kind": "recommended",
+          "correct": true,
+          "sub_answers": {
+            "ivt_screen_severity": {
+              "band": "clear",
+              "confidence": 0.98,
+              "probabilities": {
+                "absolute": 0.0,
+                "unconfirmed": 0.0,
+                "clear": 0.98,
+                "relative": 0.02
+              }
+            },
+            "ivt_disabling_deficit": {
+              "band": "disabling",
+              "confidence": 1.0,
+              "probabilities": {
+                "disabling": 1.0,
+                "unclear": 0.0,
+                "not_disabling": 0.0
+              }
+            },
+            "ivt_time_band": {
+              "band": "early",
+              "confidence": 1.0,
+              "probabilities": {
+                "early": 1.0,
+                "late": 0.0,
+                "unknown": 0.0,
+                "extended": 0.0
+              }
+            },
+            "evt_time_band": {
+              "band": "early",
+              "confidence": 1.0,
+              "probabilities": {
+                "early": 1.0,
+                "late": 0.0,
+                "unknown": 0.0,
+                "extended": 0.0
+              }
+            },
+            "evt_core_band": {
+              "band": "favorable",
+              "confidence": 1.0,
+              "probabilities": {
+                "unfavorable": 0.0,
+                "favorable": 1.0,
+                "moderate": 0.0
+              }
+            },
+            "evt_mrs_band": {
+              "band": "independent",
+              "confidence": 1.0,
+              "probabilities": {
+                "severe_dependence": 0.0,
+                "mild_dependence": 0.0,
+                "independent": 1.0,
+                "moderate_severe_dependence": 0.0
+              }
+            },
+            "evt_nihss_band": {
+              "band": "high",
+              "confidence": 1.0,
+              "probabilities": {
+                "moderate": 0.0,
+                "high": 1.0,
+                "low": 0.0
+              }
+            }
+          }
+        },
+        "evt_decision": {
+          "target_kind": "recommended",
+          "synthesized_kind": "recommended",
+          "correct": true,
+          "sub_answers": {
+            "ivt_screen_severity": {
+              "band": "clear",
+              "confidence": 0.98,
+              "probabilities": {
+                "absolute": 0.0,
+                "unconfirmed": 0.0,
+                "clear": 0.98,
+                "relative": 0.02
+              }
+            },
+            "ivt_disabling_deficit": {
+              "band": "disabling",
+              "confidence": 1.0,
+              "probabilities": {
+                "disabling": 1.0,
+                "unclear": 0.0,
+                "not_disabling": 0.0
+              }
+            },
+            "ivt_time_band": {
+              "band": "early",
+              "confidence": 1.0,
+              "probabilities": {
+                "early": 1.0,
+                "late": 0.0,
+                "unknown": 0.0,
+                "extended": 0.0
+              }
+            },
+            "evt_time_band": {
+              "band": "early",
+              "confidence": 1.0,
+              "probabilities": {
+                "early": 1.0,
+                "late": 0.0,
+                "unknown": 0.0,
+                "extended": 0.0
+              }
+            },
+            "evt_core_band": {
+              "band": "favorable",
+              "confidence": 1.0,
+              "probabilities": {
+                "unfavorable": 0.0,
+                "favorable": 1.0,
+                "moderate": 0.0
+              }
+            },
+            "evt_mrs_band": {
+              "band": "independent",
+              "confidence": 1.0,
+              "probabilities": {
+                "severe_dependence": 0.0,
+                "mild_dependence": 0.0,
+                "independent": 1.0,
+                "moderate_severe_dependence": 0.0
+              }
+            },
+            "evt_nihss_band": {
+              "band": "high",
+              "confidence": 1.0,
+              "probabilities": {
+                "moderate": 0.0,
+                "high": 1.0,
+                "low": 0.0
+              }
+            }
+          }
+        }
+      }
+    },
+    "S02": {
+      "title": "Non-disabling minor stroke within 4.5 h, no occlusion",
+      "questions": {
+        "ivt_decision": {
+          "target_kind": "not_recommended",
+          "synthesized_kind": "not_recommended",
+          "correct": true,
+          "sub_answers": {
+            "ivt_screen_severity": {
+              "band": "clear",
+              "confidence": 0.96,
+              "probabilities": {
+                "clear": 0.97,
+                "absolute": 0.0,
+                "relative": 0.03,
+                "unconfirmed": 0.0
+              }
+            },
+            "ivt_disabling_deficit": {
+              "band": "not_disabling",
+              "confidence": 0.99,
+              "probabilities": {
+                "unclear": 0.0,
+                "not_disabling": 1.0,
+                "disabling": 0.0
+              }
+            },
+            "ivt_time_band": {
+              "band": "early",
+              "confidence": 1.0,
+              "probabilities": {
+                "late": 0.0,
+                "early": 1.0,
+                "unknown": 0.0,
+                "extended": 0.0
+              }
+            }
+          }
+        }
+      }
+    },
+    "S03": {
+      "title": "Apixaban 8 h ago with M1 occlusion",
+      "questions": {
+        "ivt_decision": {
+          "target_kind": "individualize",
+          "synthesized_kind": "individualize",
+          "correct": true,
+          "sub_answers": {
+            "ivt_screen_severity": {
+              "band": "relative",
+              "confidence": 0.99,
+              "probabilities": {
+                "relative": 1.0,
+                "clear": 0.0,
+                "absolute": 0.0,
+                "unconfirmed": 0.0
+              }
+            },
+            "ivt_disabling_deficit": {
+              "band": "disabling",
+              "confidence": 1.0,
+              "probabilities": {
+                "unclear": 0.0,
+                "not_disabling": 0.0,
+                "disabling": 1.0
+              }
+            },
+            "ivt_time_band": {
+              "band": "early",
+              "confidence": 1.0,
+              "probabilities": {
+                "early": 1.0,
+                "late": 0.0,
+                "extended": 0.0,
+                "unknown": 0.0
+              }
+            },
+            "evt_time_band": {
+              "band": "early",
+              "confidence": 1.0,
+              "probabilities": {
+                "early": 1.0,
+                "extended": 0.0,
+                "late": 0.0,
+                "unknown": 0.0
+              }
+            },
+            "evt_core_band": {
+              "band": "favorable",
+              "confidence": 1.0,
+              "probabilities": {
+                "moderate": 0.0,
+                "unfavorable": 0.0,
+                "favorable": 1.0
+              }
+            },
+            "evt_mrs_band": {
+              "band": "independent",
+              "confidence": 0.99,
+              "probabilities": {
+                "mild_dependence": 0.01,
+                "severe_dependence": 0.0,
+                "moderate_severe_dependence": 0.0,
+                "independent": 0.99
+              }
+            },
+            "evt_nihss_band": {
+              "band": "high",
+              "confidence": 1.0,
+              "probabilities": {
+                "high": 1.0,
+                "low": 0.0,
+                "moderate": 0.0
+              }
+            }
+          }
+        },
+        "evt_decision": {
+          "target_kind": "recommended",
+          "synthesized_kind": "recommended",
+          "correct": true,
+          "sub_answers": {
+            "ivt_screen_severity": {
+              "band": "relative",
+              "confidence": 0.99,
+              "probabilities": {
+                "relative": 1.0,
+                "clear": 0.0,
+                "absolute": 0.0,
+                "unconfirmed": 0.0
+              }
+            },
+            "ivt_disabling_deficit": {
+              "band": "disabling",
+              "confidence": 1.0,
+              "probabilities": {
+                "unclear": 0.0,
+                "not_disabling": 0.0,
+                "disabling": 1.0
+              }
+            },
+            "ivt_time_band": {
+              "band": "early",
+              "confidence": 1.0,
+              "probabilities": {
+                "early": 1.0,
+                "late": 0.0,
+                "extended": 0.0,
+                "unknown": 0.0
+              }
+            },
+            "evt_time_band": {
+              "band": "early",
+              "confidence": 1.0,
+              "probabilities": {
+                "early": 1.0,
+                "extended": 0.0,
+                "late": 0.0,
+                "unknown": 0.0
+              }
+            },
+            "evt_core_band": {
+              "band": "favorable",
+              "confidence": 1.0,
+              "probabilities": {
+                "moderate": 0.0,
+                "unfavorable": 0.0,
+                "favorable": 1.0
+              }
+            },
+            "evt_mrs_band": {
+              "band": "independent",
+              "confidence": 0.99,
+              "probabilities": {
+                "mild_dependence": 0.01,
+                "severe_dependence": 0.0,
+                "moderate_severe_dependence": 0.0,
+                "independent": 0.99
+              }
+            },
+            "evt_nihss_band": {
+              "band": "high",
+              "confidence": 1.0,
+              "probabilities": {
+                "high": 1.0,
+                "low": 0.0,
+                "moderate": 0.0
+              }
+            }
+          }
+        }
+      }
+    },
+    "S05": {
+      "title": "Wake-up stroke with DWI-FLAIR mismatch",
+      "questions": {
+        "ivt_decision": {
+          "target_kind": "reasonable",
+          "synthesized_kind": "reasonable",
+          "correct": true,
+          "sub_answers": {
+            "ivt_screen_severity": {
+              "band": "clear",
+              "confidence": 0.98,
+              "probabilities": {
+                "unconfirmed": 0.0,
+                "clear": 0.99,
+                "relative": 0.01,
+                "absolute": 0.0
+              }
+            },
+            "ivt_disabling_deficit": {
+              "band": "disabling",
+              "confidence": 1.0,
+              "probabilities": {
+                "not_disabling": 0.0,
+                "unclear": 0.0,
+                "disabling": 1.0
+              }
+            },
+            "ivt_time_band": {
+              "band": "late",
+              "confidence": 0.97,
+              "probabilities": {
+                "extended": 0.0,
+                "early": 0.02,
+                "unknown": 0.0,
+                "late": 0.98
+              }
+            }
+          }
+        }
+      }
+    },
+    "S06": {
+      "title": "6 h, non-dominant M2, perfusion mismatch, no EVT",
+      "questions": {
+        "ivt_decision": {
+          "target_kind": "reasonable",
+          "synthesized_kind": "reasonable",
+          "correct": true,
+          "sub_answers": {
+            "ivt_screen_severity": {
+              "band": "clear",
+              "confidence": 0.98,
+              "probabilities": {
+                "unconfirmed": 0.0,
+                "absolute": 0.0,
+                "relative": 0.02,
+                "clear": 0.98
+              }
+            },
+            "ivt_disabling_deficit": {
+              "band": "disabling",
+              "confidence": 1.0,
+              "probabilities": {
+                "not_disabling": 0.0,
+                "unclear": 0.0,
+                "disabling": 1.0
+              }
+            },
+            "ivt_time_band": {
+              "band": "late",
+              "confidence": 0.99,
+              "probabilities": {
+                "unknown": 0.0,
+                "early": 0.0,
+                "extended": 0.0,
+                "late": 1.0
+              }
+            },
+            "evt_time_band": {
+              "band": "early",
+              "confidence": 1.0,
+              "probabilities": {
+                "unknown": 0.0,
+                "early": 1.0,
+                "extended": 0.0,
+                "late": 0.0
+              }
+            },
+            "evt_core_band": {
+              "band": "favorable",
+              "confidence": 0.99,
+              "probabilities": {
+                "unfavorable": 0.0,
+                "favorable": 1.0,
+                "moderate": 0.0
+              }
+            },
+            "evt_mrs_band": {
+              "band": "independent",
+              "confidence": 1.0,
+              "probabilities": {
+                "mild_dependence": 0.0,
+                "independent": 1.0,
+                "moderate_severe_dependence": 0.0,
+                "severe_dependence": 0.0
+              }
+            },
+            "evt_nihss_band": {
+              "band": "moderate",
+              "confidence": 1.0,
+              "probabilities": {
+                "moderate": 1.0,
+                "low": 0.0,
+                "high": 0.0
+              }
+            }
+          }
+        },
+        "evt_decision": {
+          "target_kind": "not_recommended",
+          "synthesized_kind": "not_recommended",
+          "correct": true,
+          "sub_answers": {
+            "ivt_screen_severity": {
+              "band": "clear",
+              "confidence": 0.98,
+              "probabilities": {
+                "unconfirmed": 0.0,
+                "absolute": 0.0,
+                "relative": 0.02,
+                "clear": 0.98
+              }
+            },
+            "ivt_disabling_deficit": {
+              "band": "disabling",
+              "confidence": 1.0,
+              "probabilities": {
+                "not_disabling": 0.0,
+                "unclear": 0.0,
+                "disabling": 1.0
+              }
+            },
+            "ivt_time_band": {
+              "band": "late",
+              "confidence": 0.99,
+              "probabilities": {
+                "unknown": 0.0,
+                "early": 0.0,
+                "extended": 0.0,
+                "late": 1.0
+              }
+            },
+            "evt_time_band": {
+              "band": "early",
+              "confidence": 1.0,
+              "probabilities": {
+                "unknown": 0.0,
+                "early": 1.0,
+                "extended": 0.0,
+                "late": 0.0
+              }
+            },
+            "evt_core_band": {
+              "band": "favorable",
+              "confidence": 0.99,
+              "probabilities": {
+                "unfavorable": 0.0,
+                "favorable": 1.0,
+                "moderate": 0.0
+              }
+            },
+            "evt_mrs_band": {
+              "band": "independent",
+              "confidence": 1.0,
+              "probabilities": {
+                "mild_dependence": 0.0,
+                "independent": 1.0,
+                "moderate_severe_dependence": 0.0,
+                "severe_dependence": 0.0
+              }
+            },
+            "evt_nihss_band": {
+              "band": "moderate",
+              "confidence": 1.0,
+              "probabilities": {
+                "moderate": 1.0,
+                "low": 0.0,
+                "high": 0.0
+              }
+            }
+          }
+        }
+      }
+    },
+    "S07": {
+      "title": "M1 at 10 h, small core, going to EVT",
+      "questions": {
+        "evt_decision": {
+          "target_kind": "recommended",
+          "synthesized_kind": "recommended",
+          "correct": true,
+          "sub_answers": {
+            "evt_time_band": {
+              "band": "late",
+              "confidence": 1.0,
+              "probabilities": {
+                "unknown": 0.0,
+                "early": 0.0,
+                "extended": 0.0,
+                "late": 1.0
+              }
+            },
+            "evt_core_band": {
+              "band": "favorable",
+              "confidence": 0.99,
+              "probabilities": {
+                "unfavorable": 0.0,
+                "favorable": 1.0,
+                "moderate": 0.0
+              }
+            },
+            "evt_mrs_band": {
+              "band": "independent",
+              "confidence": 1.0,
+              "probabilities": {
+                "mild_dependence": 0.0,
+                "independent": 1.0,
+                "moderate_severe_dependence": 0.0,
+                "severe_dependence": 0.0
+              }
+            },
+            "evt_nihss_band": {
+              "band": "high",
+              "confidence": 1.0,
+              "probabilities": {
+                "high": 1.0,
+                "low": 0.0,
+                "moderate": 0.0
+              }
+            }
+          }
+        }
+      }
+    },
+    "S08": {
+      "title": "ASPECTS 4 at 3 h, age 70",
+      "questions": {
+        "ivt_decision": {
+          "target_kind": "individualize",
+          "synthesized_kind": "individualize",
+          "correct": true,
+          "sub_answers": {
+            "ivt_screen_severity": {
+              "band": "relative",
+              "confidence": 0.95,
+              "probabilities": {
+                "absolute": 0.0,
+                "relative": 0.97,
+                "clear": 0.03,
+                "unconfirmed": 0.0
+              }
+            },
+            "ivt_disabling_deficit": {
+              "band": "disabling",
+              "confidence": 1.0,
+              "probabilities": {
+                "not_disabling": 0.0,
+                "unclear": 0.0,
+                "disabling": 1.0
+              }
+            },
+            "ivt_time_band": {
+              "band": "early",
+              "confidence": 1.0,
+              "probabilities": {
+                "extended": 0.0,
+                "late": 0.0,
+                "unknown": 0.0,
+                "early": 1.0
+              }
+            },
+            "evt_time_band": {
+              "band": "early",
+              "confidence": 1.0,
+              "probabilities": {
+                "extended": 0.0,
+                "late": 0.0,
+                "unknown": 0.0,
+                "early": 1.0
+              }
+            },
+            "evt_core_band": {
+              "band": "moderate",
+              "confidence": 0.99,
+              "probabilities": {
+                "unfavorable": 0.0,
+                "favorable": 0.0,
+                "moderate": 1.0
+              }
+            },
+            "evt_mrs_band": {
+              "band": "independent",
+              "confidence": 1.0,
+              "probabilities": {
+                "mild_dependence": 0.0,
+                "moderate_severe_dependence": 0.0,
+                "independent": 1.0,
+                "severe_dependence": 0.0
+              }
+            },
+            "evt_nihss_band": {
+              "band": "high",
+              "confidence": 1.0,
+              "probabilities": {
+                "high": 1.0,
+                "moderate": 0.0,
+                "low": 0.0
+              }
+            }
+          }
+        },
+        "evt_decision": {
+          "target_kind": "recommended",
+          "synthesized_kind": "recommended",
+          "correct": true,
+          "sub_answers": {
+            "ivt_screen_severity": {
+              "band": "relative",
+              "confidence": 0.95,
+              "probabilities": {
+                "absolute": 0.0,
+                "relative": 0.97,
+                "clear": 0.03,
+                "unconfirmed": 0.0
+              }
+            },
+            "ivt_disabling_deficit": {
+              "band": "disabling",
+              "confidence": 1.0,
+              "probabilities": {
+                "not_disabling": 0.0,
+                "unclear": 0.0,
+                "disabling": 1.0
+              }
+            },
+            "ivt_time_band": {
+              "band": "early",
+              "confidence": 1.0,
+              "probabilities": {
+                "extended": 0.0,
+                "late": 0.0,
+                "unknown": 0.0,
+                "early": 1.0
+              }
+            },
+            "evt_time_band": {
+              "band": "early",
+              "confidence": 1.0,
+              "probabilities": {
+                "extended": 0.0,
+                "late": 0.0,
+                "unknown": 0.0,
+                "early": 1.0
+              }
+            },
+            "evt_core_band": {
+              "band": "moderate",
+              "confidence": 0.99,
+              "probabilities": {
+                "unfavorable": 0.0,
+                "favorable": 0.0,
+                "moderate": 1.0
+              }
+            },
+            "evt_mrs_band": {
+              "band": "independent",
+              "confidence": 1.0,
+              "probabilities": {
+                "mild_dependence": 0.0,
+                "moderate_severe_dependence": 0.0,
+                "independent": 1.0,
+                "severe_dependence": 0.0
+              }
+            },
+            "evt_nihss_band": {
+              "band": "high",
+              "confidence": 1.0,
+              "probabilities": {
+                "high": 1.0,
+                "moderate": 0.0,
+                "low": 0.0
+              }
+            }
+          }
+        }
+      }
+    },
+    "S09": {
+      "title": "ASPECTS 1 at 4 h, age 65",
+      "questions": {
+        "evt_decision": {
+          "target_kind": "reasonable",
+          "synthesized_kind": "reasonable",
+          "correct": true,
+          "sub_answers": {
+            "evt_time_band": {
+              "band": "early",
+              "confidence": 1.0,
+              "probabilities": {
+                "extended": 0.0,
+                "early": 1.0,
+                "late": 0.0,
+                "unknown": 0.0
+              }
+            },
+            "evt_core_band": {
+              "band": "unfavorable",
+              "confidence": 0.96,
+              "probabilities": {
+                "favorable": 0.02,
+                "moderate": 0.0,
+                "unfavorable": 0.98
+              }
+            },
+            "evt_mrs_band": {
+              "band": "independent",
+              "confidence": 1.0,
+              "probabilities": {
+                "moderate_severe_dependence": 0.0,
+                "independent": 1.0,
+                "severe_dependence": 0.0,
+                "mild_dependence": 0.0
+              }
+            },
+            "evt_nihss_band": {
+              "band": "high",
+              "confidence": 1.0,
+              "probabilities": {
+                "high": 1.0,
+                "moderate": 0.0,
+                "low": 0.0
+              }
+            }
+          }
+        }
+      }
+    },
+    "S10": {
+      "title": "ASPECTS 4 at 12 h, age 82",
+      "questions": {
+        "evt_decision": {
+          "target_kind": "individualize",
+          "synthesized_kind": "individualize",
+          "correct": true,
+          "sub_answers": {
+            "evt_time_band": {
+              "band": "late",
+              "confidence": 1.0,
+              "probabilities": {
+                "extended": 0.0,
+                "late": 1.0,
+                "unknown": 0.0,
+                "early": 0.0
+              }
+            },
+            "evt_core_band": {
+              "band": "moderate",
+              "confidence": 0.99,
+              "probabilities": {
+                "unfavorable": 0.0,
+                "moderate": 0.99,
+                "favorable": 0.01
+              }
+            },
+            "evt_mrs_band": {
+              "band": "independent",
+              "confidence": 1.0,
+              "probabilities": {
+                "mild_dependence": 0.0,
+                "moderate_severe_dependence": 0.0,
+                "independent": 1.0,
+                "severe_dependence": 0.0
+              }
+            },
+            "evt_nihss_band": {
+              "band": "high",
+              "confidence": 1.0,
+              "probabilities": {
+                "moderate": 0.0,
+                "low": 0.0,
+                "high": 1.0
+              }
+            }
+          }
+        }
+      }
+    },
+    "S11": {
+      "title": "Basilar occlusion at 10 h, NIHSS 20",
+      "questions": {
+        "evt_decision": {
+          "target_kind": "recommended",
+          "synthesized_kind": "recommended",
+          "correct": true,
+          "sub_answers": {
+            "evt_time_band": {
+              "band": "late",
+              "confidence": 1.0,
+              "probabilities": {
+                "early": 0.0,
+                "late": 1.0,
+                "extended": 0.0,
+                "unknown": 0.0
+              }
+            },
+            "evt_core_band": {
+              "band": "favorable",
+              "confidence": 1.0,
+              "probabilities": {
+                "favorable": 1.0,
+                "unfavorable": 0.0,
+                "moderate": 0.0
+              }
+            },
+            "evt_mrs_band": {
+              "band": "independent",
+              "confidence": 1.0,
+              "probabilities": {
+                "mild_dependence": 0.0,
+                "severe_dependence": 0.0,
+                "independent": 1.0,
+                "moderate_severe_dependence": 0.0
+              }
+            },
+            "evt_nihss_band": {
+              "band": "high",
+              "confidence": 1.0,
+              "probabilities": {
+                "moderate": 0.0,
+                "low": 0.0,
+                "high": 1.0
+              }
+            }
+          }
+        }
+      }
+    },
+    "S12": {
+      "title": "Basilar occlusion, NIHSS 7",
+      "questions": {
+        "evt_decision": {
+          "target_kind": "may_consider",
+          "synthesized_kind": "may_consider",
+          "correct": true,
+          "sub_answers": {
+            "evt_time_band": {
+              "band": "early",
+              "confidence": 1.0,
+              "probabilities": {
+                "extended": 0.0,
+                "early": 1.0,
+                "late": 0.0,
+                "unknown": 0.0
+              }
+            },
+            "evt_core_band": {
+              "band": "favorable",
+              "confidence": 0.99,
+              "probabilities": {
+                "favorable": 1.0,
+                "unfavorable": 0.0,
+                "moderate": 0.0
+              }
+            },
+            "evt_mrs_band": {
+              "band": "independent",
+              "confidence": 0.99,
+              "probabilities": {
+                "severe_dependence": 0.0,
+                "moderate_severe_dependence": 0.0,
+                "independent": 1.0,
+                "mild_dependence": 0.0
+              }
+            },
+            "evt_nihss_band": {
+              "band": "moderate",
+              "confidence": 1.0,
+              "probabilities": {
+                "high": 0.0,
+                "low": 0.0,
+                "moderate": 1.0
+              }
+            }
+          }
+        }
+      }
+    },
+    "S13": {
+      "title": "Dominant proximal M2 at 3 h",
+      "questions": {
+        "ivt_decision": {
+          "target_kind": "recommended",
+          "synthesized_kind": "recommended",
+          "correct": true,
+          "sub_answers": {
+            "ivt_screen_severity": {
+              "band": "clear",
+              "confidence": 0.96,
+              "probabilities": {
+                "absolute": 0.0,
+                "clear": 0.97,
+                "unconfirmed": 0.0,
+                "relative": 0.03
+              }
+            },
+            "ivt_disabling_deficit": {
+              "band": "disabling",
+              "confidence": 1.0,
+              "probabilities": {
+                "unclear": 0.0,
+                "not_disabling": 0.0,
+                "disabling": 1.0
+              }
+            },
+            "ivt_time_band": {
+              "band": "early",
+              "confidence": 1.0,
+              "probabilities": {
+                "extended": 0.0,
+                "late": 0.0,
+                "unknown": 0.0,
+                "early": 1.0
+              }
+            },
+            "evt_time_band": {
+              "band": "early",
+              "confidence": 1.0,
+              "probabilities": {
+                "extended": 0.0,
+                "late": 0.0,
+                "unknown": 0.0,
+                "early": 1.0
+              }
+            },
+            "evt_core_band": {
+              "band": "favorable",
+              "confidence": 1.0,
+              "probabilities": {
+                "unfavorable": 0.0,
+                "moderate": 0.0,
+                "favorable": 1.0
+              }
+            },
+            "evt_mrs_band": {
+              "band": "independent",
+              "confidence": 1.0,
+              "probabilities": {
+                "mild_dependence": 0.0,
+                "moderate_severe_dependence": 0.0,
+                "independent": 1.0,
+                "severe_dependence": 0.0
+              }
+            },
+            "evt_nihss_band": {
+              "band": "moderate",
+              "confidence": 1.0,
+              "probabilities": {
+                "moderate": 1.0,
+                "low": 0.0,
+                "high": 0.0
+              }
+            }
+          }
+        },
+        "evt_decision": {
+          "target_kind": "reasonable",
+          "synthesized_kind": "reasonable",
+          "correct": true,
+          "sub_answers": {
+            "ivt_screen_severity": {
+              "band": "clear",
+              "confidence": 0.96,
+              "probabilities": {
+                "absolute": 0.0,
+                "clear": 0.97,
+                "unconfirmed": 0.0,
+                "relative": 0.03
+              }
+            },
+            "ivt_disabling_deficit": {
+              "band": "disabling",
+              "confidence": 1.0,
+              "probabilities": {
+                "unclear": 0.0,
+                "not_disabling": 0.0,
+                "disabling": 1.0
+              }
+            },
+            "ivt_time_band": {
+              "band": "early",
+              "confidence": 1.0,
+              "probabilities": {
+                "extended": 0.0,
+                "late": 0.0,
+                "unknown": 0.0,
+                "early": 1.0
+              }
+            },
+            "evt_time_band": {
+              "band": "early",
+              "confidence": 1.0,
+              "probabilities": {
+                "extended": 0.0,
+                "late": 0.0,
+                "unknown": 0.0,
+                "early": 1.0
+              }
+            },
+            "evt_core_band": {
+              "band": "favorable",
+              "confidence": 1.0,
+              "probabilities": {
+                "unfavorable": 0.0,
+                "moderate": 0.0,
+                "favorable": 1.0
+              }
+            },
+            "evt_mrs_band": {
+              "band": "independent",
+              "confidence": 1.0,
+              "probabilities": {
+                "mild_dependence": 0.0,
+                "moderate_severe_dependence": 0.0,
+                "independent": 1.0,
+                "severe_dependence": 0.0
+              }
+            },
+            "evt_nihss_band": {
+              "band": "moderate",
+              "confidence": 1.0,
+              "probabilities": {
+                "moderate": 1.0,
+                "low": 0.0,
+                "high": 0.0
+              }
+            }
+          }
+        }
+      }
+    },
+    "S14": {
+      "title": "Pre-stroke mRS 2 with M1",
+      "questions": {
+        "ivt_decision": {
+          "target_kind": "recommended",
+          "synthesized_kind": "recommended",
+          "correct": true,
+          "sub_answers": {
+            "ivt_screen_severity": {
+              "band": "clear",
+              "confidence": 0.95,
+              "probabilities": {
+                "relative": 0.04,
+                "clear": 0.96,
+                "unconfirmed": 0.0,
+                "absolute": 0.0
+              }
+            },
+            "ivt_disabling_deficit": {
+              "band": "disabling",
+              "confidence": 1.0,
+              "probabilities": {
+                "unclear": 0.0,
+                "disabling": 1.0,
+                "not_disabling": 0.0
+              }
+            },
+            "ivt_time_band": {
+              "band": "early",
+              "confidence": 1.0,
+              "probabilities": {
+                "unknown": 0.0,
+                "late": 0.0,
+                "extended": 0.0,
+                "early": 1.0
+              }
+            },
+            "evt_time_band": {
+              "band": "early",
+              "confidence": 1.0,
+              "probabilities": {
+                "unknown": 0.0,
+                "early": 1.0,
+                "extended": 0.0,
+                "late": 0.0
+              }
+            },
+            "evt_core_band": {
+              "band": "favorable",
+              "confidence": 1.0,
+              "probabilities": {
+                "unfavorable": 0.0,
+                "favorable": 1.0,
+                "moderate": 0.0
+              }
+            },
+            "evt_mrs_band": {
+              "band": "mild_dependence",
+              "confidence": 1.0,
+              "probabilities": {
+                "mild_dependence": 1.0,
+                "moderate_severe_dependence": 0.0,
+                "independent": 0.0,
+                "severe_dependence": 0.0
+              }
+            },
+            "evt_nihss_band": {
+              "band": "high",
+              "confidence": 1.0,
+              "probabilities": {
+                "high": 1.0,
+                "low": 0.0,
+                "moderate": 0.0
+              }
+            }
+          }
+        },
+        "evt_decision": {
+          "target_kind": "reasonable",
+          "synthesized_kind": "reasonable",
+          "correct": true,
+          "sub_answers": {
+            "ivt_screen_severity": {
+              "band": "clear",
+              "confidence": 0.95,
+              "probabilities": {
+                "relative": 0.04,
+                "clear": 0.96,
+                "unconfirmed": 0.0,
+                "absolute": 0.0
+              }
+            },
+            "ivt_disabling_deficit": {
+              "band": "disabling",
+              "confidence": 1.0,
+              "probabilities": {
+                "unclear": 0.0,
+                "disabling": 1.0,
+                "not_disabling": 0.0
+              }
+            },
+            "ivt_time_band": {
+              "band": "early",
+              "confidence": 1.0,
+              "probabilities": {
+                "unknown": 0.0,
+                "late": 0.0,
+                "extended": 0.0,
+                "early": 1.0
+              }
+            },
+            "evt_time_band": {
+              "band": "early",
+              "confidence": 1.0,
+              "probabilities": {
+                "unknown": 0.0,
+                "early": 1.0,
+                "extended": 0.0,
+                "late": 0.0
+              }
+            },
+            "evt_core_band": {
+              "band": "favorable",
+              "confidence": 1.0,
+              "probabilities": {
+                "unfavorable": 0.0,
+                "favorable": 1.0,
+                "moderate": 0.0
+              }
+            },
+            "evt_mrs_band": {
+              "band": "mild_dependence",
+              "confidence": 1.0,
+              "probabilities": {
+                "mild_dependence": 1.0,
+                "moderate_severe_dependence": 0.0,
+                "independent": 0.0,
+                "severe_dependence": 0.0
+              }
+            },
+            "evt_nihss_band": {
+              "band": "high",
+              "confidence": 1.0,
+              "probabilities": {
+                "high": 1.0,
+                "low": 0.0,
+                "moderate": 0.0
+              }
+            }
+          }
+        }
+      }
+    },
+    "S15": {
+      "title": "Pre-stroke mRS 3 with M1",
+      "questions": {
+        "ivt_decision": {
+          "target_kind": "individualize",
+          "synthesized_kind": "individualize",
+          "correct": true,
+          "sub_answers": {
+            "ivt_screen_severity": {
+              "band": "relative",
+              "confidence": 0.97,
+              "probabilities": {
+                "clear": 0.02,
+                "relative": 0.98,
+                "unconfirmed": 0.0,
+                "absolute": 0.0
+              }
+            },
+            "ivt_disabling_deficit": {
+              "band": "disabling",
+              "confidence": 1.0,
+              "probabilities": {
+                "unclear": 0.0,
+                "disabling": 1.0,
+                "not_disabling": 0.0
+              }
+            },
+            "ivt_time_band": {
+              "band": "early",
+              "confidence": 1.0,
+              "probabilities": {
+                "unknown": 0.0,
+                "early": 1.0,
+                "extended": 0.0,
+                "late": 0.0
+              }
+            },
+            "evt_time_band": {
+              "band": "early",
+              "confidence": 1.0,
+              "probabilities": {
+                "unknown": 0.0,
+                "early": 1.0,
+                "late": 0.0,
+                "extended": 0.0
+              }
+            },
+            "evt_core_band": {
+              "band": "favorable",
+              "confidence": 1.0,
+              "probabilities": {
+                "unfavorable": 0.0,
+                "moderate": 0.0,
+                "favorable": 1.0
+              }
+            },
+            "evt_mrs_band": {
+              "band": "moderate_severe_dependence",
+              "confidence": 0.98,
+              "probabilities": {
+                "severe_dependence": 0.0,
+                "independent": 0.0,
+                "mild_dependence": 0.01,
+                "moderate_severe_dependence": 0.99
+              }
+            },
+            "evt_nihss_band": {
+              "band": "high",
+              "confidence": 1.0,
+              "probabilities": {
+                "high": 1.0,
+                "low": 0.0,
+                "moderate": 0.0
+              }
+            }
+          }
+        },
+        "evt_decision": {
+          "target_kind": "may_consider",
+          "synthesized_kind": "may_consider",
+          "correct": true,
+          "sub_answers": {
+            "ivt_screen_severity": {
+              "band": "relative",
+              "confidence": 0.97,
+              "probabilities": {
+                "clear": 0.02,
+                "relative": 0.98,
+                "unconfirmed": 0.0,
+                "absolute": 0.0
+              }
+            },
+            "ivt_disabling_deficit": {
+              "band": "disabling",
+              "confidence": 1.0,
+              "probabilities": {
+                "unclear": 0.0,
+                "disabling": 1.0,
+                "not_disabling": 0.0
+              }
+            },
+            "ivt_time_band": {
+              "band": "early",
+              "confidence": 1.0,
+              "probabilities": {
+                "unknown": 0.0,
+                "early": 1.0,
+                "extended": 0.0,
+                "late": 0.0
+              }
+            },
+            "evt_time_band": {
+              "band": "early",
+              "confidence": 1.0,
+              "probabilities": {
+                "unknown": 0.0,
+                "early": 1.0,
+                "late": 0.0,
+                "extended": 0.0
+              }
+            },
+            "evt_core_band": {
+              "band": "favorable",
+              "confidence": 1.0,
+              "probabilities": {
+                "unfavorable": 0.0,
+                "moderate": 0.0,
+                "favorable": 1.0
+              }
+            },
+            "evt_mrs_band": {
+              "band": "moderate_severe_dependence",
+              "confidence": 0.98,
+              "probabilities": {
+                "severe_dependence": 0.0,
+                "independent": 0.0,
+                "mild_dependence": 0.01,
+                "moderate_severe_dependence": 0.99
+              }
+            },
+            "evt_nihss_band": {
+              "band": "high",
+              "confidence": 1.0,
+              "probabilities": {
+                "high": 1.0,
+                "low": 0.0,
+                "moderate": 0.0
+              }
+            }
+          }
+        }
+      }
+    },
+    "S18": {
+      "title": "Glucose 2.1 mmol/L with disabling deficit",
+      "questions": {
+        "ivt_decision": {
+          "target_kind": "recommended",
+          "synthesized_kind": "recommended",
+          "correct": true,
+          "sub_answers": {
+            "ivt_screen_severity": {
+              "band": "clear",
+              "confidence": 0.92,
+              "probabilities": {
+                "absolute": 0.01,
+                "clear": 0.94,
+                "relative": 0.05,
+                "unconfirmed": 0.0
+              }
+            },
+            "ivt_disabling_deficit": {
+              "band": "disabling",
+              "confidence": 1.0,
+              "probabilities": {
+                "unclear": 0.0,
+                "disabling": 1.0,
+                "not_disabling": 0.0
+              }
+            },
+            "ivt_time_band": {
+              "band": "early",
+              "confidence": 1.0,
+              "probabilities": {
+                "late": 0.0,
+                "unknown": 0.0,
+                "early": 1.0,
+                "extended": 0.0
+              }
+            }
+          }
+        }
+      }
+    },
+    "S19": {
+      "title": "BP 200/115 before thrombolysis",
+      "questions": {
+        "ivt_decision": {
+          "target_kind": "recommended",
+          "synthesized_kind": "recommended",
+          "correct": true,
+          "sub_answers": {
+            "ivt_screen_severity": {
+              "band": "clear",
+              "confidence": 0.86,
+              "probabilities": {
+                "absolute": 0.02,
+                "relative": 0.08,
+                "unconfirmed": 0.0,
+                "clear": 0.9
+              }
+            },
+            "ivt_disabling_deficit": {
+              "band": "disabling",
+              "confidence": 1.0,
+              "probabilities": {
+                "not_disabling": 0.0,
+                "disabling": 1.0,
+                "unclear": 0.0
+              }
+            },
+            "ivt_time_band": {
+              "band": "early",
+              "confidence": 1.0,
+              "probabilities": {
+                "extended": 0.0,
+                "late": 0.0,
+                "unknown": 0.0,
+                "early": 1.0
+              }
+            }
+          }
+        }
+      }
+    },
+    "S20": {
+      "title": "BP refractory to treatment",
+      "questions": {
+        "ivt_decision": {
+          "target_kind": "individualize",
+          "synthesized_kind": "individualize",
+          "correct": true,
+          "sub_answers": {
+            "ivt_screen_severity": {
+              "band": "relative",
+              "confidence": 0.98,
+              "probabilities": {
+                "relative": 0.99,
+                "absolute": 0.01,
+                "unconfirmed": 0.0,
+                "clear": 0.0
+              }
+            },
+            "ivt_disabling_deficit": {
+              "band": "disabling",
+              "confidence": 1.0,
+              "probabilities": {
+                "disabling": 1.0,
+                "unclear": 0.0,
+                "not_disabling": 0.0
+              }
+            },
+            "ivt_time_band": {
+              "band": "early",
+              "confidence": 1.0,
+              "probabilities": {
+                "late": 0.0,
+                "early": 1.0,
+                "extended": 0.0,
+                "unknown": 0.0
+              }
+            }
+          }
+        }
+      }
+    },
+    "S21": {
+      "title": "Spinal surgery 7 days ago",
+      "questions": {
+        "ivt_decision": {
+          "target_kind": "harm",
+          "synthesized_kind": "harm",
+          "correct": true,
+          "sub_answers": {
+            "ivt_screen_severity": {
+              "band": "absolute",
+              "confidence": 0.65,
+              "probabilities": {
+                "absolute": 0.74,
+                "clear": 0.23,
+                "relative": 0.03,
+                "unconfirmed": 0.0
+              }
+            },
+            "ivt_disabling_deficit": {
+              "band": "disabling",
+              "confidence": 1.0,
+              "probabilities": {
+                "unclear": 0.0,
+                "not_disabling": 0.0,
+                "disabling": 1.0
+              }
+            },
+            "ivt_time_band": {
+              "band": "early",
+              "confidence": 1.0,
+              "probabilities": {
+                "unknown": 0.0,
+                "extended": 0.0,
+                "late": 0.0,
+                "early": 1.0
+              }
+            },
+            "evt_time_band": {
+              "band": "early",
+              "confidence": 1.0,
+              "probabilities": {
+                "late": 0.0,
+                "extended": 0.0,
+                "unknown": 0.0,
+                "early": 1.0
+              }
+            },
+            "evt_core_band": {
+              "band": "favorable",
+              "confidence": 1.0,
+              "probabilities": {
+                "moderate": 0.0,
+                "unfavorable": 0.0,
+                "favorable": 1.0
+              }
+            },
+            "evt_mrs_band": {
+              "band": "independent",
+              "confidence": 1.0,
+              "probabilities": {
+                "independent": 1.0,
+                "mild_dependence": 0.0,
+                "moderate_severe_dependence": 0.0,
+                "severe_dependence": 0.0
+              }
+            },
+            "evt_nihss_band": {
+              "band": "high",
+              "confidence": 1.0,
+              "probabilities": {
+                "moderate": 0.0,
+                "low": 0.0,
+                "high": 1.0
+              }
+            }
+          }
+        },
+        "evt_decision": {
+          "target_kind": "recommended",
+          "synthesized_kind": "recommended",
+          "correct": true,
+          "sub_answers": {
+            "ivt_screen_severity": {
+              "band": "absolute",
+              "confidence": 0.65,
+              "probabilities": {
+                "absolute": 0.74,
+                "clear": 0.23,
+                "relative": 0.03,
+                "unconfirmed": 0.0
+              }
+            },
+            "ivt_disabling_deficit": {
+              "band": "disabling",
+              "confidence": 1.0,
+              "probabilities": {
+                "unclear": 0.0,
+                "not_disabling": 0.0,
+                "disabling": 1.0
+              }
+            },
+            "ivt_time_band": {
+              "band": "early",
+              "confidence": 1.0,
+              "probabilities": {
+                "unknown": 0.0,
+                "extended": 0.0,
+                "late": 0.0,
+                "early": 1.0
+              }
+            },
+            "evt_time_band": {
+              "band": "early",
+              "confidence": 1.0,
+              "probabilities": {
+                "late": 0.0,
+                "extended": 0.0,
+                "unknown": 0.0,
+                "early": 1.0
+              }
+            },
+            "evt_core_band": {
+              "band": "favorable",
+              "confidence": 1.0,
+              "probabilities": {
+                "moderate": 0.0,
+                "unfavorable": 0.0,
+                "favorable": 1.0
+              }
+            },
+            "evt_mrs_band": {
+              "band": "independent",
+              "confidence": 1.0,
+              "probabilities": {
+                "independent": 1.0,
+                "mild_dependence": 0.0,
+                "moderate_severe_dependence": 0.0,
+                "severe_dependence": 0.0
+              }
+            },
+            "evt_nihss_band": {
+              "band": "high",
+              "confidence": 1.0,
+              "probabilities": {
+                "moderate": 0.0,
+                "low": 0.0,
+                "high": 1.0
+              }
+            }
+          }
+        }
+      }
+    },
+    "S22": {
+      "title": "History not yet taken",
+      "questions": {
+        "ivt_decision": {
+          "target_kind": "action",
+          "synthesized_kind": "action",
+          "correct": true,
+          "sub_answers": {
+            "ivt_screen_severity": {
+              "band": "unconfirmed",
+              "confidence": 0.82,
+              "probabilities": {
+                "relative": 0.11,
+                "absolute": 0.0,
+                "clear": 0.02,
+                "unconfirmed": 0.87
+              }
+            },
+            "ivt_disabling_deficit": {
+              "band": "disabling",
+              "confidence": 1.0,
+              "probabilities": {
+                "not_disabling": 0.0,
+                "unclear": 0.0,
+                "disabling": 1.0
+              }
+            },
+            "ivt_time_band": {
+              "band": "early",
+              "confidence": 1.0,
+              "probabilities": {
+                "extended": 0.0,
+                "late": 0.0,
+                "unknown": 0.0,
+                "early": 1.0
+              }
+            }
+          }
+        }
+      }
+    },
+    "S33": {
+      "title": "M1 at 30 h",
+      "questions": {
+        "evt_decision": {
+          "target_kind": "individualize",
+          "synthesized_kind": "individualize",
+          "correct": true,
+          "sub_answers": {
+            "evt_time_band": {
+              "band": "extended",
+              "confidence": 0.72,
+              "probabilities": {
+                "unknown": 0.0,
+                "early": 0.02,
+                "late": 0.19,
+                "extended": 0.79
+              }
+            },
+            "evt_core_band": {
+              "band": "favorable",
+              "confidence": 1.0,
+              "probabilities": {
+                "unfavorable": 0.0,
+                "moderate": 0.0,
+                "favorable": 1.0
+              }
+            },
+            "evt_mrs_band": {
+              "band": "independent",
+              "confidence": 1.0,
+              "probabilities": {
+                "severe_dependence": 0.0,
+                "mild_dependence": 0.0,
+                "independent": 1.0,
+                "moderate_severe_dependence": 0.0
+              }
+            },
+            "evt_nihss_band": {
+              "band": "high",
+              "confidence": 1.0,
+              "probabilities": {
+                "high": 1.0,
+                "low": 0.0,
+                "moderate": 0.0
+              }
+            }
+          }
+        }
+      }
+    },
+    "S34": {
+      "title": "M1 at a thrombolysis-only hospital",
+      "questions": {
+        "ivt_decision": {
+          "target_kind": "recommended",
+          "synthesized_kind": "recommended",
+          "correct": true,
+          "sub_answers": {
+            "ivt_screen_severity": {
+              "band": "clear",
+              "confidence": 0.98,
+              "probabilities": {
+                "unconfirmed": 0.0,
+                "relative": 0.01,
+                "absolute": 0.0,
+                "clear": 0.99
+              }
+            },
+            "ivt_disabling_deficit": {
+              "band": "disabling",
+              "confidence": 1.0,
+              "probabilities": {
+                "disabling": 1.0,
+                "not_disabling": 0.0,
+                "unclear": 0.0
+              }
+            },
+            "ivt_time_band": {
+              "band": "early",
+              "confidence": 1.0,
+              "probabilities": {
+                "early": 1.0,
+                "unknown": 0.0,
+                "late": 0.0,
+                "extended": 0.0
+              }
+            },
+            "evt_time_band": {
+              "band": "early",
+              "confidence": 1.0,
+              "probabilities": {
+                "early": 1.0,
+                "unknown": 0.0,
+                "late": 0.0,
+                "extended": 0.0
+              }
+            },
+            "evt_core_band": {
+              "band": "favorable",
+              "confidence": 1.0,
+              "probabilities": {
+                "unfavorable": 0.0,
+                "moderate": 0.0,
+                "favorable": 1.0
+              }
+            },
+            "evt_mrs_band": {
+              "band": "independent",
+              "confidence": 1.0,
+              "probabilities": {
+                "mild_dependence": 0.0,
+                "severe_dependence": 0.0,
+                "moderate_severe_dependence": 0.0,
+                "independent": 1.0
+              }
+            },
+            "evt_nihss_band": {
+              "band": "high",
+              "confidence": 1.0,
+              "probabilities": {
+                "low": 0.0,
+                "moderate": 0.0,
+                "high": 1.0
+              }
+            }
+          }
+        },
+        "evt_decision": {
+          "target_kind": "recommended",
+          "synthesized_kind": "recommended",
+          "correct": true,
+          "sub_answers": {
+            "ivt_screen_severity": {
+              "band": "clear",
+              "confidence": 0.98,
+              "probabilities": {
+                "unconfirmed": 0.0,
+                "relative": 0.01,
+                "absolute": 0.0,
+                "clear": 0.99
+              }
+            },
+            "ivt_disabling_deficit": {
+              "band": "disabling",
+              "confidence": 1.0,
+              "probabilities": {
+                "disabling": 1.0,
+                "not_disabling": 0.0,
+                "unclear": 0.0
+              }
+            },
+            "ivt_time_band": {
+              "band": "early",
+              "confidence": 1.0,
+              "probabilities": {
+                "early": 1.0,
+                "unknown": 0.0,
+                "late": 0.0,
+                "extended": 0.0
+              }
+            },
+            "evt_time_band": {
+              "band": "early",
+              "confidence": 1.0,
+              "probabilities": {
+                "early": 1.0,
+                "unknown": 0.0,
+                "late": 0.0,
+                "extended": 0.0
+              }
+            },
+            "evt_core_band": {
+              "band": "favorable",
+              "confidence": 1.0,
+              "probabilities": {
+                "unfavorable": 0.0,
+                "moderate": 0.0,
+                "favorable": 1.0
+              }
+            },
+            "evt_mrs_band": {
+              "band": "independent",
+              "confidence": 1.0,
+              "probabilities": {
+                "mild_dependence": 0.0,
+                "severe_dependence": 0.0,
+                "moderate_severe_dependence": 0.0,
+                "independent": 1.0
+              }
+            },
+            "evt_nihss_band": {
+              "band": "high",
+              "confidence": 1.0,
+              "probabilities": {
+                "low": 0.0,
+                "moderate": 0.0,
+                "high": 1.0
+              }
+            }
+          }
+        }
+      }
+    },
+    "S35": {
+      "title": "Unknown onset, no advanced imaging decided yet, M1",
+      "questions": {
+        "ivt_decision": {
+          "target_kind": "reasonable",
+          "synthesized_kind": "reasonable",
+          "correct": true,
+          "sub_answers": {
+            "ivt_screen_severity": {
+              "band": "clear",
+              "confidence": 0.96,
+              "probabilities": {
+                "unconfirmed": 0.0,
+                "clear": 0.97,
+                "absolute": 0.0,
+                "relative": 0.03
+              }
+            },
+            "ivt_disabling_deficit": {
+              "band": "disabling",
+              "confidence": 1.0,
+              "probabilities": {
+                "not_disabling": 0.0,
+                "disabling": 1.0,
+                "unclear": 0.0
+              }
+            },
+            "ivt_time_band": {
+              "band": "unknown",
+              "confidence": 1.0,
+              "probabilities": {
+                "extended": 0.0,
+                "early": 0.0,
+                "late": 0.0,
+                "unknown": 1.0
+              }
+            },
+            "evt_time_band": {
+              "band": "unknown",
+              "confidence": 1.0,
+              "probabilities": {
+                "extended": 0.0,
+                "early": 0.0,
+                "unknown": 1.0,
+                "late": 0.0
+              }
+            },
+            "evt_core_band": {
+              "band": "favorable",
+              "confidence": 1.0,
+              "probabilities": {
+                "moderate": 0.0,
+                "favorable": 1.0,
+                "unfavorable": 0.0
+              }
+            },
+            "evt_mrs_band": {
+              "band": "independent",
+              "confidence": 1.0,
+              "probabilities": {
+                "mild_dependence": 0.0,
+                "severe_dependence": 0.0,
+                "independent": 1.0,
+                "moderate_severe_dependence": 0.0
+              }
+            },
+            "evt_nihss_band": {
+              "band": "high",
+              "confidence": 1.0,
+              "probabilities": {
+                "low": 0.0,
+                "moderate": 0.0,
+                "high": 1.0
+              }
+            }
+          }
+        },
+        "evt_decision": {
+          "target_kind": "recommended",
+          "synthesized_kind": "recommended",
+          "correct": true,
+          "sub_answers": {
+            "ivt_screen_severity": {
+              "band": "clear",
+              "confidence": 0.96,
+              "probabilities": {
+                "unconfirmed": 0.0,
+                "clear": 0.97,
+                "absolute": 0.0,
+                "relative": 0.03
+              }
+            },
+            "ivt_disabling_deficit": {
+              "band": "disabling",
+              "confidence": 1.0,
+              "probabilities": {
+                "not_disabling": 0.0,
+                "disabling": 1.0,
+                "unclear": 0.0
+              }
+            },
+            "ivt_time_band": {
+              "band": "unknown",
+              "confidence": 1.0,
+              "probabilities": {
+                "extended": 0.0,
+                "early": 0.0,
+                "late": 0.0,
+                "unknown": 1.0
+              }
+            },
+            "evt_time_band": {
+              "band": "unknown",
+              "confidence": 1.0,
+              "probabilities": {
+                "extended": 0.0,
+                "early": 0.0,
+                "unknown": 1.0,
+                "late": 0.0
+              }
+            },
+            "evt_core_band": {
+              "band": "favorable",
+              "confidence": 1.0,
+              "probabilities": {
+                "moderate": 0.0,
+                "favorable": 1.0,
+                "unfavorable": 0.0
+              }
+            },
+            "evt_mrs_band": {
+              "band": "independent",
+              "confidence": 1.0,
+              "probabilities": {
+                "mild_dependence": 0.0,
+                "severe_dependence": 0.0,
+                "independent": 1.0,
+                "moderate_severe_dependence": 0.0
+              }
+            },
+            "evt_nihss_band": {
+              "band": "high",
+              "confidence": 1.0,
+              "probabilities": {
+                "low": 0.0,
+                "moderate": 0.0,
+                "high": 1.0
+              }
+            }
+          }
+        }
+      }
+    },
+    "S39": {
+      "title": "Pregnant, disabling stroke with M1",
+      "questions": {
+        "ivt_decision": {
+          "target_kind": "individualize",
+          "synthesized_kind": "individualize",
+          "correct": true,
+          "sub_answers": {
+            "ivt_screen_severity": {
+              "band": "relative",
+              "confidence": 0.99,
+              "probabilities": {
+                "unconfirmed": 0.0,
+                "relative": 0.99,
+                "absolute": 0.01,
+                "clear": 0.0
+              }
+            },
+            "ivt_disabling_deficit": {
+              "band": "disabling",
+              "confidence": 1.0,
+              "probabilities": {
+                "unclear": 0.0,
+                "not_disabling": 0.0,
+                "disabling": 1.0
+              }
+            },
+            "ivt_time_band": {
+              "band": "early",
+              "confidence": 1.0,
+              "probabilities": {
+                "late": 0.0,
+                "unknown": 0.0,
+                "early": 1.0,
+                "extended": 0.0
+              }
+            },
+            "evt_time_band": {
+              "band": "early",
+              "confidence": 1.0,
+              "probabilities": {
+                "late": 0.0,
+                "unknown": 0.0,
+                "early": 1.0,
+                "extended": 0.0
+              }
+            },
+            "evt_core_band": {
+              "band": "favorable",
+              "confidence": 1.0,
+              "probabilities": {
+                "moderate": 0.0,
+                "unfavorable": 0.0,
+                "favorable": 1.0
+              }
+            },
+            "evt_mrs_band": {
+              "band": "independent",
+              "confidence": 1.0,
+              "probabilities": {
+                "severe_dependence": 0.0,
+                "mild_dependence": 0.0,
+                "independent": 1.0,
+                "moderate_severe_dependence": 0.0
+              }
+            },
+            "evt_nihss_band": {
+              "band": "high",
+              "confidence": 1.0,
+              "probabilities": {
+                "moderate": 0.0,
+                "high": 1.0,
+                "low": 0.0
+              }
+            }
+          }
+        },
+        "evt_decision": {
+          "target_kind": "recommended",
+          "synthesized_kind": "recommended",
+          "correct": true,
+          "sub_answers": {
+            "ivt_screen_severity": {
+              "band": "relative",
+              "confidence": 0.99,
+              "probabilities": {
+                "unconfirmed": 0.0,
+                "relative": 0.99,
+                "absolute": 0.01,
+                "clear": 0.0
+              }
+            },
+            "ivt_disabling_deficit": {
+              "band": "disabling",
+              "confidence": 1.0,
+              "probabilities": {
+                "unclear": 0.0,
+                "not_disabling": 0.0,
+                "disabling": 1.0
+              }
+            },
+            "ivt_time_band": {
+              "band": "early",
+              "confidence": 1.0,
+              "probabilities": {
+                "late": 0.0,
+                "unknown": 0.0,
+                "early": 1.0,
+                "extended": 0.0
+              }
+            },
+            "evt_time_band": {
+              "band": "early",
+              "confidence": 1.0,
+              "probabilities": {
+                "late": 0.0,
+                "unknown": 0.0,
+                "early": 1.0,
+                "extended": 0.0
+              }
+            },
+            "evt_core_band": {
+              "band": "favorable",
+              "confidence": 1.0,
+              "probabilities": {
+                "moderate": 0.0,
+                "unfavorable": 0.0,
+                "favorable": 1.0
+              }
+            },
+            "evt_mrs_band": {
+              "band": "independent",
+              "confidence": 1.0,
+              "probabilities": {
+                "severe_dependence": 0.0,
+                "mild_dependence": 0.0,
+                "independent": 1.0,
+                "moderate_severe_dependence": 0.0
+              }
+            },
+            "evt_nihss_band": {
+              "band": "high",
+              "confidence": 1.0,
+              "probabilities": {
+                "moderate": 0.0,
+                "high": 1.0,
+                "low": 0.0
+              }
+            }
+          }
+        }
+      }
+    },
+    "S40": {
+      "title": "Seizure at onset with persisting disabling deficit",
+      "questions": {
+        "ivt_decision": {
+          "target_kind": "recommended",
+          "synthesized_kind": "recommended",
+          "correct": true,
+          "sub_answers": {
+            "ivt_screen_severity": {
+              "band": "clear",
+              "confidence": 0.94,
+              "probabilities": {
+                "relative": 0.04,
+                "clear": 0.96,
+                "unconfirmed": 0.0,
+                "absolute": 0.0
+              }
+            },
+            "ivt_disabling_deficit": {
+              "band": "disabling",
+              "confidence": 1.0,
+              "probabilities": {
+                "unclear": 0.0,
+                "disabling": 1.0,
+                "not_disabling": 0.0
+              }
+            },
+            "ivt_time_band": {
+              "band": "early",
+              "confidence": 1.0,
+              "probabilities": {
+                "unknown": 0.0,
+                "early": 1.0,
+                "extended": 0.0,
+                "late": 0.0
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

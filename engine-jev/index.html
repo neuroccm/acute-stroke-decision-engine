@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Decision Engine Jev — Hyperacute Stroke Decision Engine</title>
+<meta name="description" content="An experimental second approach to the same decisions: Jev (TypeSafe System One) answers small sub-questions, and the real deterministic engine synthesizes the verdict. 95% accuracy vs 42% for asking Jev the grade directly. For educational purposes only currently.">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32.png">
+<link rel="apple-touch-icon" href="/assets/img/favicon-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+Condensed:wght@500;600;700&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap">
+<link rel="stylesheet" href="/assets/css/site.css">
+</head>
+<body>
+
+<nav class="topnav">
+  <img class="topnav__mark" src="/assets/img/app-icon.png" alt="">
+  <a class="topnav__title" href="/">Hyperacute Stroke Decision Engine</a>
+  <div class="topnav__links">
+    <a href="/">Home</a>
+    <a href="/engine/">Decision engine</a>
+    <a href="/cases/">Case scenarios</a>
+    <a href="/engine-jev/" aria-current="page">Decision Engine Jev</a>
+    <a href="/cases-jev/">Eval Cases Jev</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <span class="eyebrow" style="margin:0">Experimental &middot; Jev evaluation</span>
+    <h1 style="font-size:clamp(30px,4.4vw,46px)">Can a language model make the same call as the tree?</h1>
+    <p class="lede">A second, independent approach to the same two questions the deterministic engine answers &mdash; is IV thrombolysis indicated, is EVT indicated &mdash; this time asking Jev (TypeSafe System One) to judge instead of walking the authored tree. Static snapshot of a completed evaluation; nothing here is wired into the live engine, CodeStrokeApp, or StrokeDecisionEngine.</p>
+    <div class="badge--disclaimer">Experimental &middot; educational purposes only currently</div>
+  </div>
+</header>
+
+<section class="section">
+  <div class="wrap">
+    <span class="eyebrow">The experiment</span>
+    <h2 style="font-size:clamp(24px,3.4vw,34px);max-width:32ch">Does asking Jev the grade directly fail on knowledge, or on holding too much at once?</h2>
+    <p class="lede">Two approaches were tried against the same 42-case set the tree itself is tested against (24 of TypeSafeStroke's own scenarios, plus 18 systematically generated boundary cases spanning time window, ASPECTS, occlusion site, mRS, age, and contraindication status). 66 total management questions, scored against the tree's own guideline-cited ground truth &mdash; the same grade taxonomy already used throughout this site: <code>recommended</code>, <code>reasonable</code>, <code>may_consider</code>, <code>individualize</code>, <code>not_recommended</code>, <code>harm</code>, <code>action</code> (missing information &mdash; the tree's own "unknown is not no" property).</p>
+    <div id="headline-table"></div>
+    <div id="byq-table"></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <span class="eyebrow">How decomposition works</span>
+    <h2 style="font-size:clamp(24px,3.4vw,34px);max-width:34ch">Small questions in, the real engine synthesizes the verdict</h2>
+    <p class="lede">Instead of one call asking for the final 7-way grade, each case gets a handful of small, narrow Choice questions: a contraindication-severity triage mirroring the tree's own worst-item-wins screen, a disabling-deficit call, and bucketed classifications of time window, core size, pre-stroke mRS, and NIHSS. Jev's answers are substituted into a copy of the case's true state at a representative value well inside the chosen band, and the same deterministic, parity-tested engine that runs <a href="/engine/">the decision engine on this site</a> computes the final verdict. Jev never computes a grade itself &mdash; only the tree does.</p>
+    <div class="card-grid" id="questions-grid" style="grid-template-columns:repeat(auto-fit,minmax(280px,1fr))"></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <span class="eyebrow">The one real gap</span>
+    <h2 style="font-size:clamp(24px,3.4vw,34px);max-width:30ch">Three misses, all the same confirmed finding</h2>
+    <p class="lede">All 3 remaining misses (of 66) are the identical, reproducible gap: for a large core (ASPECTS &lt;6), Jev answered "clear" &mdash; nothing to flag &mdash; when it should have flagged a relative contraindication, despite the question's own criteria explicitly listing "ASPECTS &lt;6" as a relative item. This was checked against a genuine guideline divergence already noted in the tree's own open questions (AHA's criterion is narrower than CSBPR's numeric cutoff) before being confirmed, on 2026-09-22, as a real miss rather than a defensible alternate reading. No other item &mdash; of roughly 26 explicit history and lab items in the severity question &mdash; produced a wrong answer anywhere in the 42-case set. This one item is the entire gap between 63/66 and a clean sweep.</p>
+    <div class="card-grid" style="grid-template-columns:repeat(auto-fit,minmax(300px,1fr))">
+      <a class="card" href="/cases-jev/#G04">
+        <span class="card__meta">G04 &middot; IVT</span>
+        <h3>Early window, M1, ASPECTS 4</h3>
+        <p>Moderate-low core &mdash; Jev said clear, tree says individualize.</p>
+      </a>
+      <a class="card" href="/cases-jev/#G05">
+        <span class="card__meta">G05 &middot; IVT</span>
+        <h3>Early window, M1, ASPECTS 1, age 65</h3>
+        <p>Large core &mdash; same miss.</p>
+      </a>
+      <a class="card" href="/cases-jev/#G06">
+        <span class="card__meta">G06 &middot; IVT</span>
+        <h3>Early window, M1, ASPECTS 1, age 84</h3>
+        <p>Large core, crossing the age-80 gate too &mdash; same miss.</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <span class="eyebrow">Status</span>
+    <h2 style="font-size:clamp(24px,3.4vw,34px);max-width:30ch">A promising early result, not a decision</h2>
+    <p class="lede">This changes the picture from "not usable" to "one narrow, specific, confirmed gap" &mdash; but nothing on this page has been wired into the live decision engine, CodeStrokeApp, or StrokeDecisionEngine. Static, illustrative, for educational purposes only currently, and reviewed the same way every open question on this site is: flagged plainly rather than smoothed over. Hemorrhagic (ICH) stroke and a live-query mode are both explicitly out of scope for this snapshot.</p>
+    <div class="hero__actions" style="margin-top:8px">
+      <a class="btn btn--primary" href="/cases-jev/">Browse all 42 eval cases</a>
+      <a class="btn btn--ghost" href="/engine/">Run the deterministic engine</a>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer wrap">
+  <p class="footer-callout">There is no duty of care. This is an educational website.</p>
+  <p class="disclaimer">Clinical decision support derived from the cited guidelines. It does not replace clinical judgement, local protocols, or specialist consultation. Draft pending clinical review.</p>
+  <p>Sources: 2026 AHA/ASA Acute Ischemic Stroke Guideline &middot; CSBPR Acute Stroke Management 2022 &middot; CSBPR EVT Interim Update 2025 &middot; Thrombosis Canada IVT/EVT Guide. Code is MIT-licensed; cited guideline text is reproduced as short, individually attributed quotations for clinical and educational use.</p>
+  <p>An educational initiative &mdash; Division of Neurology, University of Toronto &mdash; Dr. Houman Khosravani, MD PhD FRCPC.</p>
+  <p>Thanks to <a href="https://svin.org">SVIN</a> and <a href="https://missionthrombectomy.org">Mission Thrombectomy</a> for inspiration and collaboration in thinking about stroke processes and pathways, and how we can improve care for all.</p>
+  <div class="links">
+    <a href="/engine/">Decision engine</a>
+    <a href="/cases/">Case scenarios</a>
+    <a href="/disclaimer/">Disclaimer</a>
+    <a href="https://github.com/neuroccm/acute-stroke-decision-engine">GitHub</a>
+  </div>
+</footer>
+
+<script>
+const KIND = {
+  recommended: "Recommended &middot; COR 1", reasonable: "Reasonable &middot; 2a", may_consider: "May consider &middot; 2b",
+  individualize: "Individualize", not_recommended: "No benefit &middot; 3", harm: "Harm &middot; 3", action: "Action needed",
+};
+const QLABEL = { ivt_decision: "IV thrombolysis", evt_decision: "EVT (thrombectomy)" };
+const SUBQ = [
+  { key: "ivt_screen_severity", q: "Contraindication severity", detail: "Triage documented history, medications, and labs for IV thrombolysis contraindications per AHA Table 8 / CSBPR Box 5B — pick the most severe tier that applies. Silence (no history given) is “unconfirmed,” never “clear.”" },
+  { key: "ivt_disabling_deficit", q: "Disabling deficit?", detail: "Would this deficit, if it persisted, prevent basic activities of daily living or return to work (AHA Table 4)?" },
+  { key: "ivt_time_band", q: "Time since onset (IV window)", detail: "Early (≤4.5 h) · late (4.5–24 h) · extended (>24 h) · unknown (no onset/last-known-well time given at all)." },
+  { key: "evt_time_band", q: "Time since onset (EVT window)", detail: "Same bands, 6 h cutoff for early instead of 4.5 h — IVT and EVT get separately reconstructed states because the windows differ." },
+  { key: "evt_core_band", q: "Core size (ASPECTS / PC-ASPECTS)", detail: "Favorable (≥6) · moderate (3–5, anterior circulation only) · unfavorable (≤2, or PC-ASPECTS <6)." },
+  { key: "evt_mrs_band", q: "Pre-stroke mRS", detail: "Independent (0–1) · mild dependence (2) · moderate-severe dependence (3–4) · severe dependence (≥5)." },
+  { key: "evt_nihss_band", q: "NIHSS", detail: "High (≥10) · moderate (6–9) · low (<6)." },
+];
+
+fetch("/assets/data/jev-eval.json").then((r) => r.json()).then((d) => {
+  const headline = document.getElementById("headline-table");
+  headline.innerHTML = `<table class="compare-table">
+    <thead><tr><th>Approach</th><th>Correct</th><th>Accuracy</th></tr></thead>
+    <tbody>
+      <tr><td>Single-shot (ask Jev the grade directly)</td><td><b>${d.singleShot.correct}/${d.singleShot.total}</b></td><td>${Math.round(100 * d.singleShot.correct / d.singleShot.total)}%</td></tr>
+      <tr><td>Decomposed + real-engine synthesis</td><td><b>${d.decomposed.correct}/${d.decomposed.total}</b></td><td>${Math.round(100 * d.decomposed.correct / d.decomposed.total)}%</td></tr>
+    </tbody>
+  </table>`;
+  const rows = Object.entries(d.decomposed.byQuestion).map(([q, dc]) => {
+    const ss = d.singleShot.byQuestion[q];
+    return `<tr><td>${QLABEL[q] || q}</td><td>${ss.correct}/${ss.total} (${Math.round(100 * ss.correct / ss.total)}%)</td><td><b>${dc.correct}/${dc.total}</b> (${Math.round(100 * dc.correct / dc.total)}%)</td></tr>`;
+  }).join("");
+  document.getElementById("byq-table").innerHTML = `<table class="compare-table" style="margin-top:20px">
+    <thead><tr><th>Question</th><th>Single-shot</th><th>Decomposed</th></tr></thead>
+    <tbody>${rows}</tbody>
+  </table>`;
+
+  document.getElementById("questions-grid").innerHTML = SUBQ.map((s) => `<div class="card" style="cursor:default"><span class="card__meta">Jev is asked</span><h3>${s.q}</h3><p>${s.detail}</p></div>`).join("");
+});
+</script>
+
+</body>
+</html>

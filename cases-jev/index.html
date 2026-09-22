@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Case scenarios — Jev eval — Hyperacute Stroke Decision Engine</title>
+<meta name="description" content="42 cases, 66 questions: Jev's decomposed sub-answers and synthesized verdict against the deterministic engine's ground truth, side by side, with confidence shown. For educational purposes only currently.">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32.png">
+<link rel="apple-touch-icon" href="/assets/img/favicon-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+Condensed:wght@500;600;700&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap">
+<link rel="stylesheet" href="/assets/css/site.css">
+</head>
+<body>
+
+<nav class="topnav">
+  <img class="topnav__mark" src="/assets/img/app-icon.png" alt="">
+  <a class="topnav__title" href="/">Hyperacute Stroke Decision Engine</a>
+  <div class="topnav__links">
+    <a href="/">Home</a>
+    <a href="/engine/">Decision engine</a>
+    <a href="/cases/">Case scenarios</a>
+    <a href="/engine-jev/">Decision Engine Jev</a>
+    <a href="/cases-jev/" aria-current="page">Eval Cases Jev</a>
+  </div>
+</nav>
+
+<header class="section section--tight wrap">
+  <span class="eyebrow">42 cases &middot; 66 questions &middot; experimental</span>
+  <h1 style="font-size:clamp(28px,4vw,42px)">Case scenarios &mdash; Jev eval</h1>
+  <p class="lede">Every case below is real: 24 of TypeSafeStroke's own hand-written scenarios plus 18 systematically generated boundary cases, each scored on IV thrombolysis and/or EVT eligibility. Jev answers a handful of small sub-questions per case; the real deterministic engine substitutes those answers into the case state and computes the verdict. Ground truth is the tree's own answer to the same case. See <a href="/engine-jev/">how decomposition works</a>.</p>
+  <div id="headline-strip" class="stat-strip" style="margin-top:20px"></div>
+</header>
+
+<main class="wrap">
+  <div id="case-groups"></div>
+</main>
+
+<footer class="site-footer wrap">
+  <p class="footer-callout">There is no duty of care. This is an educational website.</p>
+  <p class="disclaimer">Clinical decision support derived from the cited guidelines. It does not replace clinical judgement, local protocols, or specialist consultation. Draft pending clinical review.</p>
+  <p>Sources: 2026 AHA/ASA Acute Ischemic Stroke Guideline &middot; CSBPR Acute Stroke Management 2022 &middot; CSBPR EVT Interim Update 2025 &middot; Thrombosis Canada IVT/EVT Guide.</p>
+  <p>An educational initiative &mdash; Division of Neurology, University of Toronto &mdash; Dr. Houman Khosravani, MD PhD FRCPC.</p>
+  <p>Thanks to <a href="https://svin.org">SVIN</a> and <a href="https://missionthrombectomy.org">Mission Thrombectomy</a> for inspiration and collaboration in thinking about stroke processes and pathways, and how we can improve care for all.</p>
+  <div class="links">
+    <a href="/">Home</a>
+    <a href="/engine/">Decision engine</a>
+    <a href="/disclaimer/">Disclaimer</a>
+    <a href="https://github.com/neuroccm/acute-stroke-decision-engine">GitHub</a>
+  </div>
+</footer>
+
+<script>
+const KIND = {
+  recommended: "Recommended", reasonable: "Reasonable", may_consider: "May consider",
+  individualize: "Individualize", not_recommended: "No benefit", harm: "Harm", action: "Action needed",
+};
+const QLABEL = { ivt_decision: "IV thrombolysis", evt_decision: "EVT" };
+const SUBQ_LABEL = {
+  ivt_screen_severity: "Contraindication severity", ivt_disabling_deficit: "Disabling deficit",
+  ivt_time_band: "Time since onset (IVT)", evt_time_band: "Time since onset (EVT)",
+  evt_core_band: "Core size (ASPECTS)", evt_mrs_band: "Pre-stroke mRS", evt_nihss_band: "NIHSS",
+};
+const esc = (s) => String(s ?? "").replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+const kindBadge = (k) => `<span class="kind-badge k-${esc(k)}">${esc(KIND[k] || k)}</span>`;
+const pct = (n) => n == null ? "" : `${Math.round(n * 100)}%`;
+
+function subAnswerRows(subs) {
+  return Object.entries(subs).map(([key, a]) => {
+    const runnerUp = a.probabilities ? Object.entries(a.probabilities).filter(([k]) => k !== a.band).sort((x, y) => y[1] - x[1])[0] : null;
+    const conf = a.confidence != null ? `<span>${pct(a.confidence)} confident${runnerUp && runnerUp[1] > 0.1 ? ` &middot; ${pct(runnerUp[1])} ${esc(runnerUp[0])}` : ""}</span>` : "";
+    return `<div><div class="jev-sub-q">${esc(SUBQ_LABEL[key] || key)}</div><div class="jev-sub-row"><b>${esc(a.band)}</b>${conf}</div></div>`;
+  }).join("");
+}
+
+function questionBlock(qKey, q) {
+  const label = QLABEL[qKey] || qKey;
+  if (q.correct) {
+    return `<div class="jev-q">${q.correct ? "✅" : "❌"} <b>${esc(label)}</b> &mdash; both agree: ${kindBadge(q.target_kind)}</div>`;
+  }
+  return `<div class="jev-q">❌ <b>${esc(label)}</b> &mdash; tree: ${kindBadge(q.target_kind)} &nbsp;Jev: ${kindBadge(q.synthesized_kind)}</div>`;
+}
+
+function caseCard(id, c) {
+  const questions = Object.entries(c.questions);
+  const anyMiss = questions.some(([, q]) => !q.correct);
+  const verdicts = questions.map(([qKey, q]) => questionBlock(qKey, q)).join("");
+  const subDetail = questions.map(([qKey, q]) => `
+    <div class="jev-sub">
+      <div class="jev-sub-q" style="text-transform:none;font-size:13px;color:var(--text-1);margin-bottom:6px">${esc(QLABEL[qKey] || qKey)} &mdash; what Jev was asked, and what it answered</div>
+      ${subAnswerRows(q.sub_answers)}
+    </div>`).join("");
+  return `<details class="jev-case${anyMiss ? " is-miss" : ""}" id="${esc(id)}">
+    <summary>
+      <div class="jev-case__head">
+        <span class="jev-case__id">${esc(id)}</span>
+        <span class="jev-case__title">${esc(c.title)}</span>
+      </div>
+      <div class="jev-case__verdicts">${verdicts}</div>
+    </summary>
+    ${subDetail}
+  </details>`;
+}
+
+fetch("/assets/data/jev-eval.json").then((r) => r.json()).then((d) => {
+  const s = d.decomposed;
+  document.getElementById("headline-strip").innerHTML = `
+    <div class="stat"><b>${s.correct}/${s.total}</b><span>Decomposed accuracy</span></div>
+    <div class="stat"><b>${s.byQuestion.ivt_decision.correct}/${s.byQuestion.ivt_decision.total}</b><span>IV thrombolysis</span></div>
+    <div class="stat"><b>${s.byQuestion.evt_decision.correct}/${s.byQuestion.evt_decision.total}</b><span>EVT</span></div>
+    <div class="stat"><b>${d.singleShot.correct}/${d.singleShot.total}</b><span>Single-shot baseline</span></div>
+  `;
+
+  const ids = Object.keys(d.cases);
+  const handWritten = ids.filter((id) => id.startsWith("S")).sort();
+  const generated = ids.filter((id) => id.startsWith("G")).sort();
+  const groups = [
+    ["Hand-written scenarios", "From TypeSafeStroke's own 40-scenario suite &mdash; the same cases behind /cases/.", handWritten],
+    ["Systematically generated boundary cases", "18 cases sweeping time window, core size, mRS, age, and contraindication status across the tree's own thresholds &mdash; ground truth computed by the real engine, not hand-typed.", generated],
+  ];
+  document.getElementById("case-groups").innerHTML = groups.map(([title, note, groupIds]) => `
+    <section class="jev-group">
+      <h2>${esc(title)}</h2>
+      <p class="lede" style="margin-bottom:16px">${note}</p>
+      ${groupIds.map((id) => caseCard(id, d.cases[id])).join("")}
+    </section>
+  `).join("");
+
+  if (location.hash) {
+    const el = document.getElementById(location.hash.slice(1));
+    if (el) { el.setAttribute("open", ""); el.scrollIntoView({ block: "start" }); }
+  }
+});
+</script>
+
+</body>
+</html>

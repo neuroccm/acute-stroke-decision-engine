@@ -104,7 +104,13 @@
                 "high": 1.0
               }
             }
-          }
+          },
+          "targetOutcomeId": "ivt.std.eligible",
+          "sources": [
+            "AHA 2026",
+            "CSBPR 2022"
+          ],
+          "divergence": "CSBPR 2022 phrases tenecteplase as 'may be considered as an alternative' (Strong/Moderate); AHA 2026 recommends either agent (COR 1/A)."
         },
         "evt_decision": {
           "target_kind": "recommended",
@@ -178,7 +184,14 @@
                 "high": 1.0
               }
             }
-          }
+          },
+          "targetOutcomeId": "evt.rec_early",
+          "sources": [
+            "AHA 2026",
+            "CSBPR 2022",
+            "CSBPR EVT 2025"
+          ],
+          "divergence": null
         }
       }
     },
@@ -257,7 +270,14 @@
                 "high": 1.0
               }
             }
-          }
+          },
+          "targetOutcomeId": "ivt.ext_image",
+          "sources": [
+            "AHA 2026",
+            "CSBPR 2022",
+            "Thrombosis Canada"
+          ],
+          "divergence": null
         },
         "evt_decision": {
           "target_kind": "recommended",
@@ -331,7 +351,13 @@
                 "high": 1.0
               }
             }
-          }
+          },
+          "targetOutcomeId": "evt.rec_late",
+          "sources": [
+            "AHA 2026",
+            "CSBPR EVT 2025"
+          ],
+          "divergence": null
         }
       }
     },
@@ -381,7 +407,13 @@
                 "low": 0.0
               }
             }
-          }
+          },
+          "targetOutcomeId": "evt.idd_24h",
+          "sources": [
+            "AHA 2026",
+            "CSBPR EVT 2025"
+          ],
+          "divergence": null
         }
       }
     },
@@ -460,7 +492,13 @@
                 "moderate": 0.0
               }
             }
-          }
+          },
+          "targetOutcomeId": "ivt.std.individualize",
+          "sources": [
+            "AHA 2026",
+            "CSBPR 2022"
+          ],
+          "divergence": null
         },
         "evt_decision": {
           "target_kind": "recommended",
@@ -534,7 +572,14 @@
                 "moderate": 0.0
               }
             }
-          }
+          },
+          "targetOutcomeId": "evt.rec_early",
+          "sources": [
+            "AHA 2026",
+            "CSBPR 2022",
+            "CSBPR EVT 2025"
+          ],
+          "divergence": null
         }
       }
     },
@@ -613,7 +658,13 @@
                 "low": 0.0
               }
             }
-          }
+          },
+          "targetOutcomeId": "ivt.std.individualize",
+          "sources": [
+            "AHA 2026",
+            "CSBPR 2022"
+          ],
+          "divergence": null
         },
         "evt_decision": {
           "target_kind": "reasonable",
@@ -687,7 +738,13 @@
                 "low": 0.0
               }
             }
-          }
+          },
+          "targetOutcomeId": "evt.large_core",
+          "sources": [
+            "AHA 2026",
+            "CSBPR EVT 2025"
+          ],
+          "divergence": "CSBPR 2025 gives no graded recommendation for large core: moderate-to-large core 'may do better' with EVT, but treatment may not be indicated when prognosis is poor."
         }
       }
     },
@@ -766,7 +823,13 @@
                 "high": 1.0
               }
             }
-          }
+          },
+          "targetOutcomeId": "ivt.std.individualize",
+          "sources": [
+            "AHA 2026",
+            "CSBPR 2022"
+          ],
+          "divergence": null
         },
         "evt_decision": {
           "target_kind": "individualize",
@@ -840,7 +903,13 @@
                 "high": 1.0
               }
             }
-          }
+          },
+          "targetOutcomeId": "evt.large_core_idd",
+          "sources": [
+            "AHA 2026",
+            "CSBPR EVT 2025"
+          ],
+          "divergence": null
         }
       }
     },
@@ -919,7 +988,13 @@
                 "moderate": 0.0
               }
             }
-          }
+          },
+          "targetOutcomeId": "ivt.std.eligible",
+          "sources": [
+            "AHA 2026",
+            "CSBPR 2022"
+          ],
+          "divergence": "CSBPR 2022 phrases tenecteplase as 'may be considered as an alternative' (Strong/Moderate); AHA 2026 recommends either agent (COR 1/A)."
         },
         "evt_decision": {
           "target_kind": "reasonable",
@@ -993,7 +1068,13 @@
                 "moderate": 0.0
               }
             }
-          }
+          },
+          "targetOutcomeId": "evt.mrs2",
+          "sources": [
+            "AHA 2026",
+            "CSBPR 2022"
+          ],
+          "divergence": "CSBPR 2025 requires 'baseline independent function'; patients not functionally independent may be considered after goals-of-care discussion (CSBPR 2022)."
         }
       }
     },
@@ -1072,7 +1153,13 @@
                 "high": 1.0
               }
             }
-          }
+          },
+          "targetOutcomeId": "ivt.std.individualize",
+          "sources": [
+            "AHA 2026",
+            "CSBPR 2022"
+          ],
+          "divergence": null
         },
         "evt_decision": {
           "target_kind": "may_consider",
@@ -1146,7 +1233,13 @@
                 "high": 1.0
               }
             }
-          }
+          },
+          "targetOutcomeId": "evt.mrs34",
+          "sources": [
+            "AHA 2026",
+            "CSBPR 2022"
+          ],
+          "divergence": "CSBPR: not functionally independent at baseline; consider only after careful benefit-risk and goals-of-care discussion."
         }
       }
     },
@@ -1225,7 +1318,13 @@
                 "low": 0.0
               }
             }
-          }
+          },
+          "targetOutcomeId": "ivt.std.individualize",
+          "sources": [
+            "AHA 2026",
+            "CSBPR 2022"
+          ],
+          "divergence": null
         },
         "evt_decision": {
           "target_kind": "individualize",
@@ -1299,7 +1398,13 @@
                 "low": 0.0
               }
             }
-          }
+          },
+          "targetOutcomeId": "evt.idd_mrs",
+          "sources": [
+            "AHA 2026",
+            "CSBPR 2022"
+          ],
+          "divergence": null
         }
       }
     },
@@ -1378,7 +1483,13 @@
                 "moderate": 0.0
               }
             }
-          }
+          },
+          "targetOutcomeId": "ivt.std.eligible",
+          "sources": [
+            "AHA 2026",
+            "CSBPR 2022"
+          ],
+          "divergence": "CSBPR 2022 phrases tenecteplase as 'may be considered as an alternative' (Strong/Moderate); AHA 2026 recommends either agent (COR 1/A)."
         },
         "evt_decision": {
           "target_kind": "individualize",
@@ -1452,7 +1563,14 @@
                 "moderate": 0.0
               }
             }
-          }
+          },
+          "targetOutcomeId": "evt.low_nihss",
+          "sources": [
+            "AHA 2026",
+            "CSBPR 2022",
+            "CSBPR EVT 2025"
+          ],
+          "divergence": "CSBPR 2025 requires a disabling stroke (e.g. NIHSS >5); CSBPR 2022 Box 5C: disabling usually NIHSS >4."
         }
       }
     },
@@ -1531,7 +1649,13 @@
                 "low": 0.0
               }
             }
-          }
+          },
+          "targetOutcomeId": "ivt.std.eligible",
+          "sources": [
+            "AHA 2026",
+            "CSBPR 2022"
+          ],
+          "divergence": "CSBPR 2022 phrases tenecteplase as 'may be considered as an alternative' (Strong/Moderate); AHA 2026 recommends either agent (COR 1/A)."
         },
         "evt_decision": {
           "target_kind": "reasonable",
@@ -1605,7 +1729,13 @@
                 "low": 0.0
               }
             }
-          }
+          },
+          "targetOutcomeId": "evt.m2_rec",
+          "sources": [
+            "AHA 2026",
+            "CSBPR EVT 2025"
+          ],
+          "divergence": "CSBPR 2025: MeVO (including M2) EVT not uniformly supported; consider after stroke physician-neurointerventionalist consultation."
         }
       }
     },
@@ -1684,7 +1814,13 @@
                 "moderate": 1.0
               }
             }
-          }
+          },
+          "targetOutcomeId": "ivt.std.eligible",
+          "sources": [
+            "AHA 2026",
+            "CSBPR 2022"
+          ],
+          "divergence": "CSBPR 2022 phrases tenecteplase as 'may be considered as an alternative' (Strong/Moderate); AHA 2026 recommends either agent (COR 1/A)."
         },
         "evt_decision": {
           "target_kind": "not_recommended",
@@ -1758,7 +1894,13 @@
                 "moderate": 1.0
               }
             }
-          }
+          },
+          "targetOutcomeId": "evt.mevo",
+          "sources": [
+            "AHA 2026",
+            "CSBPR EVT 2025"
+          ],
+          "divergence": "CSBPR 2025: RCTs do not support uniform EVT for MeVO (M2, A2, P2); otherwise-eligible patients may be considered after stroke physician and neurointerventionalist consultation."
         }
       }
     },
@@ -1837,7 +1979,14 @@
                 "high": 1.0
               }
             }
-          }
+          },
+          "targetOutcomeId": "ivt.ext_image",
+          "sources": [
+            "AHA 2026",
+            "CSBPR 2022",
+            "Thrombosis Canada"
+          ],
+          "divergence": null
         },
         "evt_decision": {
           "target_kind": "recommended",
@@ -1911,7 +2060,13 @@
                 "high": 1.0
               }
             }
-          }
+          },
+          "targetOutcomeId": "evt.basilar_rec",
+          "sources": [
+            "AHA 2026",
+            "CSBPR EVT 2025"
+          ],
+          "divergence": null
         }
       }
     },
@@ -1990,7 +2145,14 @@
                 "high": 0.0
               }
             }
-          }
+          },
+          "targetOutcomeId": "ivt.ext_image",
+          "sources": [
+            "AHA 2026",
+            "CSBPR 2022",
+            "Thrombosis Canada"
+          ],
+          "divergence": null
         },
         "evt_decision": {
           "target_kind": "may_consider",
@@ -2064,7 +2226,13 @@
                 "high": 0.0
               }
             }
-          }
+          },
+          "targetOutcomeId": "evt.basilar_2b",
+          "sources": [
+            "AHA 2026",
+            "CSBPR EVT 2025"
+          ],
+          "divergence": "CSBPR 2025 includes basilar occlusion in its strong EVT recommendation for disabling stroke (e.g. NIHSS >5) without a separate NIHSS tier."
         }
       }
     },
@@ -2105,7 +2273,13 @@
                 "extended": 0.0
               }
             }
-          }
+          },
+          "targetOutcomeId": "ivt.std.eligible",
+          "sources": [
+            "AHA 2026",
+            "CSBPR 2022"
+          ],
+          "divergence": "CSBPR 2022 phrases tenecteplase as 'may be considered as an alternative' (Strong/Moderate); AHA 2026 recommends either agent (COR 1/A)."
         }
       }
     },
@@ -2146,7 +2320,13 @@
                 "early": 1.0
               }
             }
-          }
+          },
+          "targetOutcomeId": "ivt.std.no",
+          "sources": [
+            "AHA 2026",
+            "CSBPR 2022"
+          ],
+          "divergence": null
         }
       }
     },
@@ -2187,7 +2367,13 @@
                 "late": 0.0
               }
             }
-          }
+          },
+          "targetOutcomeId": "ivt.std.individualize",
+          "sources": [
+            "AHA 2026",
+            "CSBPR 2022"
+          ],
+          "divergence": null
         }
       }
     },
@@ -2228,7 +2414,13 @@
                 "unknown": 0.0
               }
             }
-          }
+          },
+          "targetOutcomeId": "ivt.std.pending",
+          "sources": [
+            "AHA 2026",
+            "CSBPR 2022"
+          ],
+          "divergence": null
         }
       }
     },
@@ -2307,7 +2499,13 @@
                 "low": 0.0
               }
             }
-          }
+          },
+          "targetOutcomeId": "ivt.std.eligible",
+          "sources": [
+            "AHA 2026",
+            "CSBPR 2022"
+          ],
+          "divergence": "CSBPR 2022 phrases tenecteplase as 'may be considered as an alternative' (Strong/Moderate); AHA 2026 recommends either agent (COR 1/A)."
         },
         "evt_decision": {
           "target_kind": "recommended",
@@ -2381,7 +2579,14 @@
                 "low": 0.0
               }
             }
-          }
+          },
+          "targetOutcomeId": "evt.rec_early",
+          "sources": [
+            "AHA 2026",
+            "CSBPR 2022",
+            "CSBPR EVT 2025"
+          ],
+          "divergence": null
         }
       }
     },
@@ -2422,7 +2627,13 @@
                 "extended": 0.0
               }
             }
-          }
+          },
+          "targetOutcomeId": "ivt.nondisabling",
+          "sources": [
+            "AHA 2026",
+            "CSBPR 2022"
+          ],
+          "divergence": null
         }
       }
     },
@@ -2501,7 +2712,13 @@
                 "moderate": 0.0
               }
             }
-          }
+          },
+          "targetOutcomeId": "ivt.std.individualize",
+          "sources": [
+            "AHA 2026",
+            "CSBPR 2022"
+          ],
+          "divergence": null
         },
         "evt_decision": {
           "target_kind": "recommended",
@@ -2575,7 +2792,14 @@
                 "moderate": 0.0
               }
             }
-          }
+          },
+          "targetOutcomeId": "evt.rec_early",
+          "sources": [
+            "AHA 2026",
+            "CSBPR 2022",
+            "CSBPR EVT 2025"
+          ],
+          "divergence": null
         }
       }
     },
@@ -2616,7 +2840,13 @@
                 "late": 0.98
               }
             }
-          }
+          },
+          "targetOutcomeId": "ivt.mri.eligible",
+          "sources": [
+            "AHA 2026",
+            "CSBPR 2022"
+          ],
+          "divergence": null
         }
       }
     },
@@ -2695,7 +2925,13 @@
                 "high": 0.0
               }
             }
-          }
+          },
+          "targetOutcomeId": "ivt.ctp.eligible",
+          "sources": [
+            "AHA 2026",
+            "CSBPR 2022"
+          ],
+          "divergence": null
         },
         "evt_decision": {
           "target_kind": "not_recommended",
@@ -2769,7 +3005,13 @@
                 "high": 0.0
               }
             }
-          }
+          },
+          "targetOutcomeId": "evt.mevo",
+          "sources": [
+            "AHA 2026",
+            "CSBPR EVT 2025"
+          ],
+          "divergence": "CSBPR 2025: RCTs do not support uniform EVT for MeVO (M2, A2, P2); otherwise-eligible patients may be considered after stroke physician and neurointerventionalist consultation."
         }
       }
     },
@@ -2819,7 +3061,13 @@
                 "moderate": 0.0
               }
             }
-          }
+          },
+          "targetOutcomeId": "evt.rec_late",
+          "sources": [
+            "AHA 2026",
+            "CSBPR EVT 2025"
+          ],
+          "divergence": null
         }
       }
     },
@@ -2898,7 +3146,13 @@
                 "low": 0.0
               }
             }
-          }
+          },
+          "targetOutcomeId": "ivt.std.individualize",
+          "sources": [
+            "AHA 2026",
+            "CSBPR 2022"
+          ],
+          "divergence": null
         },
         "evt_decision": {
           "target_kind": "recommended",
@@ -2972,7 +3226,14 @@
                 "low": 0.0
               }
             }
-          }
+          },
+          "targetOutcomeId": "evt.rec_early",
+          "sources": [
+            "AHA 2026",
+            "CSBPR 2022",
+            "CSBPR EVT 2025"
+          ],
+          "divergence": null
         }
       }
     },
@@ -3022,7 +3283,13 @@
                 "low": 0.0
               }
             }
-          }
+          },
+          "targetOutcomeId": "evt.large_core",
+          "sources": [
+            "AHA 2026",
+            "CSBPR EVT 2025"
+          ],
+          "divergence": "CSBPR 2025 gives no graded recommendation for large core: moderate-to-large core 'may do better' with EVT, but treatment may not be indicated when prognosis is poor."
         }
       }
     },
@@ -3072,7 +3339,13 @@
                 "high": 1.0
               }
             }
-          }
+          },
+          "targetOutcomeId": "evt.late_mod_idd",
+          "sources": [
+            "AHA 2026",
+            "CSBPR EVT 2025"
+          ],
+          "divergence": null
         }
       }
     },
@@ -3122,7 +3395,13 @@
                 "high": 1.0
               }
             }
-          }
+          },
+          "targetOutcomeId": "evt.basilar_rec",
+          "sources": [
+            "AHA 2026",
+            "CSBPR EVT 2025"
+          ],
+          "divergence": null
         }
       }
     },
@@ -3172,7 +3451,13 @@
                 "moderate": 1.0
               }
             }
-          }
+          },
+          "targetOutcomeId": "evt.basilar_2b",
+          "sources": [
+            "AHA 2026",
+            "CSBPR EVT 2025"
+          ],
+          "divergence": "CSBPR 2025 includes basilar occlusion in its strong EVT recommendation for disabling stroke (e.g. NIHSS >5) without a separate NIHSS tier."
         }
       }
     },
@@ -3251,7 +3536,13 @@
                 "high": 0.0
               }
             }
-          }
+          },
+          "targetOutcomeId": "ivt.std.eligible",
+          "sources": [
+            "AHA 2026",
+            "CSBPR 2022"
+          ],
+          "divergence": "CSBPR 2022 phrases tenecteplase as 'may be considered as an alternative' (Strong/Moderate); AHA 2026 recommends either agent (COR 1/A)."
         },
         "evt_decision": {
           "target_kind": "reasonable",
@@ -3325,7 +3616,13 @@
                 "high": 0.0
               }
             }
-          }
+          },
+          "targetOutcomeId": "evt.m2_rec",
+          "sources": [
+            "AHA 2026",
+            "CSBPR EVT 2025"
+          ],
+          "divergence": "CSBPR 2025: MeVO (including M2) EVT not uniformly supported; consider after stroke physician-neurointerventionalist consultation."
         }
       }
     },
@@ -3404,7 +3701,13 @@
                 "moderate": 0.0
               }
             }
-          }
+          },
+          "targetOutcomeId": "ivt.std.eligible",
+          "sources": [
+            "AHA 2026",
+            "CSBPR 2022"
+          ],
+          "divergence": "CSBPR 2022 phrases tenecteplase as 'may be considered as an alternative' (Strong/Moderate); AHA 2026 recommends either agent (COR 1/A)."
         },
         "evt_decision": {
           "target_kind": "reasonable",
@@ -3478,7 +3781,13 @@
                 "moderate": 0.0
               }
             }
-          }
+          },
+          "targetOutcomeId": "evt.mrs2",
+          "sources": [
+            "AHA 2026",
+            "CSBPR 2022"
+          ],
+          "divergence": "CSBPR 2025 requires 'baseline independent function'; patients not functionally independent may be considered after goals-of-care discussion (CSBPR 2022)."
         }
       }
     },
@@ -3557,7 +3866,13 @@
                 "moderate": 0.0
               }
             }
-          }
+          },
+          "targetOutcomeId": "ivt.std.individualize",
+          "sources": [
+            "AHA 2026",
+            "CSBPR 2022"
+          ],
+          "divergence": null
         },
         "evt_decision": {
           "target_kind": "may_consider",
@@ -3631,7 +3946,13 @@
                 "moderate": 0.0
               }
             }
-          }
+          },
+          "targetOutcomeId": "evt.mrs34",
+          "sources": [
+            "AHA 2026",
+            "CSBPR 2022"
+          ],
+          "divergence": "CSBPR: not functionally independent at baseline; consider only after careful benefit-risk and goals-of-care discussion."
         }
       }
     },
@@ -3672,7 +3993,13 @@
                 "extended": 0.0
               }
             }
-          }
+          },
+          "targetOutcomeId": "ivt.std.eligible",
+          "sources": [
+            "AHA 2026",
+            "CSBPR 2022"
+          ],
+          "divergence": "CSBPR 2022 phrases tenecteplase as 'may be considered as an alternative' (Strong/Moderate); AHA 2026 recommends either agent (COR 1/A)."
         }
       }
     },
@@ -3713,7 +4040,13 @@
                 "early": 1.0
               }
             }
-          }
+          },
+          "targetOutcomeId": "ivt.std.eligible",
+          "sources": [
+            "AHA 2026",
+            "CSBPR 2022"
+          ],
+          "divergence": "CSBPR 2022 phrases tenecteplase as 'may be considered as an alternative' (Strong/Moderate); AHA 2026 recommends either agent (COR 1/A)."
         }
       }
     },
@@ -3754,7 +4087,13 @@
                 "unknown": 0.0
               }
             }
-          }
+          },
+          "targetOutcomeId": "ivt.std.individualize",
+          "sources": [
+            "AHA 2026",
+            "CSBPR 2022"
+          ],
+          "divergence": null
         }
       }
     },
@@ -3833,7 +4172,13 @@
                 "high": 1.0
               }
             }
-          }
+          },
+          "targetOutcomeId": "ivt.std.no",
+          "sources": [
+            "AHA 2026",
+            "CSBPR 2022"
+          ],
+          "divergence": null
         },
         "evt_decision": {
           "target_kind": "recommended",
@@ -3907,7 +4252,14 @@
                 "high": 1.0
               }
             }
-          }
+          },
+          "targetOutcomeId": "evt.rec_early",
+          "sources": [
+            "AHA 2026",
+            "CSBPR 2022",
+            "CSBPR EVT 2025"
+          ],
+          "divergence": null
         }
       }
     },
@@ -3948,7 +4300,13 @@
                 "early": 1.0
               }
             }
-          }
+          },
+          "targetOutcomeId": "ivt.std.pending",
+          "sources": [
+            "AHA 2026",
+            "CSBPR 2022"
+          ],
+          "divergence": null
         }
       }
     },
@@ -3998,7 +4356,13 @@
                 "moderate": 0.0
               }
             }
-          }
+          },
+          "targetOutcomeId": "evt.idd_24h",
+          "sources": [
+            "AHA 2026",
+            "CSBPR EVT 2025"
+          ],
+          "divergence": null
         }
       }
     },
@@ -4077,7 +4441,13 @@
                 "high": 1.0
               }
             }
-          }
+          },
+          "targetOutcomeId": "ivt.std.eligible",
+          "sources": [
+            "AHA 2026",
+            "CSBPR 2022"
+          ],
+          "divergence": "CSBPR 2022 phrases tenecteplase as 'may be considered as an alternative' (Strong/Moderate); AHA 2026 recommends either agent (COR 1/A)."
         },
         "evt_decision": {
           "target_kind": "recommended",
@@ -4151,7 +4521,14 @@
                 "high": 1.0
               }
             }
-          }
+          },
+          "targetOutcomeId": "evt.rec_early",
+          "sources": [
+            "AHA 2026",
+            "CSBPR 2022",
+            "CSBPR EVT 2025"
+          ],
+          "divergence": null
         }
       }
     },
@@ -4230,7 +4607,14 @@
                 "high": 1.0
               }
             }
-          }
+          },
+          "targetOutcomeId": "ivt.ext_image",
+          "sources": [
+            "AHA 2026",
+            "CSBPR 2022",
+            "Thrombosis Canada"
+          ],
+          "divergence": null
         },
         "evt_decision": {
           "target_kind": "recommended",
@@ -4304,7 +4688,13 @@
                 "high": 1.0
               }
             }
-          }
+          },
+          "targetOutcomeId": "evt.rec_late",
+          "sources": [
+            "AHA 2026",
+            "CSBPR EVT 2025"
+          ],
+          "divergence": null
         }
       }
     },
@@ -4383,7 +4773,13 @@
                 "low": 0.0
               }
             }
-          }
+          },
+          "targetOutcomeId": "ivt.std.individualize",
+          "sources": [
+            "AHA 2026",
+            "CSBPR 2022"
+          ],
+          "divergence": null
         },
         "evt_decision": {
           "target_kind": "recommended",
@@ -4457,7 +4853,14 @@
                 "low": 0.0
               }
             }
-          }
+          },
+          "targetOutcomeId": "evt.rec_early",
+          "sources": [
+            "AHA 2026",
+            "CSBPR 2022",
+            "CSBPR EVT 2025"
+          ],
+          "divergence": null
         }
       }
     },
@@ -4498,7 +4901,13 @@
                 "late": 0.0
               }
             }
-          }
+          },
+          "targetOutcomeId": "ivt.std.eligible",
+          "sources": [
+            "AHA 2026",
+            "CSBPR 2022"
+          ],
+          "divergence": "CSBPR 2022 phrases tenecteplase as 'may be considered as an alternative' (Strong/Moderate); AHA 2026 recommends either agent (COR 1/A)."
         }
       }
     }

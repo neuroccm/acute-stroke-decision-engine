@@ -74,12 +74,16 @@ function subAnswerRows(subs) {
   }).join("");
 }
 
+function sourcesNote(q) {
+  return q.sources && q.sources.length ? `<span class="jev-sources">${esc(q.sources.join(", "))}</span>` : "";
+}
+
 function questionBlock(qKey, q) {
   const label = QLABEL[qKey] || qKey;
   if (q.correct) {
-    return `<div class="jev-q">${q.correct ? "✅" : "❌"} <b>${esc(label)}</b> &mdash; both agree: ${kindBadge(q.target_kind)}</div>`;
+    return `<div class="jev-q">✅ <b>${esc(label)}</b> &mdash; both agree: ${kindBadge(q.target_kind)} ${sourcesNote(q)}</div>`;
   }
-  return `<div class="jev-q">❌ <b>${esc(label)}</b> &mdash; tree: ${kindBadge(q.target_kind)} &nbsp;Jev: ${kindBadge(q.synthesized_kind)}</div>`;
+  return `<div class="jev-q">❌ <b>${esc(label)}</b> &mdash; tree: ${kindBadge(q.target_kind)} ${sourcesNote(q)} &nbsp;Jev: ${kindBadge(q.synthesized_kind)}</div>`;
 }
 
 function caseCard(id, c) {
@@ -90,6 +94,7 @@ function caseCard(id, c) {
     <div class="jev-sub">
       <div class="jev-sub-q" style="text-transform:none;font-size:13px;color:var(--text-1);margin-bottom:6px">${esc(QLABEL[qKey] || qKey)} &mdash; what Jev was asked, and what it answered</div>
       ${subAnswerRows(q.sub_answers)}
+      ${q.divergence ? `<div class="jev-divergence"><b>Guideline divergence:</b> ${esc(q.divergence)}</div>` : ""}
     </div>`).join("");
   return `<details class="jev-case${anyMiss ? " is-miss" : ""}" id="${esc(id)}">
     <summary>

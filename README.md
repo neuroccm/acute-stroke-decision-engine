@@ -3,8 +3,8 @@
 (hot on the release of TypeSafe) A TypeSafe-based, citation-traced decision engine for acute ischemic stroke,
 built from the 2026 AHA/ASA guideline, CSBPR 2022 (+ 2025 EVT update), and
 the Thrombosis Canada guide. For educational purposes only currently. This
-repo is the public site for the [TypeSafeStroke](https://github.com/neuroccm)
-decision tree that also runs inside CodeStrokeApp.
+repo is the public site for the TypeSafeStroke decision tree (a local
+project, not yet on GitHub) that also runs inside CodeStrokeApp.
 
 **Status: draft, pending clinical review. Decision support, not orders.**
 
@@ -13,7 +13,7 @@ decision tree that also runs inside CodeStrokeApp.
 - `index.html` — one-page overview.
 - `engine/index.html` — the live decision engine. **Generated only** by
   `scripts/sync-decision-tree.sh` — never hand-edit this file.
-- `cases/index.html` — 40 clinical test scenarios grouped by theme, each
+- `cases/index.html` — 50 clinical test scenarios grouped by theme, each
   linking into the live engine with real inputs preloaded.
 - `disclaimer/index.html` — terms of use and disclaimer (no duty of care,
   educational purpose only, no real patient data, source attribution).

@@ -432,7 +432,8 @@
    ],
    "expect_not": [
     "ivt.std.eligible"
-   ]
+   ],
+   "group": "pediatric"
   },
   {
    "id": "S17",
@@ -451,7 +452,8 @@
    },
    "expect": [
     "evt.peds_young"
-   ]
+   ],
+   "group": "pediatric"
   },
   {
    "id": "S18",
@@ -958,7 +960,7 @@
   },
   {
    "id": "S41",
-   "title": "Code review F1: witnessed onset 12 h, LVO, no EVT access, perfusion mismatch (TRACE-III)",
+   "title": "Witnessed onset 12 h, M1, no EVT access, perfusion mismatch",
    "presets": [
     "ed",
     "clear_history"
@@ -983,7 +985,7 @@
   },
   {
    "id": "S42",
-   "title": "Code review F2: TIA with no thrombolysis field entered",
+   "title": "TIA 12 h ago, ABCD2 5, thrombolysis not recorded",
    "presets": [],
    "inputs": {
     "care_setting": "ed",
@@ -1003,7 +1005,7 @@
   },
   {
    "id": "S43",
-   "title": "Code review F2: non-disabling deficit with no thrombolysis field entered",
+   "title": "Non-disabling minor stroke at 2 h, thrombolysis not recorded",
    "presets": [
     "ed",
     "clear_history"
@@ -1028,7 +1030,7 @@
   },
   {
    "id": "S44",
-   "title": "Code review F2: thrombolysis contraindicated, no thrombolysis field entered",
+   "title": "Neurosurgery within 14 days, no occlusion, NIHSS 8",
    "presets": [
     "ed",
     "clear_history"
@@ -1054,7 +1056,7 @@
   },
   {
    "id": "S45",
-   "title": "Code review F3: after thrombolysis, NIHSS 2, no AF",
+   "title": "After thrombolysis, NIHSS 2, no AF",
    "presets": [
     "ed",
     "clear_history"
@@ -1080,7 +1082,7 @@
   },
   {
    "id": "S46",
-   "title": "Code review F5: recent warfarin, INR/aPTT not back",
+   "title": "Recent warfarin, INR and aPTT not back",
    "presets": [
     "ed",
     "clear_history"
@@ -1110,7 +1112,7 @@
   },
   {
    "id": "S47",
-   "title": "Code review F5: more than 10 microbleeds on prior MRI",
+   "title": "More than 10 microbleeds on prior MRI",
    "presets": [
     "ed",
     "clear_history"
@@ -1137,7 +1139,7 @@
   },
   {
    "id": "S48",
-   "title": "Code review F10: non-integer pre-stroke mRS still reaches an EVT outcome",
+   "title": "M1, pre-stroke mRS uncertain between 1 and 2",
    "presets": [
     "ed",
     "clear_history"
@@ -1157,7 +1159,7 @@
   },
   {
    "id": "S49",
-   "title": "Code review F10: non-integer ASPECTS still reaches an EVT outcome",
+   "title": "M1 at 3 h, borderline ASPECTS between 5 and 6",
    "presets": [
     "ed",
     "clear_history"

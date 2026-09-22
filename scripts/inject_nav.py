@@ -3,9 +3,9 @@
 The artifact's own CSS custom properties (--rule, --muted, --cond, --accent,
 --ink) are reused so no extra stylesheet is loaded on this page. The page
 already ships full light/dark CSS (:root[data-theme="light"|"dark"], see
-template.html) with no UI control for it -- the toggle button and its
-localStorage-backed logic are added here rather than upstream, since this
-is site-level chrome, not a TypeSafeStroke engine feature.
+template.html); the toggle button, its localStorage-backed logic, and the
+site-wide dark default are all added here rather than upstream, since this
+is site-level chrome/preference, not a TypeSafeStroke engine feature.
 
 Usage: inject_nav.py <built.html> <out.html>
 """
@@ -16,18 +16,18 @@ src, out = Path(sys.argv[1]), Path(sys.argv[2])
 html = src.read_text()
 
 EXTRA_CSS = """
-.site-crumbs { display:flex; align-items:center; gap:10px; padding-bottom:14px; margin-bottom:14px; border-bottom:1px solid var(--rule); font:600 12px/1 var(--cond); }
-.site-crumbs img { border-radius:6px; display:block; }
-.site-crumbs a { color: var(--muted); text-decoration:none; }
-.site-crumbs a:hover { color: var(--accent); }
-.site-crumbs .sep { color: var(--rule); }
-.site-crumbs .current { color: var(--ink); }
+.site-nav { display:flex; align-items:center; gap:12px; padding-bottom:14px; margin-bottom:14px; border-bottom:1px solid var(--rule); }
+.site-nav img { border-radius:6px; display:block; }
+.site-nav__title { font:600 13px/1 var(--cond); letter-spacing:.01em; color: var(--ink); text-decoration:none; }
+.site-nav__links { margin-left:auto; display:flex; align-items:center; gap:16px; font:600 12px/1 var(--cond); letter-spacing:.02em; flex-wrap:wrap; }
+.site-nav__links a { color: var(--muted); text-decoration:none; }
+.site-nav__links a:hover, .site-nav__links a[aria-current="page"] { color: var(--accent); }
 .site-foot-links { display:flex; gap:16px; padding-top:14px; margin-top:18px; border-top:1px solid var(--rule); font:600 12px/1 var(--cond); }
 .site-foot-links a { color: var(--muted); text-decoration:none; }
 .site-foot-links a:hover { color: var(--accent); }
 .site-footer-callout { font:700 12px/1.4 var(--sans); color: var(--cor3nb); margin: 0 0 10px; }
-.theme-toggle { margin-left:auto; width:30px; height:30px; display:inline-flex; align-items:center; justify-content:center;
-  background: var(--sunk); border: 1px solid var(--rule); border-radius: 6px; font-size: 15px; line-height: 1; cursor: pointer; color: var(--ink); }
+.theme-toggle { width:28px; height:28px; flex:none; display:inline-flex; align-items:center; justify-content:center;
+  background: var(--sunk); border: 1px solid var(--rule); border-radius: 6px; font-size: 14px; line-height: 1; cursor: pointer; color: var(--ink); }
 .theme-toggle:hover { border-color: var(--muted); }
 """
 
@@ -35,19 +35,16 @@ THEME_SCRIPT = """<script>
 (function () {
   var KEY = "stroke-theme";
   var saved = localStorage.getItem(KEY);
-  if (saved === "light" || saved === "dark") document.documentElement.setAttribute("data-theme", saved);
-  function currentTheme() {
-    var explicit = document.documentElement.getAttribute("data-theme");
-    if (explicit === "light" || explicit === "dark") return explicit;
-    return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+  document.documentElement.setAttribute("data-theme", saved === "light" ? "light" : "dark");
+  function paint(btn) {
+    btn.textContent = document.documentElement.getAttribute("data-theme") === "dark" ? "\\u2600\\ufe0f" : "\\ud83c\\udf19";
   }
-  function paint(btn) { btn.textContent = currentTheme() === "dark" ? "\\u2600\\ufe0f" : "\\ud83c\\udf19"; }
   document.addEventListener("DOMContentLoaded", function () {
     var btn = document.getElementById("theme-toggle");
     if (!btn) return;
     paint(btn);
     btn.addEventListener("click", function () {
-      var next = currentTheme() === "dark" ? "light" : "dark";
+      var next = document.documentElement.getAttribute("data-theme") === "dark" ? "light" : "dark";
       document.documentElement.setAttribute("data-theme", next);
       localStorage.setItem(KEY, next);
       paint(btn);
@@ -57,14 +54,18 @@ THEME_SCRIPT = """<script>
 </script>
 """
 
-NAV_HTML = """<div class="site-crumbs">
-  <img src="/assets/img/app-icon.png" alt="" width="22" height="22">
-  <a href="/">Hyperacute Stroke Decision Engine</a>
-  <span class="sep">/</span>
-  <span class="current">Decision engine</span>
-  <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle dark mode" title="Toggle dark mode">&#127761;</button>
-  <a href="/cases/">Case scenarios &rarr;</a>
-</div>
+NAV_HTML = """<nav class="site-nav">
+  <img src="/assets/img/app-icon.png" alt="" width="26" height="26">
+  <a href="/" class="site-nav__title">Hyperacute Stroke Decision Engine</a>
+  <div class="site-nav__links">
+    <a href="/">Home</a>
+    <a href="/engine/" aria-current="page">Decision engine</a>
+    <a href="/cases/">Case scenarios</a>
+    <a href="/engine-jev/">Decision Engine Jev</a>
+    <a href="/cases-jev/">Eval Cases Jev</a>
+    <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle dark mode" title="Toggle dark mode">&#127761;</button>
+  </div>
+</nav>
 """
 
 SUBFOOTER_HTML = """<p class="site-footer-callout">There is no duty of care. This is an educational website.</p>

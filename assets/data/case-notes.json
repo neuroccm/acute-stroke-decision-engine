@@ -11,6 +11,8 @@
   "S08": { "theme": "Imaging & core-size edge cases", "note": "A large core early in the window — tests where the ASPECTS threshold actually bites." },
   "S09": { "theme": "Imaging & core-size edge cases", "note": "About as large a core as the tree will ever see — the floor of the ASPECTS threshold." },
   "S10": { "theme": "Imaging & core-size edge cases", "note": "Large core, late window, and advanced age stacked together — three relative factors at once." },
+  "S41": { "theme": "Imaging & core-size edge cases", "note": "A late-window occlusion selected by perfusion mismatch rather than the clock, when mechanical thrombectomy isn't on the table — the TRACE-III thrombolysis-alone scenario." },
+  "S49": { "theme": "Imaging & core-size edge cases", "note": "An ASPECTS score of 5.5 — a fractional input on the imaging threshold that gates early thrombectomy." },
 
   "S11": { "theme": "Vessel & anatomy nuance", "note": "Posterior circulation with a severe deficit gets a wider window than anterior circulation would." },
   "S12": { "theme": "Vessel & anatomy nuance", "note": "Same vessel, mild deficit — tests whether severity alone gates EVT for basilar occlusion." },
@@ -22,10 +24,14 @@
   "S16": { "theme": "Baseline function & special populations", "note": "The pediatric age gate in the early window, where adult defaults don't apply." },
   "S17": { "theme": "Baseline function & special populations", "note": "Pediatric, late window, and imaging-selected — the narrowest version of the EVT criteria." },
   "S39": { "theme": "Baseline function & special populations", "note": "Pregnancy as a relative factor the tree weighs, not an automatic exclusion." },
+  "S48": { "theme": "Baseline function & special populations", "note": "A pre-stroke modified Rankin Score of 1.5 instead of a whole number — a fractional input that shouldn't break the tree's thresholds." },
 
   "S03": { "theme": "Anticoagulation, labs & recent-procedure risk", "note": "A DOAC with no drug level and no clear last-dose confirmation — thrombolysis eligibility narrows, EVT stays open." },
   "S18": { "theme": "Anticoagulation, labs & recent-procedure risk", "note": "Hypoglycemia that can mimic or worsen a deficit — corrected before the stroke pathway proceeds." },
   "S21": { "theme": "Anticoagulation, labs & recent-procedure risk", "note": "A recent-surgery relative contraindication with its own lookback window." },
+  "S46": { "theme": "Anticoagulation, labs & recent-procedure risk", "note": "Recent warfarin with the coagulation labs not back yet — an unresulted INR/aPTT has to raise a caution, not pass silently or block outright." },
+  "S47": { "theme": "Anticoagulation, labs & recent-procedure risk", "note": "More than ten microbleeds on a prior MRI — a high microbleed burden flagged as its own caution finding." },
+  "S50": { "theme": "Anticoagulation, labs & recent-procedure risk", "note": "Glucose corrected back to normal but the deficit doesn't resolve — the counterpart to the hypoglycemia case, confirming a ruled-out metabolic mimic isn't a reason to withhold thrombolysis." },
 
   "S19": { "theme": "Blood pressure", "note": "Above the pre-treatment blood pressure threshold — treat first, then re-check eligibility." },
   "S20": { "theme": "Blood pressure", "note": "Blood pressure that won't come into range in time closes the thrombolysis window entirely." },
@@ -34,6 +40,9 @@
   "S22": { "theme": "Incomplete information", "note": "The 'unknown is not no' rule under real time pressure — the tree stops and asks rather than assuming." },
   "S35": { "theme": "Incomplete information", "note": "Two unknowns stacked — onset time and imaging strategy both still open." },
   "S36": { "theme": "Incomplete information", "note": "The empty-state worst case for how the tree handles missing information." },
+  "S42": { "theme": "Incomplete information", "note": "A TIA with the thrombolysis fields left blank on purpose — antithrombotic routing shouldn't stall waiting on questions the TIA pathway never needed." },
+  "S43": { "theme": "Incomplete information", "note": "A non-disabling deficit with the same blank thrombolysis fields — the same fix, on the branch that routes straight to antiplatelet therapy." },
+  "S44": { "theme": "Incomplete information", "note": "Thrombolysis already ruled out by a hard contraindication — a blank field shouldn't be read as a reason to hold the decision open." },
 
   "S23": { "theme": "Post-treatment complications", "note": "The symptomatic hemorrhage pathway that follows a treatment complication, not a treatment decision." },
   "S24": { "theme": "Post-treatment complications", "note": "A different post-thrombolysis emergency, with its own immediate management branch." },
@@ -46,5 +55,6 @@
   "S30": { "theme": "Downstream care & systems", "note": "Mothership-versus-drip-and-ship, in a system built to support direct transfer." },
   "S31": { "theme": "Downstream care & systems", "note": "The same routing decision under worse real-world constraints." },
   "S38": { "theme": "Downstream care & systems", "note": "Mild deficit, late presentation, no reperfusion candidate — secondary prevention carries the visit." },
-  "S40": { "theme": "Downstream care & systems", "note": "A stroke mimic that turns out not to be one — the tree has to tell the difference." }
+  "S40": { "theme": "Downstream care & systems", "note": "A stroke mimic that turns out not to be one — the tree has to tell the difference." },
+  "S45": { "theme": "Downstream care & systems", "note": "Mild deficit after thrombolysis, no atrial fibrillation — confirms only the post-thrombolysis waiting period fires, not the AF- or non-disabling-specific branches." }
 }

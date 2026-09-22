@@ -1,10 +1,10 @@
 {
   "modules": 13,
-  "nodes": 217,
-  "outcomes": 142,
+  "nodes": 222,
+  "outcomes": 147,
   "citedStatements": 362,
   "corpusStatements": 1268,
-  "scenarios": 40,
+  "scenarios": 50,
   "treeVersion": "2026.09-draft1",
-  "generatedAt": "2026-09-22T02:24:09Z"
+  "generatedAt": "2026-09-22T04:06:28Z"
 }

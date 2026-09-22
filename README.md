@@ -7,6 +7,7 @@ repo is the public site for the TypeSafeStroke decision tree (a local
 project, not yet on GitHub) that also runs inside CodeStrokeApp.
 
 **Status: draft, pending clinical review. Decision support, not orders.**
+**Last updated:** 2026-09-22.
 
 ## Structure
 
@@ -17,11 +18,18 @@ project, not yet on GitHub) that also runs inside CodeStrokeApp.
   linking into the live engine with real inputs preloaded.
 - `disclaimer/index.html` — terms of use and disclaimer (no duty of care,
   educational purpose only, no real patient data, source attribution).
+- `engine-jev/index.html` — experimental: Jev (TypeSafe System One)
+  decomposed-judgment eval vs. this engine, static snapshot, methodology
+  and headline numbers.
+- `cases-jev/index.html` — the 42 eval cases behind that page, tree vs.
+  Jev verdict per case with a confidence drill-down.
 - `assets/` — shared CSS, hand-built icons, brand assets, and the JSON data
-  (`scenarios.json`, `stats.json` generated; `case-notes.json` hand-authored
-  here).
+  (`scenarios.json`, `stats.json`, `jev-eval.json` generated; `case-notes.json`
+  hand-authored here).
 - `scripts/sync-decision-tree.sh` — rebuilds `engine/index.html` and the
   generated JSON from a local TypeSafeStroke checkout.
+- `scripts/build_jev_eval.py` — one-time snapshot builder for
+  `jev-eval.json` from a local TypeSafeWorkJev/ClinicalEval checkout.
 
 No build step, no JS framework — Cloudflare Pages serves the repo root
 directly.
@@ -52,15 +60,14 @@ then commit and push — Cloudflare Pages deploys automatically on push to
 
 ## Deploying
 
-This repo has no Cloudflare Pages project connected yet. One-time setup:
+Connected to Cloudflare Pages, live at [stroke.app](https://stroke.app).
+Build command: none. Build output directory: `/` (repo root). Every push to
+`main` deploys automatically.
 
-1. In the Cloudflare dashboard, go to Workers & Pages → Create → Pages →
-   Connect to Git, and select this repository.
-2. Build command: none. Build output directory: `/` (repo root).
-3. Every push to `main` deploys automatically after that.
-
-Alternatively, from the CLI: `wrangler login`, then
-`wrangler pages deploy . --project-name=acute-stroke-decision-engine`.
+To connect a fresh clone of this repo instead: Cloudflare dashboard →
+Workers & Pages → Create → Pages → Connect to Git → select this repository,
+same build settings as above. Alternatively, from the CLI: `wrangler login`,
+then `wrangler pages deploy . --project-name=acute-stroke-decision-engine`.
 
 ## License and attribution
 

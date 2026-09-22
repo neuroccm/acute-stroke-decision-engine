@@ -1,7 +1,11 @@
 #!/usr/bin/env python3
 """Wrap the vendored TypeSafeStroke artifact with this site's navigation.
 The artifact's own CSS custom properties (--rule, --muted, --cond, --accent,
---ink) are reused so no extra stylesheet is loaded on this page.
+--ink) are reused so no extra stylesheet is loaded on this page. The page
+already ships full light/dark CSS (:root[data-theme="light"|"dark"], see
+template.html) with no UI control for it -- the toggle button and its
+localStorage-backed logic are added here rather than upstream, since this
+is site-level chrome, not a TypeSafeStroke engine feature.
 
 Usage: inject_nav.py <built.html> <out.html>
 """
@@ -22,6 +26,35 @@ EXTRA_CSS = """
 .site-foot-links a { color: var(--muted); text-decoration:none; }
 .site-foot-links a:hover { color: var(--accent); }
 .site-footer-callout { font:700 12px/1.4 var(--sans); color: var(--cor3nb); margin: 0 0 10px; }
+.theme-toggle { margin-left:auto; width:30px; height:30px; display:inline-flex; align-items:center; justify-content:center;
+  background: var(--sunk); border: 1px solid var(--rule); border-radius: 6px; font-size: 15px; line-height: 1; cursor: pointer; color: var(--ink); }
+.theme-toggle:hover { border-color: var(--muted); }
+"""
+
+THEME_SCRIPT = """<script>
+(function () {
+  var KEY = "stroke-theme";
+  var saved = localStorage.getItem(KEY);
+  if (saved === "light" || saved === "dark") document.documentElement.setAttribute("data-theme", saved);
+  function currentTheme() {
+    var explicit = document.documentElement.getAttribute("data-theme");
+    if (explicit === "light" || explicit === "dark") return explicit;
+    return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+  }
+  function paint(btn) { btn.textContent = currentTheme() === "dark" ? "\\u2600\\ufe0f" : "\\ud83c\\udf19"; }
+  document.addEventListener("DOMContentLoaded", function () {
+    var btn = document.getElementById("theme-toggle");
+    if (!btn) return;
+    paint(btn);
+    btn.addEventListener("click", function () {
+      var next = currentTheme() === "dark" ? "light" : "dark";
+      document.documentElement.setAttribute("data-theme", next);
+      localStorage.setItem(KEY, next);
+      paint(btn);
+    });
+  });
+})();
+</script>
 """
 
 NAV_HTML = """<div class="site-crumbs">
@@ -29,7 +62,8 @@ NAV_HTML = """<div class="site-crumbs">
   <a href="/">Hyperacute Stroke Decision Engine</a>
   <span class="sep">/</span>
   <span class="current">Decision engine</span>
-  <a href="/cases/" style="margin-left:auto">Case scenarios &rarr;</a>
+  <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle dark mode" title="Toggle dark mode">&#127761;</button>
+  <a href="/cases/">Case scenarios &rarr;</a>
 </div>
 """
 
@@ -53,6 +87,7 @@ def replace_once(html, needle, insert, insert_before=False):
 
 
 html = replace_once(html, "</style>", EXTRA_CSS, insert_before=True)
+html = replace_once(html, "</style>", THEME_SCRIPT)
 html = replace_once(html, '<div class="wrap">', NAV_HTML)
 html = replace_once(html, '<footer id="disclaimer"></footer>', SUBFOOTER_HTML)
 

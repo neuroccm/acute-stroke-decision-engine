@@ -7,7 +7,10 @@ repo is the public site for the TypeSafeStroke decision tree (a local
 project, not yet on GitHub) that also runs inside CodeStrokeApp.
 
 **Status: draft, pending clinical review. Decision support, not orders.**
-**Last updated:** 2026-09-22.
+**Last updated:** 2026-09-24.
+
+Picking this project back up in a new session? Read
+[`docs/superpowers/STATUS.md`](docs/superpowers/STATUS.md) first.
 
 ## Structure
 

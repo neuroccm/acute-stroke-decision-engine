@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Case scenarios — Jev eval — Hyperacute Stroke Decision Engine</title>
+<title>Case scenarios: Jev eval | Hyperacute Stroke Decision Engine</title>
 <meta name="description" content="42 cases, 66 questions: Jev's decomposed sub-answers and synthesized verdict against the deterministic engine's ground truth, side by side, with confidence shown. For educational purposes only currently.">
 <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32.png">
 <link rel="apple-touch-icon" href="/assets/img/favicon-180.png">
@@ -28,7 +28,7 @@
 
 <header class="section section--tight wrap">
   <span class="eyebrow">42 cases &middot; 66 questions &middot; experimental</span>
-  <h1 style="font-size:clamp(28px,4vw,42px)">Case scenarios &mdash; Jev eval</h1>
+  <h1 style="font-size:clamp(28px,4vw,42px)">Case scenarios: Jev eval</h1>
   <p class="lede">Every case below is real: 24 of TypeSafeStroke's own hand-written scenarios plus 18 systematically generated boundary cases, each scored on IV thrombolysis and/or EVT eligibility. Jev answers a handful of small sub-questions per case; the real deterministic engine substitutes those answers into the case state and computes the verdict. Ground truth is the tree's own answer to the same case. See <a href="/engine-jev/">how decomposition works</a>.</p>
   <div id="headline-strip" class="stat-strip" style="margin-top:20px"></div>
 </header>
@@ -41,7 +41,7 @@
   <p class="footer-callout">There is no duty of care. This is an educational website.</p>
   <p class="disclaimer">Clinical decision support derived from the cited guidelines. It does not replace clinical judgement, local protocols, or specialist consultation. Draft pending clinical review.</p>
   <p>Sources: 2026 AHA/ASA Acute Ischemic Stroke Guideline &middot; CSBPR Acute Stroke Management 2022 &middot; CSBPR EVT Interim Update 2025 &middot; Thrombosis Canada IVT/EVT Guide.</p>
-  <p>An educational initiative &mdash; Division of Neurology, University of Toronto &mdash; Dr. Houman Khosravani, MD PhD FRCPC.</p>
+  <p>An educational initiative &middot; Division of Neurology, University of Toronto &middot; Dr. Houman Khosravani, MD PhD FRCPC.</p>
   <p>Thanks to <a href="https://svin.org">SVIN</a> and <a href="https://missionthrombectomy.org">Mission Thrombectomy</a> for inspiration and collaboration in thinking about stroke processes and pathways, and how we can improve care for all.</p>
   <div class="links">
     <a href="/">Home</a>
@@ -81,9 +81,9 @@ function sourcesNote(q) {
 function questionBlock(qKey, q) {
   const label = QLABEL[qKey] || qKey;
   if (q.correct) {
-    return `<div class="jev-q">✅ <b>${esc(label)}</b> &mdash; both agree: ${kindBadge(q.target_kind)} ${sourcesNote(q)}</div>`;
+    return `<div class="jev-q">✅ <b>${esc(label)}</b> &middot; both agree: ${kindBadge(q.target_kind)} ${sourcesNote(q)}</div>`;
   }
-  return `<div class="jev-q">❌ <b>${esc(label)}</b> &mdash; tree: ${kindBadge(q.target_kind)} ${sourcesNote(q)} &nbsp;Jev: ${kindBadge(q.synthesized_kind)}</div>`;
+  return `<div class="jev-q">❌ <b>${esc(label)}</b> &middot; tree: ${kindBadge(q.target_kind)} ${sourcesNote(q)} &nbsp;Jev: ${kindBadge(q.synthesized_kind)}</div>`;
 }
 
 function caseCard(id, c) {
@@ -92,7 +92,7 @@ function caseCard(id, c) {
   const verdicts = questions.map(([qKey, q]) => questionBlock(qKey, q)).join("");
   const subDetail = questions.map(([qKey, q]) => `
     <div class="jev-sub">
-      <div class="jev-sub-q" style="text-transform:none;font-size:13px;color:var(--text-1);margin-bottom:6px">${esc(QLABEL[qKey] || qKey)} &mdash; what Jev was asked, and what it answered</div>
+      <div class="jev-sub-q" style="text-transform:none;font-size:13px;color:var(--text-1);margin-bottom:6px">${esc(QLABEL[qKey] || qKey)}: what Jev was asked, and what it answered</div>
       ${subAnswerRows(q.sub_answers)}
       ${q.divergence ? `<div class="jev-divergence"><b>Guideline divergence:</b> ${esc(q.divergence)}</div>` : ""}
     </div>`).join("");
@@ -121,8 +121,8 @@ fetch("/assets/data/jev-eval.json").then((r) => r.json()).then((d) => {
   const handWritten = ids.filter((id) => id.startsWith("S")).sort();
   const generated = ids.filter((id) => id.startsWith("G")).sort();
   const groups = [
-    ["Hand-written scenarios", "From TypeSafeStroke's own 40-scenario suite &mdash; the same cases behind /cases/.", handWritten],
-    ["Systematically generated boundary cases", "18 cases sweeping time window, core size, mRS, age, and contraindication status across the tree's own thresholds &mdash; ground truth computed by the real engine, not hand-typed.", generated],
+    ["Hand-written scenarios", "From TypeSafeStroke's own 40-scenario suite, the same cases behind /cases/.", handWritten],
+    ["Systematically generated boundary cases", "18 cases sweeping time window, core size, mRS, age, and contraindication status across the tree's own thresholds, with ground truth computed by the real engine, not hand-typed.", generated],
   ];
   document.getElementById("case-groups").innerHTML = groups.map(([title, note, groupIds]) => `
     <section class="jev-group">

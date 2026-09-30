@@ -12,8 +12,7 @@ Usage: inject_nav.py <built.html> <out.html>
 import sys
 from pathlib import Path
 
-src, out = Path(sys.argv[1]), Path(sys.argv[2])
-html = src.read_text()
+EM_DASH = "—"
 
 EXTRA_CSS = """
 .site-nav { display:flex; align-items:center; gap:12px; padding-bottom:14px; margin-bottom:14px; border-bottom:1px solid var(--rule); }
@@ -87,10 +86,25 @@ def replace_once(html, needle, insert, insert_before=False):
     return html[:end] + insert + html[end:]
 
 
-html = replace_once(html, "</style>", EXTRA_CSS, insert_before=True)
-html = replace_once(html, "</style>", THEME_SCRIPT)
-html = replace_once(html, '<div class="wrap">', NAV_HTML)
-html = replace_once(html, '<footer id="disclaimer"></footer>', SUBFOOTER_HTML)
+def strip_em_dashes(html):
+    """No em-dashes anywhere on this site. The vendored artifact carries them in
+    guideline section labels (the data-recs JSON) and in one empty-select
+    placeholder; both are rewritten here so a re-sync can't bring them back."""
+    html = html.replace(f'<option value="">{EM_DASH}</option>', '<option value="">?</option>')
+    html = html.replace(f" {EM_DASH} ", ": ")
+    assert EM_DASH not in html, "em-dash left in engine page; add a rule to strip_em_dashes()"
+    return html
 
-out.write_text(html)
-print(f"{out} written, {len(html) // 1024} KB")
+
+if __name__ == "__main__":
+    src, out = Path(sys.argv[1]), Path(sys.argv[2])
+    html = src.read_text()
+
+    html = replace_once(html, "</style>", EXTRA_CSS, insert_before=True)
+    html = replace_once(html, "</style>", THEME_SCRIPT)
+    html = replace_once(html, '<div class="wrap">', NAV_HTML)
+    html = replace_once(html, '<footer id="disclaimer"></footer>', SUBFOOTER_HTML)
+    html = strip_em_dashes(html)
+
+    out.write_text(html)
+    print(f"{out} written, {len(html) // 1024} KB")

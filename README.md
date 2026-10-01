@@ -17,7 +17,7 @@ Picking this project back up in a new session? Read
 - `index.html` — one-page overview.
 - `engine/index.html` — the live decision engine. **Generated only** by
   `scripts/sync-decision-tree.sh` — never hand-edit this file.
-- `cases/index.html` — 50 clinical test scenarios grouped by theme, each
+- `cases/index.html` — 52 clinical test scenarios grouped by theme, each
   linking into the live engine with real inputs preloaded.
 - `disclaimer/index.html` — terms of use and disclaimer (no duty of care,
   educational purpose only, no real patient data, source attribution).
@@ -48,7 +48,7 @@ Then open `http://localhost:4173/`.
 ## Keeping the engine in sync
 
 The decision tree itself lives in a separate, private checkout at
-`~/Downloads/TypeSafeWork/StrokeDecisionTree` (not this repo — it contains
+`~/Downloads/Claude_CoWork_Local/app-development/TypeSafeWork/StrokeDecisionTree` (not this repo — it contains
 large source PDFs that must never be committed here). After editing the
 tree there:
 

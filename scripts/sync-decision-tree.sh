@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-SRC="${1:-$HOME/Downloads/TypeSafeWork/StrokeDecisionTree}"
+SRC="${1:-$HOME/Downloads/Claude_CoWork_Local/app-development/TypeSafeWork/StrokeDecisionTree}"
 SITE_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 RES="$SRC/Sources/StrokeDecisionEngine/Resources"
 SCEN="$SRC/Tests/StrokeDecisionEngineTests/scenarios.json"

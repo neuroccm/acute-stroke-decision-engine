@@ -1197,6 +1197,60 @@
    "expect": [
     "ivt.std.eligible"
    ]
+  },
+  {
+   "id": "S51",
+   "title": "M1 at 3 h, ASPECTS entered as 12 (scale is 0-10)",
+   "presets": [
+    "ed",
+    "clear_history"
+   ],
+   "inputs": {
+    "age_y": 70,
+    "time_from_lkw_h": 3,
+    "nihss": 14,
+    "disabling_deficit": true,
+    "aspects": 12,
+    "occlusion_site": "M1",
+    "pre_stroke_mrs": 0
+   },
+   "expect": [
+    "evt.need_aspects"
+   ],
+   "expect_not": [
+    "evt.rec_early"
+   ],
+   "expect_rejected": [
+    "aspects"
+   ]
+  },
+  {
+   "id": "S52",
+   "title": "Glucose entered in mg/dL (110) instead of mmol/L",
+   "presets": [
+    "ed",
+    "clear_history"
+   ],
+   "inputs": {
+    "age_y": 67,
+    "time_from_lkw_h": 1.5,
+    "glucose_mmol_l": 110,
+    "nihss": 9,
+    "disabling_deficit": true,
+    "aspects": 10,
+    "occlusion_site": "none",
+    "pre_stroke_mrs": 0
+   },
+   "expect": [
+    "ed.check_glucose"
+   ],
+   "expect_not": [
+    "ed.hyper",
+    "ivt.std.caution"
+   ],
+   "expect_rejected": [
+    "glucose_mmol_l"
+   ]
   }
  ]
 }

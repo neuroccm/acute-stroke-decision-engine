@@ -43,6 +43,8 @@
   "S42": { "theme": "Incomplete information", "note": "A TIA with the thrombolysis fields left blank on purpose: antithrombotic routing shouldn't stall waiting on questions the TIA pathway never needed." },
   "S43": { "theme": "Incomplete information", "note": "A non-disabling deficit with the same blank thrombolysis fields: the same fix, on the branch that routes straight to antiplatelet therapy." },
   "S44": { "theme": "Incomplete information", "note": "Thrombolysis already ruled out by a hard contraindication: a blank field shouldn't be read as a reason to hold the decision open." },
+  "S51": { "theme": "Incomplete information", "note": "An ASPECTS of 12 on a 0 to 10 scale: an impossible value is set aside as unknown, so thrombectomy waits for a real score instead of being recommended on a typo." },
+  "S52": { "theme": "Incomplete information", "note": "Glucose typed in mg/dL (110) into a mmol/L field: the value is outside the physiologic range, so it's flagged and not read as severe hyperglycemia." },
 
   "S23": { "theme": "Post-treatment complications", "note": "The symptomatic hemorrhage pathway that follows a treatment complication, not a treatment decision." },
   "S24": { "theme": "Post-treatment complications", "note": "A different post-thrombolysis emergency, with its own immediate management branch." },

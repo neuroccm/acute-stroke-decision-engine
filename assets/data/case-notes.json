@@ -34,7 +34,10 @@
   "S50": { "theme": "Anticoagulation, labs & recent-procedure risk", "note": "Glucose corrected back to normal but the deficit doesn't resolve: the counterpart to the hypoglycemia case, confirming a ruled-out metabolic mimic isn't a reason to withhold thrombolysis." },
 
   "S19": { "theme": "Blood pressure", "note": "Above the pre-treatment blood pressure threshold: treat first, then re-check eligibility." },
-  "S20": { "theme": "Blood pressure", "note": "Blood pressure that won't come into range in time closes the thrombolysis window entirely." },
+  "S20": { "theme": "Blood pressure", "note": "Blood pressure that can't be brought below 185/110 is a relative contraindication: the tree routes to an individualized decision, not to treatment." },
+  "S53": { "theme": "Blood pressure", "note": "No blood pressure recorded yet: thrombolysis waits for a measured BP below 185/110 instead of assuming one." },
+  "S54": { "theme": "Blood pressure", "note": "An SBP of 270 is above the 250 mmHg plausibility limit, so it's set aside, and thrombolysis waits for a usable reading." },
+  "S55": { "theme": "Blood pressure", "note": "The BP gate on an extended-window pathway: perfusion-selected LVO without EVT access still needs BP below 185/110 before thrombolysis." },
   "S37": { "theme": "Blood pressure", "note": "Post-stroke blood pressure management when reperfusion therapy isn't in the picture." },
 
   "S22": { "theme": "Incomplete information", "note": "The 'unknown is not no' rule under real time pressure: the tree stops and asks rather than assuming." },

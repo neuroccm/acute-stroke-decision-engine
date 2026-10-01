@@ -17,7 +17,7 @@ Picking this project back up in a new session? Read
 - `index.html` — one-page overview.
 - `engine/index.html` — the live decision engine. **Generated only** by
   `scripts/sync-decision-tree.sh` — never hand-edit this file.
-- `cases/index.html` — 52 clinical test scenarios grouped by theme, each
+- `cases/index.html` — 55 clinical test scenarios grouped by theme, each
   linking into the live engine with real inputs preloaded.
 - `disclaimer/index.html` — terms of use and disclaimer (no duty of care,
   educational purpose only, no real patient data, source attribution).
